@@ -1,6 +1,6 @@
 ---
 #type: slide
-title: Talk Title
+title: "Three Django Apps in a Trenchcoat: Writing an event management website with not a lot of time"
 slideOptions:
   theme: white
   transition: none
@@ -24,7 +24,9 @@ attributes: '<!-- data-autoslide="0" .slide: data-visibility="hidden" -->'
 
 <!-- .slide: data-autoslide="10000" -->
 
-## Talk Title
+## Three Django Apps in a Trenchcoat
+
+### Writing an event management website with not a lot of time
 
 Matt Cengia
 (they/them)
@@ -36,7 +38,7 @@ Matt Cengia
 - Mastodon: [@mattcen@aus.social](https://aus.social/@mattcen)
 - Matrix: [@mattcen:mattcen.com](https://matrix.to/#/@mattcen:mattcen.com)
 - Website: [blog.mattcen.com](https://blog.mattcen.com)
-- Slides: https://github.com/mattcen/REPO_NAME
+- Slides: https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat
 -->
 
 License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
@@ -45,8 +47,8 @@ Note:
 
 - I'm Matt (they/them)
 - Find me by handle, M A T T C E N
-- Post about talk using #HashTag and #AnotherHashTag
-- Slides available on GitHub: <https://github.com/mattcen/REPO_NAME>
+- Post about talk using #PyConAU and #3AppsInATrenchcoat
+- Slides available on GitHub: <https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat>
 
 ---
 
@@ -54,7 +56,7 @@ Note:
 
 ## Slides
 
-[![https://github.com/mattcen/REPO_NAME](images/repo_url.svg)](https://github.com/mattcen/REPO_NAME)
+[![https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat](images/repo_url.svg)](https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat)
 
 ---
 

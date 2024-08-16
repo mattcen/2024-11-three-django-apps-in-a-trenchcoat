@@ -2,13 +2,13 @@
 
 ## Viewing these slides:
 
-Browse to: <https://mattcen.github.io/REPO_NAME>
+Browse to: <https://mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat>
 
 ## Editing these slides:
 
 ```bash
-git clone --recursive https://github.com/mattcen/REPO_NAME
-cd REPO_NAME
+git clone --recursive https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat
+cd 2024-11-three-django-apps-in-a-trenchcoat
 python -m http.server
 ```
 
