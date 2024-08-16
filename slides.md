@@ -70,4 +70,38 @@ I'm delivering this presentation on the unceded ancenstral lands of many Indigen
 I honour the knowledge, stewardship, and care with which they've tended this land throughout history, and recognise the deep and lasting damage that colonisation has inflicted on them.
 I pledge to do my best to respect, learn from, and support these peoples. We can all do better.
 
+----
+
+# "Let's make a tech and radio outdoor wide game!"
+
+## "It'll be fun!", he said
+
 ---
+
+## Getting RadioActiv8 off the ground
+
+----
+
+# "We should build an event registration platform!"
+
+## "Uh, sure?"
+
+---
+
+## The gathering of Brownsea
+
+----
+
+# "So I wanna run the biggest STEM scout camp in the state…"
+
+## "And I want to make use of these other two apps *and* build a new one!"
+
+---
+
+## Creating Star Trek: Survival
+
+### And getting youth to run it
+
+----
+
+# Lessons learned
