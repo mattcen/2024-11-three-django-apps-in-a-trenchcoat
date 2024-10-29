@@ -113,11 +113,24 @@ Luke wanted to create a wide game which uses 2-way to communicate with a home ba
 
 Upon reaching a base, they would use the radio to contact HQ for further instructions. Each base would have a sheet of "intelligence" questions, one of which would be requested by the operator at HQ. Once the scouts answered the intelligence question, HQ would send them to another base.
 
-![RadioActiv8 site map]()
-
 ---
 
 ## Getting RadioActiv8 off the ground
+
+----
+
+![RA8 0.1 paper implementation](images/ra8-0.1.jpg)
+<!-- .element: class="r-stretch" -->
+
+----
+
+![RA8 current Play screen](images/RadioActiv8%20-%20Play.svg)
+<!-- .element: class="r-stretch" -->
+
+----
+
+![RadioActiv8 site map](images/RA8%20Wattle%20Park%20A4.svg)
+<!-- .element: class="r-stretch" -->
 
 ----
 
