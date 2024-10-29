@@ -58,6 +58,33 @@ Note:
 
 [![https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat](images/repo_url.svg)](https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat)
 
+
+Note:
+
+- 5 minutes on the organisational problem
+  - want *youth* to be able to maintain this in future (Youth Leading, Adults Supported), for succession planning etc.
+  - registration and validation of members
+    - brownsea, denizulu (AAA) - simplification by design (less is more - require little info (a) so we don't have to store info, and (b) to reduce friction for user)
+  - gamification of event operations
+    - RA8
+  - communicating to masses
+    - STS website, Be Very Informed - internal vs external
+- 5 minutes on the technical problem
+  - why python
+    - simplicity to code/teach (popularity/ubiquity)
+  - why django
+    - rapid development ("Web framework for perfectionists with deadlines")
+    - durable/secure/BCP out of the box
+    - extensible
+    - Django Admin
+  - why docker
+    - 12 factor, easy to deploy anywhere
+  - why htmx
+    - Reduce need for custom javascript, rapid (AJAX) responsiveness
+  - why… whatever else
+- 15 minutes on the solution
+- 5 mins for question time
+
 ---
 
 <!-- .slide: data-autoslide="20000" -->
@@ -76,11 +103,11 @@ I pledge to do my best to respect, learn from, and support these peoples. We can
 
 ## "It'll be fun!", he said
 
-Note:
-
 > wide game (n) (plural wide games):
 >
->     Any of various games played by groups in a large area, such as a field or woodland.
+>  Any of various games played by groups in a large area, such as a field or woodland.
+
+Note:
 
 Luke wanted to create a wide game which uses 2-way to communicate with a home base. Each radio would be at a base out in the field, and patrols of scouts would be sent to one of those bases.
 
@@ -95,6 +122,18 @@ Upon reaching a base, they would use the radio to contact HQ for further instruc
 ----
 
 # "We should build an event registration platform!"
+
+Note:
+
+- multiple intersecting hierarchies
+- good user flow
+- met specific needs the current system did not
+- uses agile development methodology to rapidly build stuff without getting bogged down in policy and bureaucracy
+
+NOTE: 2 audiences:
+
+1. PyConAU
+2. Members of Scouts Victoria
 
 ## "Uh, sure?"
 
@@ -117,3 +156,18 @@ Upon reaching a base, they would use the radio to contact HQ for further instruc
 ----
 
 # Lessons learned
+
+---
+
+Note:
+
+# Potential questions
+
+- Why not PHP/Laravel, or some other framework/language
+- Why not Node/Javascript
+  - One programming language is enough
+  - Set out to do as much as we can without JS or another language
+- Why Docker as opposed to "bare metal"/VM
+  - Lift and shift
+  - Scalability
+  - Ref needing to migrate STS website at the 11th hour
