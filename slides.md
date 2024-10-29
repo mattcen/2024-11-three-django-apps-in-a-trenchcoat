@@ -97,6 +97,21 @@ I'm delivering this presentation on the unceded ancenstral lands of many Indigen
 I honour the knowledge, stewardship, and care with which they've tended this land throughout history, and recognise the deep and lasting damage that colonisation has inflicted on them.
 I pledge to do my best to respect, learn from, and support these peoples. We can all do better.
 
+---
+
+## Scouts Victoria
+
+Note:
+
+Scouts Australia is an accredited member of the World Organisation of the Scouting Movement. Scouts Victoria is a Branch of this federation, and provides young people aged 5 to 25 with fun and challenging opportunities to grow through adventure. The modern Scouting program goes beyond the traditional outdoor Scouting activities of camping and hiking, and incorporates contemporary program opportunties that involve responsible risk taking and development of vocational skills that are supported through a peer-supported award scheme to recognize individual achievement. Each Branch of Scouts Australia works to achieve these common goals, but is responsible for executing their own administrative support objectives.
+
+
+You can see where the hierarchy problem begins...
+
+---
+
+## T
+
 ----
 
 # "Let's make a tech and radio outdoor wide game!"
@@ -121,7 +136,7 @@ Upon reaching a base, they would use the radio to contact HQ for further instruc
 
 ----
 
-# "We should build an event registration platform!"
+# "We should build an(other) event registration platform!"
 
 Note:
 
@@ -135,6 +150,7 @@ NOTE: 2 audiences:
 1. PyConAU
 2. Members of Scouts Victoria
 
+---
 ## "Uh, sure?"
 
 ---
