@@ -8,7 +8,7 @@ slideOptions:
   hashOneBasedIndex: true
   controls: false
   slideNumber: 'c/t'
-  totalTime: 2700
+  totalTime: 1500
   defaultTiming: 10
   minimumTiming: 5
   autoSlideStoppable: false
@@ -75,6 +75,18 @@ I pledge to do my best to respect, learn from, and support these peoples. We can
 # "Let's make a tech and radio outdoor wide game!"
 
 ## "It'll be fun!", he said
+
+Note:
+
+> wide game (n) (plural wide games):
+>
+>     Any of various games played by groups in a large area, such as a field or woodland.
+
+Luke wanted to create a wide game which uses 2-way to communicate with a home base. Each radio would be at a base out in the field, and patrols of scouts would be sent to one of those bases.
+
+Upon reaching a base, they would use the radio to contact HQ for further instructions. Each base would have a sheet of "intelligence" questions, one of which would be requested by the operator at HQ. Once the scouts answered the intelligence question, HQ would send them to another base.
+
+![RadioActiv8 site map]()
 
 ---
 
