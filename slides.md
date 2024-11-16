@@ -62,7 +62,7 @@ Note:
 Note:
 
 - 5 minutes on the organisational problem
-  - want *youth* to be able to maintain this in future (Youth Leading, Adults Supported), for succession planning etc.
+  - want *youth* to be able to maintain this in future ([Youth Leading, Adults Supporting](https://pr.scouts.com.au/?mdocs-file=5191)), for succession planning etc.
   - registration and validation of members
     - brownsea, denizulu (AAA) - simplification by design (less is more - require little info (a) so we don't have to store info, and (b) to reduce friction for user)
   - gamification of event operations
@@ -119,7 +119,10 @@ Upon reaching a base, they would use the radio to contact HQ for further instruc
 
 ----
 
-![RA8 0.1 paper implementation](images/ra8-0.1.jpg)
+![RA8 0.1 paper implementation. A sheet of lined paper with 4 named bases, each
+represented by coloured dot stickers. Under each base is a list of intelligence
+answers, most of which are crossed out with circled patrol names beside them,
+indicating who answered what.](images/ra8-0.1.jpg)
 <!-- .element: class="r-stretch" -->
 
 ----
