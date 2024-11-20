@@ -295,7 +295,7 @@ From a technical perspective, we wanted to do our best to adhere to current
 industry best practices for the tools we used. Django is obviously a
 well-understood and battle-tested framework. As much as possible, we run all of
 our Django apps as 12-factor apps in Docker containers to make them easy to
-deploy anywhere and migrate where necessary. Because our goal is for these apps
+deploy anywhere and migrate where necessary. As our goal is for these apps
 to be maintainable by youth members who may be very novice programmers, we want
 to reduce what they have to learn. As a result, we're doing what we can to
 standardise on HTMX for the interactive parts of RadioActiv8, so that people
