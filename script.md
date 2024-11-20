@@ -1,59 +1,196 @@
 ---
 title: "Three Django Apps in a Trenchcoat: Writing an event management website with not a lot of time"
+lang: en
 ---
 
+Content Summary:
+
+1. Introduction & Motivation
+  a. Introduce speakers
+  b. Introduce organisational goals
+  c. Organisation limitations
+  d. Supporting a Legion of Devs with Python
+
+2. Brownsea
+  a. ScoutHack Origins
+
+
+3. RadioActiv8
+  a. What is RA8 - Where did I come from
+  b.
+  c.
+
+
+
+
+1.a. Introduce Speakers
+mattcen is a Linux systems administrator and software developer,
+Luke is a security analyst and systems architect with interests in web development
+and security education. We are also both Amateur Radio Operators.
+
 Luke and I are both members of the STEM[^STEM] team of Scouts Victoria, and thus
-part of WOSM[^WOSM]; a "Youth Lead, Adult Supported" organisation focused on empowering
- kids and young adults to pursue fun and educational activities they want to do,
-and facilitates their safe participation in anything from rock climbing, to air
-activities, to laser tag, to website development. We've come a long way from
-camping in the bush and tying knots, and we are hellbent on continuing to engage
-young people in making their Scouting world, and by extension, the wider
-community, equipped with better resources.
+part of WOSM[^WOSM]; a "Youth Lead, Adult Supported" organisation focused on
+empowering young people to pursue fun and adventurous activities they want to do,
+and facilitate their safe participation in camping, climbing, sailing, cycling,
+and our specialties, radio communications and  website development.
+
+1.b. Introduce organisational goals Scouting has come a long way from camping in
+the bush and tying knots, and as Leaders, we are hellbent on continuing to
+engage young people in providing Scouting and the wider community with better
+resources.
 
 [^STEM]: Science, Technology, Engineering, Maths
 
 [^WOSM]: World Organization of the Scout Movement
 
-We're both technologists; I'm a Linux systems administrator and software
-developer, and Luke is a Security Architect with interests in web development
-and security education. We are also both Amateur Radio Operators.
+1.c. Organisation Limitations As an organisation run by volunteers, we don't
+always have the resources to work as efficiently as we'd like. Some of our IT
+systems are dated (think PHP sites from the early 2000s) and due to limited
+resources, haven't always grown as the organisation's needs have changed. Our
+organisation is unique in its structure, and isn't well served by off-the-shelf
+products.
 
-As an organisation run by volunteers, we don't always have the resources to work
-as efficiently as we'd like. Some of our IT systems are dated (think PHP sites
-from the early 2000s) and due to limited resources, haven't always grown as
-the organisation's needs have changed. Our organisation is unique in its structure,
-and isn't well served by off-the-shelf products.
+1.d. Supporting a Legion of Devs using Python Luke and I have often considered
+the value of raising a "Legion of Devs" to perpetuate volunteer development and
+growth of Scouting information tools. Python and its supportive framework are a
+natural colleague to this challenge, with Python being a friendly and familiar
+language to young coders through school and tech programs already well
+established. Python and its frameworks are an obvious solution due to its
+ubiquitous presence in early coding education spaces.
 
-Luke and I have often thought that as a youth led organisation, if we can empower youth to have direct input and
-contributions into these systems, we would be in a position to perpetuate volunteer development and growth of our
-tools that conserves our paid adults to focus on supporting the business operations of the organisation, and leave
-the program development to the volunteers who run program.
+2. Brownsea
+Because having just one project on the go is boring for two folks with ADHD, and
+on the back of building RadioActiv8, yet another tech platform that needed
+maintenance, we were keen to empower scouts to help out with this, so Luke
+created .
 
-We embarked on this journey with the first of the three apps in a trenchcoat:
-Luke, as our State Leader of Communication Technologies, wanted to replicate the exciting experience
-of Amateur Radio Contesting. Much like like fishing, the joy of contesting is found in making contact with
-another radio station, exchanging callsigns, location, and a custom serial identifier, before
-searching for another contact - the station with the most contacts wins the contest, so speed and efficiency are rewarded.
-Contests had already proved interesting and exciting to our Youth members, so why not
-simulate the experience as a next-generation wide game[^WideGame]? In its simplest form, scouts would use two-way radios to
+Building a Legion of Devs is ambitious, and starting that process at age 10 is
+insanity. We have learnt that teaching young people to code can never be started
+too early - how this is achieved is much more important. While there are
+plethora of excellent coding resources that teach kids to build games or spin
+turtle on their local machines, we found that sharing information is not only a
+skill for life, but part of the most rewarding tech experiences for young people
+to see the fruit of their labour. Given the ubiquity of information accessible
+to young people via websites, it seems obvious that web development is the best
+place to start building skills with a tangible outcome.
+
+So we created ScoutHack[^ScoutHack], a WebDev course that walks participants
+through HTML, CSS, and Python. Check out our Lightening Talk from Everything
+Open 2023 for a little more about that adventure. Today we're discussing the
+registration app built to support event registrations - our second app in our
+trenchcoat!
+
+[^ScoutHack]:
+    A weekend long hackathon/tutorial hybrid in which we teach youth 11-years
+    and up basic HTML, CSS, and a little Python in the form of a Flask app. See
+    Matt's talk [Developing Labs for Teaching Kids
+    Webdev](https://www.youtube.com/watch?v=VXFuL5PcPKI) for more information
+
+However, registration for an event in the organisation poses some administrative
+burdens we felt empowered to overcome. Firstly, the member database system for
+event registration requires a lot of administrative rework and data duplication.
+Secondly, avoid paying a third party provider that only does half of what we
+need. Thirdly, use a system that understands the unique structure of the
+organisation.
+
+In summary, our need is to allow registered members to sign up for an event;
+prefill as much PII as needed from our membership database while using as little
+as possible; auto-generate an invoice from our accounting system; summarize
+dietary needs at a glance; and as a proficient user, have the whole process take
+about 60 seconds.
+
+Welcome to Brownsea[^Brownsea]! Using an membership database API and
+<<!FIXME>techno-babble Django sweetness>, we now have a viable system for any event
+administrator to use to manage the event details for our organisation.
+
+[^Brownsea]:
+    Named after the first Scout camp held by Lord Robert Baden-Powell
+    on Brownsea Island in England in 1907
+
+In Australia, Scouts is split up into [5
+sections](https://scoutsvictoria.com.au/age-sections-adults/)[^Sections]:
+
+[^Sections]:
+    - Joey Scouts 5--8 Years
+    - Cub Scouts 8--11 Years
+    - Scouts 11--14 Years
+    - Venturers 14--18 Years
+    - Rovers 18--25 Years
+
+Better UX opportunities were available to pursue, so we set to request contact
+information from the existing membership database while only pulling what we
+needed - the less PII[^PII] we collect and store, the better. This results in a
+sign up and receive an invoice process taking, literally, 30 seconds:
+
+[^PII]: Personally Identifiable Information
+
+<video controls src="images/Brownsea-rego.mp4" width="720"></video>
+
+This system integrates with <del>a pair of</del> <!--obfuscation of detail-->
+authenticated API endpoints of Extranet[^Extranet], which do the following:
+
+[^Extranet]: Scouts Victoria's membership database
+
+1. Given a surname[^names], date of birth, and membership number, confirm if
+   they match an active Scouts Victoria membership record
+2. Given a membership number, return minimal information about that member:
+
+   - Name
+   - Email address
+   - Phone number
+   - Age (years, as an integer)
+   - List of roles within the organisation, including name of scout group(s).
+
+[^names]: Yes, I hate that we split up names into given/surnames too.
+
+Our goal was not only to store minimal information, but to streamline the
+sign-up experience by avoiding _requesting_ information that we could get from
+the existing membership database, but allowing members to override
+system-provided information if desired. This also incentivises members to keep
+their membership record up to date (something that sometimes falls by the
+wayside).
+
+Brownsea has made it trivial for members to sign up to ScoutHack, and receive a
+Xero invoice both in the interface, and via email (the system doesn't accept
+credit card payments currently).
+
+Now we have some members registered, and we've got them sorted into Patrols.
+Time for some fun with radios.
+
+2. CQ, CQ, CQ: RadioActiv8
+
+2.a. Introduce RA8
+
+As our State Leader of Communication Technologies, Luke wanted to replicate the
+exciting experience of Amateur Radio Contesting as an activity for Scouts. A
+metaphor of fishing (with a rod, not a mail server), the joy of contesting is
+found in making contact with another radio station, exchanging callsigns,
+location, and a custom serial identifier, before searching for another contact -
+the station with the most contacts wins the contest, so speed and efficiency are
+rewarded. Contests had already proved interesting and exciting to our Youth
+members, so why not simulate the experience as a next- generation wide
+game[^WideGame]? In its simplest form, scouts would use two-way radios to
 receive instructions and relay information while running around a park.
 
 [^WideGame]:
     wide game (n) (plural wide games): Any of various games played by
     groups in a large area, such as a field or woodland.
 
-The principle of RadioActiv8[^RA8Name] is quite straightforward: We set out bases around
-a neighbourhood park or scout camp, each with a two-way radio, and a sheet of
+2.b. RadioActiv8 Gameplay
 
-paper with some "intelligence" (a mapping of questions to answers). At the start
-of the game, each patrol[^Patrol] would be sent to one these bases. Once they
-arrive, they radio to HQ, identifying their patrol and current location, and we
-ask them a question, which they answer using the intelligence sheet. Once they
-answer, we send them off to another randomly chosen base. The game's end
-condition (and whether it is competitive) is up to the facilitator's discretion.
-The Proof-of-Concept used a sheet of paper to track the game state[^GameState]
-of patrols, recorded by Luke while we gave contacts the next base to attend.
+The principle of RadioActiv8[^RA8Name] is quite straightforward: Bases are set
+out across a neighbourhood park or Scout Camp. Each base has a two-way radio,
+and a sign with the name of the base and an intelligence grid featuring an
+answer matrix. At the start of the game, each patrol[^Patrol] is sent to
+a base. Once they arrive, they radio to HQ, identify their patrol and
+current location to HQ. The HQ station response with a question, which they
+answer using the intelligence answer matrix. Once the an answer is given, HQ
+provides a new destination. The game's end condition (and whether it is
+competitive) is up to the facilitator's discretion. The Proof-of-Concept used a
+sheet of paper to track the game state[^GameState] of patrols, recorded by Luke
+while we gave contacts the next base to attend.
+
+
 
 [^RA8Name]:
     Wordplay on the use of two-way radios, the active component of
@@ -104,142 +241,61 @@ their way.
 
 After successfully running RadioActiv8 as one of several dozen activities at a
 state-wide scout event, and getting great feedback, we were keen to find other
-uses for this platform.
+uses for this platform. For example, each base only has intelligence on a card,
+but what if the base was an activity base, that had a task to complete?
+RadioActiv8 would work really well at distributing Youth members to different
+activities, and so we began putting together ideas as to how this application
+would work to facilitate management of a Scouting event, rather than just being
+an activity itself.
 
 ---
 
-Because having just one project on the go is boring for two folks with ADHD, and
-on the back of building RadioActiv8, yet another tech platform that needed
-maintenance, we were keen to empower scouts to help out with this, so Luke
-created ScoutHack[^ScoutHack].
+4. Star Trek: Survival (2022, 2024)
 
-[^ScoutHack]:
-    A weekend long hackathon/tutorial hybrid in which we teach youth 11-years
-    and up basic HTML, CSS, and a little Python in the form of a Flask app. See
-    Matt's talk [Developing Labs for Teaching Kids
-    Webdev](https://www.youtube.com/watch?v=VXFuL5PcPKI) for more information
+The best way to teach a young person (or anyone, really) is to make it fun. The
+more fun the activity, the less obstruction to focus and learning. Immersion of
+experience, much like chocolate on vegetables, is a great way to discover new
+skills and explore self-capability without feeling the burden of pressure to
+learn.
 
-In Australia, Scouts is split up into [5
-sections](https://scoutsvictoria.com.au/age-sections-adults/)[^Sections]:
+To that end, we have devliered not one, but two [_Star Trek:
+Survival_'s](https://startreksurvival.tech/), "an _immersive_ adventure
+experience for all Scouting Members". This website forms our third app in our
+trenchcoat.
 
-[^Sections]:
-    - Joey Scouts 5--8 Years
-    - Cub Scouts 8--11 Years
-    - Scouts 11--14 Years
-    - Venturers 14--18 Years
-    - Rovers 18--25 Years
+We have supported many STEM-based activities at conventional Scouting events,
+but now that we have a versatile registration system and a dynamic and gamified
+distribution utility, we decided to combine these activities into an immersive
+program experience.
 
-As we were preparing for ScoutHack, we rediscovered that the main Scouts
-Victoria event management system, which ties into our membership database, only
-allows any given event to be available to one of these sections. This meant that
-we'd need to create up to 4 different events in the system for the same dates,
-each targeting different sections. This sounded like a pain, and while we could
-have dealt with it, we really wanted to lead the way by finding a better way,
-usable by both us, and other members of the organisation.
+The idea was that we'd take over one of Scouts Victoria's largest Scout camps,
+(Mafeking Rover Park, about 2 hours north-east of Melbourne) and invite various
+Activity Teams to each run activities, and use RadioActiv8 to run the entire
+event by sending patrols to activities based on pre-selected patrol preferences,
+walking distance, activity capacity, and availability.
 
-And thus, Brownsea[^Brownsea] was born - not as an example of enshittification,
-but as a platform on which we could manage events for multiple <del>ages and
-sections</del> audiences.
-Better UX opportunities were available to pursue, so we set to request contact
-information from the existing membership database while only pulling what we
-needed - the less PII[^PII] we collect and store, the better. This results in a
-sign up and receive an invoice process taking, literally, 30 seconds:
-
-[^Brownsea]:
-    Named after the first Scout camp held by Lord Robert Baden-Powell
-    on Brownsea Island in England in 1907
-
-[^PII]: Personally Identifiable Information
-
-<video controls src="images/Brownsea-rego.mp4" width="1280"></video>
-
-This system integrates with <del>a pair of</del> <!--obfuscation of detail-->
-authenticated API endpoints of Extranet[^Extranet], which do the following:
-
-[^Extranet]: Scouts Victoria's membership database
-
-1. Given a surname[^names], date of birth, and membership number, confirm if
-   they match an active Scouts Victoria membership record
-2. Given a membership number, return minimal information about that member:
-
-   - Name
-   - Email address
-   - Phone number
-   - Age (years, as an integer)
-   - List of roles within the organisation, including name of scout group(s)
-
-[^names]: Yes, I hate that we split up names into given/surnames too.
-
-Our goal was not only to store minimal information, but to streamline the
-sign-up experience by avoiding _requesting_ information that we could get from
-the existing membership database, but allowing members to override
-system-provided information if desired. This also incentivises members to keep
-their membership record up to date (something that sometimes falls by the
-wayside).
-
-Brownsea has made it trivial for members to sign up to ScoutHack, and receive a
-Xero invoice both in the interface, and via email (the system doesn't accept
-credit card payments currently).
-
-But we wanted to go bigger.
-
-I'm not Trekkie[^Trekkie], but Luke, who is, saw a values alignment between
-Scouts, and Star Trek's Starfleet organisation - with the exception of space flight,
-the virtue Venn Diagram is practically a circle. With Star Trek's comprehensive
-back-catalogue and world building, it's a rich universe to draw ideas from for
-theming Scouting activities.
-
-[^Trekkie]: Star Trek fan
-
-To that end, we devliered two [_Star Trek: Survival_'s](https://startreksurvival.tech/), "an
-_immersive_ adventure experience for all Scouting Members".
-
-This was an incredibly ambitious idea. Scouts Victoria has several major events
-that are state-wide, and many smaller events targeting scouts of all ages.
-
-A typical Scouting event is age-group specific, which makes targeting program
-activities easy to facilitate within a targeted age. However, Scouts Australia
-has redesigned its program since we were youth members, and now facilitates a
-"One Program" concept of program delivery, meaning that program areas should be
-executed in a fashion that scales according to capability, rather than age. Just
-because a program is designed for older teenage Venturer Scouts, doesn't mean it
-can't be done by Joey Scouts (and sometimes done better!). There are exceptions;
-Cub Scouts don't drive like Rover Scouts, but the program can be adjusted to suit
-the needs of the individual - what could be more inclusive?
-
-Then comes the STEM program area. Anyone who has done anything with Tech and young
-people will appreciate the level of logistical planning that is required to support
-a tech program, and the amount of effort that goes into supporting young people
-is no small task either. Add into the effects of scale, and you're asking for trouble.
-Executing a major state-wide event with no age restriction is rarely done when
-the program focuses on Outdoor Adventure, let alone the chaos of technology activities.
-
-The idea was that we'd take over one of Scouts Victoria's largest scout camps,
-(Mafeking Rover Park, about 2 hours north-east of Melbourne), ask various Scouts
-Victoria Activity Teams (initially with a STEM focus, but eventually more
-broadly) to each run activities, and use RadioActiv8 to run the entire event by
-semi-randomly sending patrols to activities based on pre-selected patrol
-preferences, walking distance, and activity capacity.
-
-The first step was to create a _Star Trek: Survival_ website, which we also
-created in Django. The Program team compiled a list of 18 individual activities
-for the 2022 event, with 18 additional activities added to the 2024 event.
+The first step was to create a _Star Trek: Survival_ website. The Program team
+compiled a list of 18 individual activities for the 2022 event, with 18
+additional activities added to the 2024 event.
 
 Each activity was published online, and included an immersive Trek-themed
 narrative a list of "I can..." skill-based statements that facilitate Scouts
 Australia's award scheme components, ready for peer-review and presentation back
 in their Scout Groups post-event.
 
-Then into STS[^STS] website, we added the Brownsea and RadioActiv8 Django
+![FIXME Get an "I Can" statement list from STS mission ]
+
+Then into the STS[^STS] website, we added the Brownsea and RadioActiv8 Django
 applications, and mapped these into the STS website's various models.
 
 [^STS]: _Star Trek: Survival_
 
 As always, we sought a straightforward, user-friendly workflow for both members
-and organisers - an oxymoronic representation of the Be Prepared motto for any
-Scouting planning process.
+and organisers - for the most part, this was achieved as a minimum viable
+product with room to grow.
 
-The idea was:
+<del>The idea was:</del>
+The workflow follows: [!FIXME: phrasing this sentence.]
 
 1. Member uses Brownsea to sign up using their Scouts Victoria membership information
 2. As part of sign-up, the member can select which activities interest them
