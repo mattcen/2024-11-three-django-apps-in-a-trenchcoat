@@ -97,6 +97,21 @@ I'm delivering this presentation on the unceded ancenstral lands of many Indigen
 I honour the knowledge, stewardship, and care with which they've tended this land throughout history, and recognise the deep and lasting damage that colonisation has inflicted on them.
 I pledge to do my best to respect, learn from, and support these peoples. We can all do better.
 
+---
+
+## Scouts Victoria
+
+Note:
+
+Scouts Australia is an accredited member of the World Organisation of the Scouting Movement. Scouts Victoria is a Branch of this federation, and provides young people aged 5 to 25 with fun and challenging opportunities to grow through adventure. The modern Scouting program goes beyond the traditional outdoor Scouting activities of camping and hiking, and incorporates contemporary program opportunties that involve responsible risk taking and development of vocational skills that are supported through a peer-supported award scheme to recognize individual achievement. Each Branch of Scouts Australia works to achieve these common goals, but is responsible for executing their own administrative support objectives.
+
+
+You can see where the hierarchy problem begins...
+
+---
+
+## T
+
 ----
 
 # "Let's make a tech and radio outdoor wide game!"
@@ -137,7 +152,25 @@ indicating who answered what.](images/ra8-0.1.jpg)
 
 ----
 
-# "We should build an event registration platform!"
+![RA8 0.1 paper implementation. A sheet of lined paper with 4 named bases, each
+represented by coloured dot stickers. Under each base is a list of intelligence
+answers, most of which are crossed out with circled patrol names beside them,
+indicating who answered what.](images/ra8-0.1.jpg)
+<!-- .element: class="r-stretch" -->
+
+----
+
+![RA8 current Play screen](images/RadioActiv8%20-%20Play.svg)
+<!-- .element: class="r-stretch" -->
+
+----
+
+![RadioActiv8 site map](images/RA8%20Wattle%20Park%20A4.svg)
+<!-- .element: class="r-stretch" -->
+
+----
+
+# "We should build an(other) event registration platform!"
 
 Note:
 
@@ -153,6 +186,9 @@ NOTE: 2 audiences:
 
 ----
 
+----
+
+---
 ## "Uh, sure?"
 
 ---
