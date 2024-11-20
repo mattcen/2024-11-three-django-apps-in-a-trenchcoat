@@ -13,6 +13,9 @@
   /* TODO: Alter font size to ensure header fits viewport width */
   font-size: 1.4vw;
 }
+#header-content {
+  font-size: 3.5vw;
+}
 
 .header ul {
   margin: 0;
