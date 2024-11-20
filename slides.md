@@ -56,7 +56,7 @@ Note:
 
 ## Slides
 
-[![https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat](images/repo_url.svg)](https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat)
+[![https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat](images/slides_url.svg)](https://mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat)
 
 
 Note:
