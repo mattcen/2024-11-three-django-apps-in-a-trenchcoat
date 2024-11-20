@@ -34,7 +34,7 @@ We embarked on this journey with the first of the three apps in a trenchcoat:
 Luke, as our State Leader of Communication Technologies, wanted to replicate the exciting experience
 of Amateur Radio Contesting. Much like like fishing, the joy of contesting is found in making contact with
 another radio station, exchanging callsigns, location, and a custom serial identifier, before
-searching for another contact - the station with the most contacts wins the contest, so speed and effiency are rewarded.
+searching for another contact - the station with the most contacts wins the contest, so speed and efficiency are rewarded.
 Contests had already proved interesting and exciting to our Youth members, so why not
 simulate the experience as a next-generation wide game[^WideGame]? In its simplest form, scouts would use two-way radios to
 receive instructions and relay information while running around a park.
@@ -43,9 +43,9 @@ receive instructions and relay information while running around a park.
     wide game (n) (plural wide games): Any of various games played by
     groups in a large area, such as a field or woodland.
 
-The principle of RadioActiv8[^RA8Name] is quite straightfoward: We set out bases around
+The principle of RadioActiv8[^RA8Name] is quite straightforward: We set out bases around
 a neighbourhood park or scout camp, each with a two-way radio, and a sheet of
-\
+
 paper with some "intelligence" (a mapping of questions to answers). At the start
 of the game, each patrol[^Patrol] would be sent to one these bases. Once they
 arrive, they radio to HQ, identifying their patrol and current location, and we
@@ -205,7 +205,7 @@ executed in a fashion that scales according to capability, rather than age. Just
 because a program is designed for older teenage Venturer Scouts, doesn't mean it
 can't be done by Joey Scouts (and sometimes done better!). There are exceptions;
 Cub Scouts don't drive like Rover Scouts, but the program can be adjusted to suit
-the needs of the inidividual - what could be more inclusive?
+the needs of the individual - what could be more inclusive?
 
 Then comes the STEM program area. Anyone who has done anything with Tech and young
 people will appreciate the level of logistical planning that is required to support
