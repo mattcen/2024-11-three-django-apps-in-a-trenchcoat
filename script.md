@@ -3,45 +3,57 @@ title: "Three Django Apps in a Trenchcoat: Writing an event management website w
 ---
 
 Luke and I are both members of the STEM[^STEM] team of Scouts Victoria, and thus
-part of WOSM[^WOSM]; a "youth leading, adults supporting" organisation, meaning
-that, far above and beyond camping in the bush and tying knots, empowers kids
-and young adults to decide what fun and educational activities they want to do,
+part of WOSM[^WOSM]; a "Youth Lead, Adult Supported" organisation focused on empowering
+ kids and young adults to pursue fun and educational activities they want to do,
 and facilitates their safe participation in anything from rock climbing, to air
-activities, to laser tag, to website development.
+activities, to laser tag, to website development. We've come a long way from
+camping in the bush and tying knots, and we are hellbent on continuing to engage
+young people in making their Scouting world, and by extension, the wider
+community, equipped with better resources.
 
 [^STEM]: Science, Technology, Engineering, Maths
 
 [^WOSM]: World Organization of the Scout Movement
 
-We're also both technologists; I'm a Linux systems administrator and software
-developer, and Luke is an IT generalist with interests in website development
-and information security.
+We're both technologists; I'm a Linux systems administrator and software
+developer, and Luke is a Security Architect with interests in web development
+and security education. We are also both Amateur Radio Operators.
 
 As an organisation run by volunteers, we don't always have the resources to work
 as efficiently as we'd like. Some of our IT systems are dated (think PHP sites
-from the early 2000s) and due to insufficient resources, haven't always grown as
-the organisation's needs have changed. Luke and I have often thought that as a
-youth led organisation, if we can empower youth to have direct input and
-contributions into these systems, we wouldn't need to rely as heavily on
-(potentially paid) adults to maintain them. We embarked on this journey when
-Luke, as our State Leader of Communication Technologies, wanted to run a next
-generation wide game[^WideGame], in which scouts would use two-way radios to
+from the early 2000s) and due to limited resources, haven't always grown as
+the organisation's needs have changed. Our organisation is unique in its structure,
+and isn't well served by off-the-shelf products.
+
+Luke and I have often thought that as a youth led organisation, if we can empower youth to have direct input and
+contributions into these systems, we would be in a position to perpetuate volunteer development and growth of our
+tools that conserves our paid adults to focus on supporting the business operations of the organisation, and leave
+the program development to the volunteers who run program.
+
+We embarked on this journey with the first of the three apps in a trenchcoat:
+Luke, as our State Leader of Communication Technologies, wanted to replicate the exciting experience
+of Amateur Radio Contesting. Much like like fishing, the joy of contesting is found in making contact with
+another radio station, exchanging callsigns, location, and a custom serial identifier, before
+searching for another contact - the station with the most contacts wins the contest, so speed and effiency are rewarded.
+Contests had already proved interesting and exciting to our Youth members, so why not
+simulate the experience as a next-generation wide game[^WideGame]? In its simplest form, scouts would use two-way radios to
 receive instructions and relay information while running around a park.
 
 [^WideGame]:
     wide game (n) (plural wide games): Any of various games played by
     groups in a large area, such as a field or woodland.
 
-The principle of RadioActiv8[^RA8Name] is quite simple: We set out bases around
+The principle of RadioActiv8[^RA8Name] is quite straightfoward: We set out bases around
 a neighbourhood park or scout camp, each with a two-way radio, and a sheet of
+\
 paper with some "intelligence" (a mapping of questions to answers). At the start
 of the game, each patrol[^Patrol] would be sent to one these bases. Once they
 arrive, they radio to HQ, identifying their patrol and current location, and we
 ask them a question, which they answer using the intelligence sheet. Once they
 answer, we send them off to another randomly chosen base. The game's end
 condition (and whether it is competitive) is up to the facilitator's discretion.
-Initially the game state[^GameState] was tracked on a sheet of paper by the
-folks at HQ:
+The Proof-of-Concept used a sheet of paper to track the game state[^GameState]
+of patrols, recorded by Luke while we gave contacts the next base to attend.
 
 [^RA8Name]:
     Wordplay on the use of two-way radios, the active component of
@@ -58,9 +70,10 @@ represented by coloured dot stickers. Under each base is a list of intelligence
 answers, most of which are crossed out with circled patrol names beside them,
 indicating who answered what.](images/ra8-0.1.jpg)
 
-Obviously this approach doesn't scale well, and can get overwhelming quickly
-with multiple radio operators at HQ trying to write on the same sheet of paper,
-and a high number of patrols and bases, so we sought a better solution.
+Obviously this approach doesn't scale well, and can get overwhelming quickly for
+a poor operator to manage. Increasing scale with multiple radio operators at HQ
+trying to write on the same sheet of paper was hilarious, but not optimal with a
+high number of patrols and bases, so we sought a better solution.
 
 What we needed, was a CRUD[^CRUD] app, and having recently begun experimenting
 with Django, I was _definitely_ feeling like a perfectionist with
@@ -124,21 +137,24 @@ each targeting different sections. This sounded like a pain, and while we could
 have dealt with it, we really wanted to lead the way by finding a better way,
 usable by both us, and other members of the organisation.
 
-And thus, Brownsea[^Brownsea] was born: a platform on which we could list events
-for multiple ages and sections, request the bare minimum of information
-necessary (the less PII[^PII] we collect and store, the better), and have people
-sign up and receive an invoice in literally 30 seconds:
+And thus, Brownsea[^Brownsea] was born - not as an example of enshittification,
+but as a platform on which we could manage events for multiple <del>ages and
+sections</del> audiences.
+Better UX opportunities were available to pursue, so we set to request contact
+information from the existing membership database while only pulling what we
+needed - the less PII[^PII] we collect and store, the better. This results in a
+sign up and receive an invoice process taking, literally, 30 seconds:
 
 [^Brownsea]:
-    Named after the first Scout camp heled by Lord Robert Baden-Powell
+    Named after the first Scout camp held by Lord Robert Baden-Powell
     on Brownsea Island in England in 1907
 
 [^PII]: Personally Identifiable Information
 
 <video controls src="images/Brownsea-rego.mp4" width="1280"></video>
 
-This system integrates with a pair of authenticated API endpoints of
-Extranet[^Extranet], which do the following:
+This system integrates with <del>a pair of</del> <!--obfuscation of detail-->
+authenticated API endpoints of Extranet[^Extranet], which do the following:
 
 [^Extranet]: Scouts Victoria's membership database
 
@@ -168,20 +184,35 @@ credit card payments currently).
 But we wanted to go bigger.
 
 I'm not Trekkie[^Trekkie], but Luke, who is, saw a values alignment between
-Scouts, and Star Trek's United Federation of Planets, and with Star Trek's
-comprehensive back-catalogue and world building, it's a rich universe to draw
-ideas from for theming scouting activities.
+Scouts, and Star Trek's Starfleet organisation - with the exception of space flight,
+the virtue Venn Diagram is practically a circle. With Star Trek's comprehensive
+back-catalogue and world building, it's a rich universe to draw ideas from for
+theming Scouting activities.
 
 [^Trekkie]: Star Trek fan
 
-I give you [_Star Trek: Survival_](https://startreksurvival.tech/), "an
+To that end, we devliered two [_Star Trek: Survival_'s](https://startreksurvival.tech/), "an
 _immersive_ adventure experience for all Scouting Members".
 
 This was an incredibly ambitious idea. Scouts Victoria has several major events
-that are state-wide, and many smaller events targeting scouts of all ages, but
-to combine the two and have a major state-wide event with no age restriction was
-rarely done, and would need a lot of planning and a streamlined logistical
-execution.
+that are state-wide, and many smaller events targeting scouts of all ages.
+
+A typical Scouting event is age-group specific, which makes targeting program
+activities easy to facilitate within a targeted age. However, Scouts Australia
+has redesigned its program since we were youth members, and now facilitates a
+"One Program" concept of program delivery, meaning that program areas should be
+executed in a fashion that scales according to capability, rather than age. Just
+because a program is designed for older teenage Venturer Scouts, doesn't mean it
+can't be done by Joey Scouts (and sometimes done better!). There are exceptions;
+Cub Scouts don't drive like Rover Scouts, but the program can be adjusted to suit
+the needs of the inidividual - what could be more inclusive?
+
+Then comes the STEM program area. Anyone who has done anything with Tech and young
+people will appreciate the level of logistical planning that is required to support
+a tech program, and the amount of effort that goes into supporting young people
+is no small task either. Add into the effects of scale, and you're asking for trouble.
+Executing a major state-wide event with no age restriction is rarely done when
+the program focuses on Outdoor Adventure, let alone the chaos of technology activities.
 
 The idea was that we'd take over one of Scouts Victoria's largest scout camps,
 (Mafeking Rover Park, about 2 hours north-east of Melbourne), ask various Scouts
@@ -191,10 +222,13 @@ semi-randomly sending patrols to activities based on pre-selected patrol
 preferences, walking distance, and activity capacity.
 
 The first step was to create a _Star Trek: Survival_ website, which we also
-created in Django. We then began to come up with a list of activities we wanted,
-as well as appropriate Star Trek-themed backstory for each of them, and a list
-of which parts of Scouts Australia's award scheme could be signed off upon
-activity completion.
+created in Django. The Program team compiled a list of 18 individual activities
+for the 2022 event, with 18 additional activities added to the 2024 event.
+
+Each activity was published online, and included an immersive Trek-themed
+narrative a list of "I can..." skill-based statements that facilitate Scouts
+Australia's award scheme components, ready for peer-review and presentation back
+in their Scout Groups post-event.
 
 Then into STS[^STS] website, we added the Brownsea and RadioActiv8 Django
 applications, and mapped these into the STS website's various models.
@@ -202,7 +236,10 @@ applications, and mapped these into the STS website's various models.
 [^STS]: _Star Trek: Survival_
 
 As always, we sought a straightforward, user-friendly workflow for both members
-and organisers. The idea was:
+and organisers - an oxymoronic representation of the Be Prepared motto for any
+Scouting planning process.
+
+The idea was:
 
 1. Member uses Brownsea to sign up using their Scouts Victoria membership information
 2. As part of sign-up, the member can select which activities interest them
@@ -232,10 +269,10 @@ One of Django's huge advantages in an endeavour like this is its admin app. I
 was able to give event administrators access to the admin without writing them a
 custom portal up-front, and in general it was Good Enough™ for their needs.
 
-Also, as previously mentioned, as part of our Youth Leading, Adults Supporting
-approach, we wanted our youngest scouts to be able to contribute to running STS,
-so here are some Joeys in Starfleet Command, dispatching patrols to their
-various other bases.
+As part of our Youth Leading, Adults Supporting approach, we wanted our youngest
+scouts to be able to contribute to running STS, so here are some Joeys in
+Starfleet Command, dispatching patrols to their various other bases.
+Content warning: Cute youth members.
 
 ![3 Joeys sitting at a table in front of a two-way radio, and a computer with 2
 monitors, being mentored by a Venturer on how to operate the
