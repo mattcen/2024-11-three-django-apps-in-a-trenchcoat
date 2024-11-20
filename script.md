@@ -67,8 +67,6 @@ coding education spaces.
 
 # 2. Brownsea
 
-## 2.a. Preamble ScoutHack
-
 <!--
 [!FIXME - This is verbose. Remove from talk, but keep this as a note.]
 Building a Legion of Devs is ambitious, and starting that process
@@ -82,7 +80,7 @@ accessible to young people via websites, it seems obvious that web development
 is the best place to start building skills with a tangible outcome.
 -->
 
-## 2.b. About ScoutHack
+## 2.a. About ScoutHack
 
 So we created ScoutHack[^ScoutHack], a WebDev course that walks Scouts aged ten
 to adult through HTML, CSS, and Python Flask. Check out our [Lightning Talk from
@@ -92,54 +90,42 @@ Teaching Kids Webdev](https://www.youtube.com/watch?v=VXFuL5PcPKI) for a deeper
 dive. Today we're discussing the registration app built to support event
 registrations - our second app in our trenchcoat!
 
-## Registration System needs
+## 2.b. Registration System needs
 
-However, registration for an event in the organisation poses some administrative
-burdens we felt empowered to overcome. Firstly, the member database system for
-event registration requires a lot of administrative rework and data duplication.
+However, registration for a Scouting event poses some administrative burdens we
+felt empowered to overcome.
+
+FIXME tidy up phrasing:
+
+FIXME: Option 1: Firstly, minimise the need for an event administrator to export
+(and thus duplicate/exfiltrate) registration data in order to augment it with
+information such as catering or grouping.
+
+FIXME: Option 2: Firstly, minimize the need for data exfiltration and
+duplication as a solution to support event functions like catering and grouping.
+
 Secondly, avoid paying a third party provider that only does half of what we
-need. Thirdly, use a system that understands the unique structure of the
+need.
+
+Thirdly, use a system that understands the unique structure of the
 organisation.
 
-In summary, our need is to allow registered members to sign up for an event;
-prefill as much PII as needed from our membership database while using as little
-as possible; auto-generate an invoice from our accounting system; summarize
-dietary needs at a glance; and as a proficient user, have the whole process take
-about 60 seconds.
+In summary, our need is to:
 
-## Registration System capabilities
+1. allow registered members to sign up for an event
+2. prefill the minimum essential PII from our membership database
+3. auto-generate an invoice from our accounting system
+4. summarise dietary needs at a glance
+5. and as a proficient user, have the whole process take about 60 seconds.
 
-### Introducing Brownsea
+## 2.c. Registration System capabilities
 
-Welcome to Brownsea[^Brownsea]! Using an membership database API and
-<<!FIXME>techno-babble Django sweetness>, we now have a viable system for any event
-administrator to use to manage the event details for our organisation.
+Welcome to Brownsea[^Brownsea]! This system integrates with authenticated API
+endpoints of Extranet[^Extranet], which do the following:
 
 [^Brownsea]:
     Named after the first Scout camp held by Lord Robert Baden-Powell
     on Brownsea Island in England in 1907
-
-In Australia, Scouts is split up into [5
-sections](https://scoutsvictoria.com.au/age-sections-adults/)[^Sections]:
-
-[^Sections]:
-    - Joey Scouts 5--8 Years
-    - Cub Scouts 8--11 Years
-    - Scouts 11--14 Years
-    - Venturers 14--18 Years
-    - Rovers 18--25 Years
-
-Better UX opportunities were available to pursue, so we set to request contact
-information from the existing membership database while only pulling what we
-needed - the less PII[^PII] we collect and store, the better. This results in a
-sign up and receive an invoice process taking, literally, 30 seconds:
-
-[^PII]: Personally Identifiable Information
-
-<video controls src="images/Brownsea-rego.mp4" width="720"></video>
-
-This system integrates with <del>a pair of</del> <!--obfuscation of detail-->
-authenticated API endpoints of Extranet[^Extranet], which do the following:
 
 [^Extranet]: Scouts Victoria's membership database
 
@@ -151,60 +137,91 @@ authenticated API endpoints of Extranet[^Extranet], which do the following:
    - Email address
    - Phone number
    - Age (years, as an integer)
-   - List of roles within the organisation, including name of scout group(s).
+   - List of roles within the organisation, including name of Scout Group(s).
 
 [^names]: Yes, I hate that we split up names into given/surnames too.
 
-Our goal was not only to store minimal information, but to streamline the
-sign-up experience by avoiding _requesting_ information that we could get from
-the existing membership database, but allowing members to override
-system-provided information if desired. This also incentivises members to keep
-their membership record up to date (something that sometimes falls by the
-wayside).
+We now have a viable system for any event administrator to manage the event
+details for our organisation.
 
-Brownsea has made it trivial for members to sign up to ScoutHack, and receive a
-Xero invoice both in the interface, and via email (the system doesn't accept
-credit card payments currently).
+## 2.d. Limiting data storage needs
 
-Now we have some members registered, and we've got them sorted into Patrols.
-Time for some fun with radios.
+Our goal is to store minimal PII[^PII] and streamline the sign-up experience by
+avoiding _requesting_ information that we could get from the existing membership
+database, and still allowing members to override system-provided information if
+desired.
 
-2. CQ, CQ, CQ: RadioActiv8
+[^PII]: Personally Identifiable Information
 
-2.a. Introduce RA8
+We achieved this by only allowing registration using valid member-database
+authorization credentials, forcing members to update their membership records if
+there are data inaccuracies or mismatches, and allowing authorized registrants
+could override the data presented by the membership registration database if
+they needed to use other contact details for the purpose of the event.
+
+## 2.e. Ease and speed of use
+
+Brownsea has made it trivial for members to sign up to ScoutHack, and
+immediately receive a Xero invoice both in the interface and via email (the
+system doesn't accept credit card payments currently). This results in a sign up
+and receive an invoice process taking, literally, 30 seconds:
+
+<video controls src="images/Brownsea-rego.mp4" width="720"></video>
+
+Now we have members registered to participate, it's time for some program.
+Let's play with some radios!
+
+FIXME: Wait wait, we don't have them sorted into Patrols; we don't even know
+what a Patrol *is* at this stage!
+
+# 3. CQ, CQ, CQ: RadioActiv8
+
+### 3.a. Introduce RA8
 
 As our State Leader of Communication Technologies, Luke wanted to replicate the
-exciting experience of Amateur Radio Contesting as an activity for Scouts. A
-metaphor of fishing (with a rod, not a mail server), the joy of contesting is
+exciting experience of Amateur Radio Contesting as an activity for Scouts.
+
+### 3.b. Introduce Radio Contesting
+
+A metaphor of fishing (with a rod, not a mail server), the joy of contesting is
 found in making contact with another radio station, exchanging callsigns,
 location, and a custom serial identifier, before searching for another contact -
 the station with the most contacts wins the contest, so speed and efficiency are
-rewarded. Contests had already proved interesting and exciting to our Youth
-members, so why not simulate the experience as a next- generation wide
-game[^WideGame]? In its simplest form, scouts would use two-way radios to
-receive instructions and relay information while running around a park.
+rewarded.
+
+### 3.c. Contesting into youth program
+
+Contests had already proved interesting and exciting to our Youth members, so
+why not simulate the experience as a next-generation wide game[^WideGame]? In
+its simplest form, scouts would use two-way radios to receive instructions and
+relay information while running around a park.
 
 [^WideGame]:
     wide game (n) (plural wide games): Any of various games played by
     groups in a large area, such as a field or woodland.
 
-2.b. RadioActiv8 Gameplay
+### 3.d. RadioActiv8 concept
 
+FIXME: Rephrase "grid" and "matrix" etc
 The principle of RadioActiv8[^RA8Name] is quite straightforward: Bases are set
 out across a neighbourhood park or Scout Camp. Each base has a two-way radio,
 and a sign with the name of the base and an intelligence grid featuring an
-answer matrix. At the start of the game, each patrol[^Patrol] is sent to
-a base. Once they arrive, they radio to HQ, identify their patrol and
-current location to HQ. The HQ station response with a question, which they
-answer using the intelligence answer matrix. Once the an answer is given, HQ
-provides a new destination. The game's end condition (and whether it is
-competitive) is up to the facilitator's discretion. The Proof-of-Concept used a
-sheet of paper to track the game state[^GameState] of patrols, recorded by Luke
-while we gave contacts the next base to attend.
+answer matrix.
 
 [^RA8Name]:
     Wordplay on the use of two-way radios, the active component of
     moving between bases, "activate", and "radioactive". Abbreviated to RA8
+
+### 3.e. RadioActiv8 gameplay
+
+At the start of the game, each patrol[^Patrol] is sent to
+a base. Once they arrive, they radio to HQ and identify themselves and
+current location. The HQ station responds with a question which the patrol must
+answer using the intelligence answer matrix. On receipt of an answer HQ
+provides the patrol a new destination. The game's end condition (and whether it is
+competitive) is up to the facilitator's discretion. The proof-of-concept used a
+sheet of paper to track the game state[^GameState] of patrols, recorded by Luke
+while we gave contacts the next base to attend.
 
 [^Patrol]: A group of 4-7 scouts
 
@@ -217,13 +234,21 @@ represented by coloured dot stickers. Under each base is a list of intelligence
 answers, most of which are crossed out with circled patrol names beside them,
 indicating who answered what.](images/ra8-0.1.jpg)
 
-Obviously this approach doesn't scale well, and can get overwhelming quickly for
-a poor operator to manage. Increasing scale with multiple radio operators at HQ
-trying to write on the same sheet of paper was hilarious, but not optimal with a
-high number of patrols and bases, so we sought a better solution.
+### 3.f. RadioActiv8 - does it scale?
 
-What we needed, was a CRUD[^CRUD] app, and having recently begun experimenting
-with Django, I was _definitely_ feeling like a perfectionist with
+Obviously this approach doesn't scale well, and can get overwhelming quickly for
+an inexperienced operator to manage. Increasing scale necessitated multiple
+radio operators at HQ trying to write on the same sheet of paper with hilarious
+and chaotic results, but was not optimal with a high number of patrols and
+bases, so we sought a better solution.
+
+FIXME: We introduce Django and CRUD below, but should move some of this up to
+the Brownsea section
+
+### 3.g. Digitizing RadioActiv8
+
+What we needed was a CRUD[^CRUD] app, and having recently begun experimenting
+with Django, mattcen was _definitely_ feeling like a perfectionist with
 deadlines[^DjangoSlogan], so reached for it immediately.
 
 [^CRUD]: [Create, Read, Update,
@@ -233,12 +258,17 @@ Delete](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
     Django's slogan is "The web framework for perfectionists with
     deadlines." as per their [website header](https://www.djangoproject.com/)
 
-After a month or so, we had an app so simple, that Joeys[^Joey] could sit in the
-hotseat at our HQ:
+### 3.h. RadioActiv8 is Youth Led!
 
-[^Joey]: 5--7-year-old scouts
+[!FIXME clean up this wording. #phrasing, boom]
+After a few trial sessions, we refined the app so effectively that the complex
+contest concepts became a simple process to follow. This was so effective that
+the entire game could be independently managed by older Scouts with minor
+support from us.
 
 ![FIXME: The iteration of the RadioActiv8 main page](images/RadioActiv8%20-%20Play.png)
+
+### 3.i. RadioActiv8 Interface
 
 This form is laid out in a logical order. When a patrol first contacts HQ, we
 want their patrol name or number. Once we have that, the system can suggest,
@@ -249,28 +279,33 @@ intelligence was answered correctly, and then if the patrol is checking out of
 the base, they can confirm the destination is sensible, and send the patrol on
 their way.
 
+### 3.j. Expanding capability (Yes, it scales)
+
 After successfully running RadioActiv8 as one of several dozen activities at a
 state-wide scout event, and getting great feedback, we were keen to find other
 uses for this platform. For example, each base only has intelligence on a card,
-but what if the base was an activity base, that had a task to complete?
-RadioActiv8 would work really well at distributing Youth members to different
+but what if the base was an activity base that had a task to complete?
+
+RadioActiv8 would work really well for distributing Youth members to different
 activities, and so we began putting together ideas as to how this application
 would work to facilitate management of a Scouting event, rather than just being
-an activity itself.
+an activity for its own sake.
 
 ---
 
-4. Star Trek: Survival (2022, 2024)
+--- We are here ---
 
-The best way to teach a young person (or anyone, really) is to make it fun. The
+### 4. Star Trek: Survival (2022, 2024)
+
+The best way to teach a young person (or anyone, really) is to make it fun <ins>and engaging</ins>. The
 more fun the activity, the less obstruction to focus and learning. Immersion of
 experience, much like chocolate on vegetables, is a great way to discover new
 skills and explore self-capability without feeling the burden of pressure to
 learn.
 
-To that end, we have devliered not one, but two [_Star Trek:
+To that end, we have devlivered not one, but two [_Star Trek:
 Survival_'s](https://startreksurvival.tech/), "an _immersive_ adventure
-experience for all Scouting Members". This website forms our third app in our
+experience for all Scouting Members". This website forms the third app in our
 trenchcoat.
 
 We have supported many STEM-based activities at conventional Scouting events,
@@ -279,19 +314,18 @@ distribution utility, we decided to combine these activities into an immersive
 program experience.
 
 The idea was that we'd take over one of Scouts Victoria's largest Scout camps,
-(Mafeking Rover Park, about 2 hours north-east of Melbourne) and invite various
-Activity Teams to each run activities, and use RadioActiv8 to run the entire
-event by sending patrols to activities based on pre-selected patrol preferences,
-walking distance, activity capacity, and availability.
+invite various Activity Teams to each run activity, and use RadioActiv8 to run
+the entire event by sending patrols to activities based on pre-selected patrol
+preferences, walking distance, activity capacity, and availability.
 
 The first step was to create a _Star Trek: Survival_ website. The Program team
 compiled a list of 18 individual activities for the 2022 event, with 18
 additional activities added to the 2024 event.
 
 Each activity was published online, and included an immersive Trek-themed
-narrative a list of "I can..." skill-based statements that facilitate Scouts
+narrative, and a list of "I can..." skill-based statements that facilitate Scouts
 Australia's award scheme components, ready for peer-review and presentation back
-in their Scout Groups post-event.
+to their Scout Groups post-event.
 
 ![FIXME Get an "I Can" statement list from STS mission ]
 
@@ -301,11 +335,11 @@ applications, and mapped these into the STS website's various models.
 [^STS]: _Star Trek: Survival_
 
 As always, we sought a straightforward, user-friendly workflow for both members
-and organisers - for the most part, this was achieved as a minimum viable
+and organisers -- for the most part, this was achieved as a minimum viable
 product with room to grow.
 
 <del>The idea was:</del>
-The workflow follows: [!FIXME: phrasing this sentence.]
+The combined workflow follows: [!FIXME: phrasing this sentence.]
 
 1. Member uses Brownsea to sign up using their Scouts Victoria membership information
 2. As part of sign-up, the member can select which activities interest them
@@ -315,12 +349,13 @@ The workflow follows: [!FIXME: phrasing this sentence.]
 4. These scout groups' leaders can sign in (again using their Scouts Vic
    membership details) to check which of their members have registered, and
    which patrols they've been allocated to.
-5. When the event begins, every member is signed in using Brownsea's admin
-   portal, given a 2-way radio to keep, and sets up cap with their patrol.
-6. Each patrol is sent off to one of the activities on their priority list.
-7. On arrival, the patrol checks in by radioing their identity and location to
-   the RadioActiv8 team at Starfleet Command (which is also one of the
-   activities), does the activity, and checks out the same way.
+5. When the event begins, every member is checked in using Brownsea's admin
+   portal, given a 2-way radio to keep, and sets up camp with their patrol.
+6. When activities begin, each patrol is sent off to one of the activities on
+   their priority list.
+7. On arrival at their activity, the patrol checks in by radioing their
+   identity and location to the RadioActiv8 team at Starfleet Command (which is
+   also one of the activities), does the activity, and checks out the same way.
 8. This continues throughout the weekend, and each patrol gets to complete
    _most_ of their preferred activities.
 9. After the weekend, each member can access a web page listing which award
@@ -335,6 +370,8 @@ One of Django's huge advantages in an endeavour like this is its admin app. I
 was able to give event administrators access to the admin without writing them a
 custom portal up-front, and in general it was Good Enough™ for their needs.
 
+#### Post-event tech review
+
 From a technical perspective, we wanted to do our best to adhere to current
 industry best practices for the tools we used. Django is obviously a
 well-understood and battle-tested framework. As much as possible, we run all of
@@ -345,8 +382,7 @@ to reduce what they have to learn. As a result, we're doing what we can to
 standardise on HTMX for the interactive parts of RadioActiv8, so that people
 don't need to know JavaScript or another front-end framework.
 
-
-4.d Evidence of success
+# 5.a Evidence of success
 
 Under our Youth Lead, Adult Supported approach and assisted by the process
 driven layout of the RadioActiv8, we are able to have our youngest scouts to be
@@ -357,8 +393,6 @@ Content warning: Cute youth members.
 ![3 Joeys sitting at a table in front of a two-way radio, and a computer with 2
 monitors, being mentored by a Venturer on how to operate the
 equipment](images/1000001380.jpg)
-
-4.e
 
 To guide our dispatch team to make operational decisions, RadioActiv8 uses
 comprehensive dashboards that include the base capacity, last known location of
@@ -383,11 +417,13 @@ to be Youth Led, and Adult Supported. With thanks to the capabilities of Python
 and Django, we can continue to do perpetuate our success and upskill our members
 in ways that were only a dream just a few years ago.
 
----
+--- EOF ---
 
 ---
 
-# OK here we go
+---
+
+# OK [here we go](https://www.youtube.com/watch?v=-l5G5BT8-fQ)
 
 ## Outline
 
