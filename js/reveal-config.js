@@ -2,8 +2,8 @@
 // - https://revealjs.com/initialization/
 // - https://revealjs.com/config/
 // TODO: Set socket server here
-//socket_server = 'https://familiar-kiwi-iguanodon.glitch.me'; // Location of socket.io server for multiplex
-socket_server = 'http://localhost'; // Location of socket.io server for multiplex
+socket_server = 'https://familiar-kiwi-iguanodon.glitch.me'; // Location of socket.io server for multiplex
+//socket_server = 'http://localhost'; // Location of socket.io server for multiplex
 Reveal.initialize({
 	hash: true,
 	hashOneBasedIndex: true,
@@ -38,7 +38,7 @@ Reveal.initialize({
 		// For viewer
 		secret: null, // null so the clients do not have control of the master presentation
 		// TODO: Set id for client here
-		id: '557d20e1b2b12563', // Obtained from socket.io server
+		id: '688237e853b409c5', // Obtained from socket.io server
 		url: socket_server
 	},
 
