@@ -21,70 +21,78 @@ Content Summary:
   c.
 
 
+# Introduction & Motivation
 
+## 1.a. Introduce Speakers
 
-1.a. Introduce Speakers
-mattcen is a Linux systems administrator and software developer,
-Luke is a security analyst and systems architect with interests in web development
-and security education. We are also both Amateur Radio Operators.
+mattcen is a Linux systems administrator and software developer;
+Luke is a security analyst and systems architect with interests in web
+development and security education. We are also both Amateur Radio Operators.
+FIXME: Phrasing: "We are also both…" "Luke and I are both…" -- tie these
+together better
 
-Luke and I are both members of the STEM[^STEM] team of Scouts Victoria, and thus
-part of WOSM[^WOSM]; a "Youth Lead, Adult Supported" organisation focused on
+Luke and I are both members of the STEM[^STEM] team of Scouts Victoria; a "Youth Lead, Adult Supported" organisation focused on
 empowering young people to pursue fun and adventurous activities they want to do,
-and facilitate their safe participation in camping, climbing, sailing, cycling,
-and our specialties, radio communications and  website development.
-
-1.b. Introduce organisational goals Scouting has come a long way from camping in
-the bush and tying knots, and as Leaders, we are hellbent on continuing to
-engage young people in providing Scouting and the wider community with better
-resources.
+and facilitating their safe participation in camping, climbing, sailing, cycling,
+and our specialties, radio communications and website development.
 
 [^STEM]: Science, Technology, Engineering, Maths
 
 [^WOSM]: World Organization of the Scout Movement
 
-1.c. Organisation Limitations As an organisation run by volunteers, we don't
+## 1.b. Introduce organisational goals
+
+Scouting has come a long way from camping in the bush and tying knots, and as
+Leaders, we are hellbent on continuing to engage young people in providing
+better resources to both Scouting and the wider community.
+
+## 1.c. Organisation Limitations
+
+As an organisation run by volunteers, we don't
 always have the resources to work as efficiently as we'd like. Some of our IT
 systems are dated (think PHP sites from the early 2000s) and due to limited
 resources, haven't always grown as the organisation's needs have changed. Our
-organisation is unique in its structure, and isn't well served by off-the-shelf
+organisation is unique in its structure, and isn't well-served by off-the-shelf
 products.
 
-1.d. Supporting a Legion of Devs using Python Luke and I have often considered
-the value of raising a "Legion of Devs" to perpetuate volunteer development and
-growth of Scouting information tools. Python and its supportive framework are a
-natural colleague to this challenge, with Python being a friendly and familiar
-language to young coders through school and tech programs already well
-established. Python and its frameworks are an obvious solution due to its
-ubiquitous presence in early coding education spaces.
+## 1.d. Supporting a Legion of Devs using Python
 
-2. Brownsea
-Because having just one project on the go is boring for two folks with ADHD, and
-on the back of building RadioActiv8, yet another tech platform that needed
-maintenance, we were keen to empower scouts to help out with this, so Luke
-created .
+Luke and I have often considered the value of raising a "Legion of Devs" to
+perpetuate volunteer development and growth of Scouting information tools.
+Python with its supportive framework is a natural colleague to this challenge,
+with Python being a friendly and familiar language to young coders through
+school and tech programs already well established. Python, along with its
+frameworks, is an obvious solution due to its ubiquitous presence in early
+coding education spaces.
 
-Building a Legion of Devs is ambitious, and starting that process at age 10 is
-insanity. We have learnt that teaching young people to code can never be started
-too early - how this is achieved is much more important. While there are
-plethora of excellent coding resources that teach kids to build games or spin
-turtle on their local machines, we found that sharing information is not only a
-skill for life, but part of the most rewarding tech experiences for young people
-to see the fruit of their labour. Given the ubiquity of information accessible
-to young people via websites, it seems obvious that web development is the best
-place to start building skills with a tangible outcome.
+# 2. Brownsea
 
-So we created ScoutHack[^ScoutHack], a WebDev course that walks participants
-through HTML, CSS, and Python. Check out our Lightening Talk from Everything
-Open 2023 for a little more about that adventure. Today we're discussing the
-registration app built to support event registrations - our second app in our
-trenchcoat!
+## 2.a. Preamble ScoutHack
 
-[^ScoutHack]:
-    A weekend long hackathon/tutorial hybrid in which we teach youth 11-years
-    and up basic HTML, CSS, and a little Python in the form of a Flask app. See
-    Matt's talk [Developing Labs for Teaching Kids
-    Webdev](https://www.youtube.com/watch?v=VXFuL5PcPKI) for more information
+<!--
+[!FIXME - This is verbose. Remove from talk, but keep this as a note.]
+Building a Legion of Devs is ambitious, and starting that process
+at age 10 is insanity. We have learnt that teaching young people to code can
+never be started too early - how this is achieved is much more important. While
+there is a plethora of excellent coding resources that teach kids to build games
+or spin turtles on their local machines, we found that sharing information is
+not only a skill for life, but one of the most rewarding tech experiences for
+young people to see the fruit of their labour. Given the ubiquity of information
+accessible to young people via websites, it seems obvious that web development
+is the best place to start building skills with a tangible outcome.
+-->
+
+## 2.b. About ScoutHack
+
+So we created ScoutHack[^ScoutHack], a WebDev course that walks Scouts aged ten
+to adult through HTML, CSS, and Python Flask. Check out our [Lightning Talk from
+Everything Open 2023](https://www.youtube.com/watch?v=GGgHsA8WifE&t=1460) for a
+little more about that adventure, or mattcen's talk, [Developing Labs for
+Teaching Kids Webdev](https://www.youtube.com/watch?v=VXFuL5PcPKI) for a deeper
+dive. Today we're discussing the registration app built to support event
+registrations - our second app in our trenchcoat!
+
+## Registration System needs
 
 However, registration for an event in the organisation poses some administrative
 burdens we felt empowered to overcome. Firstly, the member database system for
@@ -98,6 +106,10 @@ prefill as much PII as needed from our membership database while using as little
 as possible; auto-generate an invoice from our accounting system; summarize
 dietary needs at a glance; and as a proficient user, have the whole process take
 about 60 seconds.
+
+## Registration System capabilities
+
+### Introducing Brownsea
 
 Welcome to Brownsea[^Brownsea]! Using an membership database API and
 <<!FIXME>techno-babble Django sweetness>, we now have a viable system for any event
@@ -189,8 +201,6 @@ provides a new destination. The game's end condition (and whether it is
 competitive) is up to the facilitator's discretion. The Proof-of-Concept used a
 sheet of paper to track the game state[^GameState] of patrols, recorded by Luke
 while we gave contacts the next base to attend.
-
-
 
 [^RA8Name]:
     Wordplay on the use of two-way radios, the active component of
@@ -319,33 +329,11 @@ The workflow follows: [!FIXME: phrasing this sentence.]
 
 Both Brownsea and RadioActiv8 required additional features to facilitate STS.
 Some of these features were generically useful for most events, but a small
-subset were specific to STS, so I carefully kept those on a separate branch.
+subset were specific to STS and carefully kept on a separate branch.
 
 One of Django's huge advantages in an endeavour like this is its admin app. I
 was able to give event administrators access to the admin without writing them a
 custom portal up-front, and in general it was Good Enough™ for their needs.
-
-As part of our Youth Leading, Adults Supporting approach, we wanted our youngest
-scouts to be able to contribute to running STS, so here are some Joeys in
-Starfleet Command, dispatching patrols to their various other bases.
-Content warning: Cute youth members.
-
-![3 Joeys sitting at a table in front of a two-way radio, and a computer with 2
-monitors, being mentored by a Venturer on how to operate the
-equipment](images/1000001380.jpg)
-
-As part of RadioActiv8, there are some comprehensive dashboards showing base
-capacity, last known location of each patrol, and when we've last heard from
-them. Still on my to-do list is an interactive map showing everyone's locations,
-but in lieu of that, and to keep things fun, we printed out an A0 table-top
-gaming-style map of the entire campsite and its activities, with which Starfleet
-Command personnel could visually track the location of each patrol:
-
-![an A0 map of coloured hexagons on a table, with magnetic markers for each
-patrol. There are 2 Venturers standing around the table updating the map's
-locations](images/ima_6316733.jpeg)
-
----
 
 From a technical perspective, we wanted to do our best to adhere to current
 industry best practices for the tools we used. Django is obviously a
@@ -357,6 +345,43 @@ to reduce what they have to learn. As a result, we're doing what we can to
 standardise on HTMX for the interactive parts of RadioActiv8, so that people
 don't need to know JavaScript or another front-end framework.
 
+
+4.d Evidence of success
+
+Under our Youth Lead, Adult Supported approach and assisted by the process
+driven layout of the RadioActiv8, we are able to have our youngest scouts to be
+able to contribute to running STS, so here are some Joey Scouts in Starfleet
+Command, dispatching patrols of peers and seniors to their various other bases.
+Content warning: Cute youth members.
+
+![3 Joeys sitting at a table in front of a two-way radio, and a computer with 2
+monitors, being mentored by a Venturer on how to operate the
+equipment](images/1000001380.jpg)
+
+4.e
+
+To guide our dispatch team to make operational decisions, RadioActiv8 uses
+comprehensive dashboards that include the base capacity, last known location of
+each patrol, and when we last heard from them. We're yet to develop an
+interactive map showing everyone's locations but is on the to-do list. To
+overcome this for our visual and kinesthetic learners, our colleague designed an
+ A0 table-top gaming-style map of the entire campsite and its activities, with
+ which Starfleet Command personnel could use to visually track the
+location of each patrol:
+
+![an A0 map of coloured hexagons on a table, with magnetic markers for each
+patrol. There are 2 Venturers standing around the table updating the map's
+locations](images/ima_6316733.jpeg)
+
+Using RadioActiv8, Brownsea, and the STS website in an integrated fashion helped
+us to minimize the administrative functions of supporting the delivery of the
+Scouting program, and gave Scouts Victoria the capability to allow simultaneous
+participation and delivery of the Scouting program.
+
+As a result, we have literally made it possible for the operations of an event
+to be Youth Led, and Adult Supported. With thanks to the capabilities of Python
+and Django, we can continue to do perpetuate our success and upskill our members
+in ways that were only a dream just a few years ago.
 
 ---
 
