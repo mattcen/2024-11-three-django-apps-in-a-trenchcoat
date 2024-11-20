@@ -107,13 +107,14 @@ created ScoutHack[^ScoutHack].
     Webdev](https://www.youtube.com/watch?v=VXFuL5PcPKI) for more information
 
 In Australia, Scouts is split up into [5
-sections](https://scoutsvictoria.com.au/age-sections-adults/):
+sections](https://scoutsvictoria.com.au/age-sections-adults/)[^Sections]:
 
-- Joey Scouts 5--8 Years
-- Cub Scouts 8--11 Years
-- Scouts 11--14 Years
-- Venturers 14--18 Years
-- Rovers 18--25 Years
+[^Sections]:
+    - Joey Scouts 5--8 Years
+    - Cub Scouts 8--11 Years
+    - Scouts 11--14 Years
+    - Venturers 14--18 Years
+    - Rovers 18--25 Years
 
 As we were preparing for ScoutHack, we rediscovered that the main Scouts
 Victoria event management system, which ties into our membership database, only
@@ -262,3 +263,59 @@ to be maintainable by youth members who may be very novice programmers, we want
 to reduce what they have to learn. As a result, we're doing what we can to
 standardise on HTMX for the interactive parts of RadioActiv8, so that people
 don't need to know JavaScript or another front-end framework.
+
+
+---
+
+---
+
+# OK here we go
+
+This talk is about building web apps voluntarily for a non-profit organisation
+to solve organisational and logistical challenges.
+
+We'll start with a little backstory about us and the organisation, and touch on
+the problems we're trying to solve.
+
+Then we'll describe the evolving solutions we've developed, initially at a high
+level, but getting into a bit of the technical detail, time permitting.
+
+---
+
+Luke and I are both members of the STEM[^STEM] team of Scouts Victoria, a "youth
+leading, adults supporting" organisation, meaning that, far above and beyond the
+stereotype of camping in the bush and tying knots, we empower kids and young
+adults to decide what fun and educational activities they want to do, and
+facilitate their safe participation in anything from rock climbing, to air
+activities, to laser tag, to website development.
+
+[^STEM]: Science, Technology, Engineering, Maths
+
+We're also both technologists; I'm a Linux systems administrator and software
+developer, and Luke is an IT generalist with interests in website development
+and information security.
+
+---
+
+FIXME: How much do we talk about the logistical and organisational problems of
+the organisation as a whole, vs the specific chanllenges we face as a result?
+
+Our ultimate goal is to deliver program requested by youth members in a way that
+gives them as much input as possible, while removing any friction to
+participating in, or organising activities and events, in a way that is
+child-safe and protects people's privacy.
+
+We wanted to be able to manage ScoutsVic member registrations for upcoming
+events, but (a) need to verify registrants *are* members of ScoutsVic, and (b)
+want to offer different "tickets" to the same event to different ages and scout
+sections[^Sections]. No existing systems met this need without also collecting
+unnecessary amounts of PII[^PII], which we wanted to avoid the responsibility of
+storing safely.
+
+[^PII]: Personally Identifiable Information
+
+FIXME: What *problem* does RA8 solve? Sure it facilitates a wide-game, but is
+that it? I know it was designed with the likes of ScoutHike in mind, so perhaps
+the greater problem is "how do we keep track of youth members across a large
+area, and send them to different activities without them having to wait around
+for activities to be available etc.?"
