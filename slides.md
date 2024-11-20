@@ -103,7 +103,7 @@ I pledge to do my best to respect, learn from, and support these peoples. We can
 
 Note:
 
-Scouts Australia is an accredited member of the World Organisation of the Scouting Movement. Scouts Victoria is a Branch of this federation, and provides young people aged 5 to 25 with fun and challenging opportunities to grow through adventure. The modern Scouting program goes beyond the traditional outdoor Scouting activities of camping and hiking, and incorporates contemporary program opportunties that involve responsible risk taking and development of vocational skills that are supported through a peer-supported award scheme to recognize individual achievement. Each Branch of Scouts Australia works to achieve these common goals, but is responsible for executing their own administrative support objectives.
+Scouts Australia is an accredited member of the World Organisation of the Scouting Movement. Scouts Victoria is a Branch of this federation, and provides young people aged 5 to 25 with fun and challenging opportunities to grow through adventure. The modern Scouting program goes beyond the traditional outdoor Scouting activities of camping and hiking, and incorporates contemporary program opportunities that involve responsible risk taking and development of vocational skills that are supported through a peer-supported award scheme to recognize individual achievement. Each Branch of Scouts Australia works to achieve these common goals, but is responsible for executing their own administrative support objectives.
 
 
 You can see where the hierarchy problem begins...

@@ -335,7 +335,7 @@ and information security.
 ---
 
 FIXME: How much do we talk about the logistical and organisational problems of
-the organisation as a whole, vs the specific chanllenges we face as a result?
+the organisation as a whole, vs the specific challenges we face as a result?
 
 Our ultimate goal is to deliver program requested by youth members in a way that
 gives them as much input as possible, while removing any friction to
