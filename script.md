@@ -7,20 +7,36 @@ Content Summary:
 
 1. Introduction & Motivation
   a. Introduce speakers
-  b. Outline
+  b. Talk Outline
   c. Introduce organisational goals
   d. Organisation limitations
   e. Supporting a Legion of Devs with Python
 
 2. Brownsea
-  a. ScoutHack Origins
+  a. About ScoutHack
+  b. Registration System needs
+  c. Registration System capabilities
+  d. Limiting data storage needs
+  e. Ease and speed of use
 
+3. CQ, CQ, CQ: RadioActiv8
+  a. Introduce RA8
+  b. Introduce Radio Contesting
+  c. Contesting into youth program
+  d. RadioActiv8 concept
+  e. RadioActiv8 gameplay
+  f. RadioActiv8 - does it scale?
+  g. Digitizing RadioActiv8
+  h. RadioActiv8 is Youth Led!
+  i. RadioActiv8 Interface
+  j. Expanding capability (Yes, it scales)
 
-3. RadioActiv8
-  a. What is RA8 - Where did I come from
-  b.
-  c.
+4. Star Trek: Survival (2022, 2024)
 
+5.
+  a. Evidence of success
+
+---
 
 # Introduction & Motivation
 
@@ -43,7 +59,7 @@ communications and website development.
 
 [^WOSM]: World Organization of the Scout Movement
 
-## 1.b Talk Outline
+## 1.b. Talk Outline
 
 This talk is about building web apps voluntarily for a non-profit organisation
 to solve organisational and logistical challenges.
@@ -401,7 +417,7 @@ to reduce what they have to learn. As a result, we're doing what we can to
 standardise on HTMX for the interactive parts of RadioActiv8, so that people
 don't need to know JavaScript or another front-end framework.
 
-# 5.a Evidence of success
+## 5.a. Evidence of success
 
 Under our Youth Lead, Adult Supported approach and assisted by the process
 driven layout of the RadioActiv8, we are able to have our youngest scouts to be
