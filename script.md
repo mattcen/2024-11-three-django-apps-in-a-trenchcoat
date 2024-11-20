@@ -7,9 +7,10 @@ Content Summary:
 
 1. Introduction & Motivation
   a. Introduce speakers
-  b. Introduce organisational goals
-  c. Organisation limitations
-  d. Supporting a Legion of Devs with Python
+  b. Outline
+  c. Introduce organisational goals
+  d. Organisation limitations
+  e. Supporting a Legion of Devs with Python
 
 2. Brownsea
   a. ScoutHack Origins
@@ -28,25 +29,38 @@ Content Summary:
 mattcen is a Linux systems administrator and software developer;
 Luke is a security analyst and systems architect with interests in web
 development and security education. We are also both Amateur Radio Operators.
+
 FIXME: Phrasing: "We are also both…" "Luke and I are both…" -- tie these
 together better
 
-Luke and I are both members of the STEM[^STEM] team of Scouts Victoria; a "Youth Lead, Adult Supported" organisation focused on
-empowering young people to pursue fun and adventurous activities they want to do,
-and facilitating their safe participation in camping, climbing, sailing, cycling,
-and our specialties, radio communications and website development.
+Luke and I are both members of the STEM[^STEM] team of Scouts Victoria; a "Youth
+Lead, Adult Supported" organisation focused on empowering young people to pursue
+fun and adventurous activities they want to do, and facilitating their safe
+participation in camping, climbing, sailing, cycling, and our specialties, radio
+communications and website development.
 
 [^STEM]: Science, Technology, Engineering, Maths
 
 [^WOSM]: World Organization of the Scout Movement
 
-## 1.b. Introduce organisational goals
+## 1.b Talk Outline
+
+This talk is about building web apps voluntarily for a non-profit organisation
+to solve organisational and logistical challenges.
+
+We'll start with a little backstory about us and the organisation, and touch on
+the problems we're trying to solve.
+
+Then we'll describe the evolving solutions we've developed, initially at a high
+level, but getting into a bit of the technical detail, time permitting.
+
+## 1.c. Introduce organisational goals
 
 Scouting has come a long way from camping in the bush and tying knots, and as
 Leaders, we are hellbent on continuing to engage young people in providing
 better resources to both Scouting and the wider community.
 
-## 1.c. Organisation Limitations
+## 1.d. Organisation Limitations
 
 As an organisation run by volunteers, we don't
 always have the resources to work as efficiently as we'd like. Some of our IT
@@ -55,14 +69,14 @@ resources, haven't always grown as the organisation's needs have changed. Our
 organisation is unique in its structure, and isn't well-served by off-the-shelf
 products.
 
-## 1.d. Supporting a Legion of Devs using Python
+## 1.e. Supporting a Legion of Devs using Python
 
 Luke and I have often considered the value of raising a "Legion of Devs" to
 perpetuate volunteer development and growth of Scouting information tools.
 Python with its supportive framework is a natural colleague to this challenge,
 with Python being a friendly and familiar language to young coders through
 school and tech programs already well established. Python, along with its
-frameworks, is an obvious solution due to its ubiquitous presence in early
+frameworks, is an obvious solution due to its ubiquity in early
 coding education spaces.
 
 # 2. Brownsea
@@ -291,6 +305,11 @@ activities, and so we began putting together ideas as to how this application
 would work to facilitate management of a Scouting event, rather than just being
 an activity for its own sake.
 
+FIXME: Also mention ScoutSafe implications of being able to track youth across a
+large area
+
+TODO: Show RA8 dashboard listing base capacity and patrol locations
+
 ---
 
 --- We are here ---
@@ -416,153 +435,3 @@ As a result, we have literally made it possible for the operations of an event
 to be Youth Led, and Adult Supported. With thanks to the capabilities of Python
 and Django, we can continue to do perpetuate our success and upskill our members
 in ways that were only a dream just a few years ago.
-
---- EOF ---
-
----
-
----
-
-# OK [here we go](https://www.youtube.com/watch?v=-l5G5BT8-fQ)
-
-## Outline
-
-This talk is about building web apps voluntarily for a non-profit organisation
-to solve organisational and logistical challenges.
-
-We'll start with a little backstory about us and the organisation, and touch on
-the problems we're trying to solve.
-
-Then we'll describe the evolving solutions we've developed, initially at a high
-level, but getting into a bit of the technical detail, time permitting.
-
----
-
-## Who are we
-
-Luke and I are both members of the STEM[^STEM] team of Scouts Victoria, a "youth
-leading, adults supporting" organisation, meaning that, far above and beyond the
-stereotype of camping in the bush and tying knots, we empower kids and young
-adults to decide what fun and educational activities they want to do, and
-facilitate their safe participation in anything from rock climbing, to air
-activities, to laser tag, to website development.
-
-[^STEM]: Science, Technology, Engineering, Maths
-
-We're also both technologists; I'm a Linux systems administrator and software
-developer, and Luke is an IT generalist with interests in website development
-and information security.
-
----
-
-## Our goals in scouting
-
-FIXME: How much do we talk about the logistical and organisational problems of
-the organisation as a whole, vs the specific challenges we face as a result?
-
-Our ultimate goal is to deliver program requested by youth members in a way that
-gives them as much input as possible, while removing any friction to
-participating in, or organising activities and events, in a way that is
-child-safe and protects people's privacy.
-
-We wanted to be able to manage ScoutsVic member registrations for upcoming
-events, but (a) need to verify registrants *are* members of ScoutsVic, and (b)
-want to offer different "tickets" to the same event to different ages and scout
-sections[^Sections]. No existing systems met this need without also collecting
-unnecessary amounts of PII[^PII], which we wanted to avoid the responsibility of
-storing safely.
-
-[^PII]: Personally Identifiable Information
-
-FIXME: What *problem* does RA8 solve? Sure it facilitates a wide-game, but is
-that it? I know it was designed with the likes of ScoutHike in mind, so perhaps
-the greater problem is "how do we keep track of youth members across a large
-area, and send them to different activities without them having to wait around
-for activities to be available etc.?"
-
----
-
-## Building sustainable software
-
-- Empower youth to contribute by using friendly tools and languages, and
-proactively teaching these tools as valuable skills
-
-TODO: Humming poll on who is familiar with Django to decide how much detail to
-cover.
-
----
-
-
-## Keeping track of youth member location
-
-RA8 facilitates keeping track of youth members over a large area at an event,
-and scales up to a several-hundred person event.
-
-In addition to this being a valuable safety measure at events that span a large
-campsite or a forest, we can use this to run a wide game over this sort of area
-in which we send youth to different bases around the site.
-
-TODO: Elaborate on how RadioActiv8 works and were we started with it.
-
-![RA8 0.1 paper implementation. A sheet of lined paper with 4 named bases, each
-represented by coloured dot stickers. Under each base is a list of intelligence
-answers, most of which are crossed out with circled patrol names beside them,
-indicating who answered what.](images/ra8-0.1.jpg)
-
-![FIXME: The iteration of the RadioActiv8 main page](images/RadioActiv8%20-%20Play.png)
-
-TODO: Show RA8 dashboard listing base capacity and patrol locations
-
----
-
-## Registering youth member participants to an event
-
-- Services like Eventbrite or Trybooking are great, but require storing youth
-PII with a third party, which may (but shouldn't) include medical info
-- These services also don't allow us to validate ScoutsVic membership
-- We wanted to request as little info as possible, to reduce both attack surface
-and friction for registrants.
-
-Brownsea collects:
-
-- Scouts Victoria Membership Number
-- Date of Birth
-- Surname
-- Dietary requirements
-- Any other notes the participant enters
-
-Brownsea stores:
-
-- Scouts Victoria Membership Number
-- Full name
-- Phone number
-- Email address
-- Age (to nearest year)
-- List of roles (and associated scout groups) within the organisation
-- Dietary requirements
-- Notes
-
-----
-
-### Registrant event sign-up workflow
-
-- Authenticate with surname/birthdate/membership number
-- Select an eligible event from a list
-- Select an eligible ticket from a list
-- Confirm personal and contact details, and enter dietary requirements
-- Select "register"
-- Receive invoice via link and in email
-
-----
-
-### Demo of registration
-
-<video controls src="images/Brownsea-rego.mp4" width="720"></video>
-
----
-
-### Event admin
-
-- Organisers can see registrations appear in the Django admin
-- Invoices get generated into Xero, and their payment status could be reflected
-in the admin too (though isn't currently)
