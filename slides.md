@@ -47,7 +47,6 @@ Note:
 
 - I'm Matt (they/them)
 - Find me by handle, M A T T C E N
-- Post about talk using #PyConAU and #3AppsInATrenchcoat
 - Slides available on GitHub: <https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat>
 
 ---
@@ -109,8 +108,6 @@ Scouts Australia is an accredited member of the World Organisation of the Scouti
 You can see where the hierarchy problem begins...
 
 ---
-
-## T
 
 ----
 

@@ -17,7 +17,7 @@ Reveal.initialize({
 	width: 560 * 2.5,
 	height: 300 * 2.5,
 	//autoSlide: 5000,
-	showNotes: true,
+	//showNotes: true,
 	//autoSlideStoppable: false,
 	// Learn about plugins: https://revealjs.com/plugins/
 	plugins: [
