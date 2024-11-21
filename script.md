@@ -14,68 +14,89 @@ Content Summary:
      - Both members of STEM (Science, Tech, Engineering, Maths) team of Scouts
        Victoria
      - Scouts Victoria: "Youth Lead, Adult Supported" organisation. Focus:
-      - empowering young people to pursue fun & adventurous activities they want to do
-      - facilitating safe participation in:
-        - camping
-        - climbing
-        - sailing
-        - cycling
-        - our specialties: radio communications & web development
+       - empowering young people to pursue fun & adventurous activities they
+         want to do
+       - facilitating safe participation in:
+         - camping
+         - climbing
+         - sailing
+         - cycling
+         - our specialties: radio communications & web development
   b. Talk Outline
-    - Background about organisation and problems we're trying to solve
-    - Description of evolving solutions we've developed; high level, with some
-      technical detail, time permitting
+     - Background about organisation and problems we're trying to solve
+     - Description of evolving solutions we've developed; high level, with some
+       technical detail, time permitting
   c. Introduce organisational goals
-    - Scouting has come a long way from cmping in the bush and tying knots
-    - We leaders are hellbent on supporting young people to provide better
-      resources to both Scouting and wider community
+     - Scouting has come a long way from cmping in the bush and tying knots
+     - We leaders are hellbent on supporting young people to provide better
+       resources to both Scouting and wider community
   d. Organisation limitations
-    - Our volunteer-run organisation isn't always resourced to work as efficient
-      as we'd like
-    - Some IT systems are dated; think PHP apps from the early 2000s
-    - Haven't grown to meet changing organisational needs due to limited resources
-    - Organisation is unique and not well-served by off-the-shelf products
+     - Our volunteer-run organisation isn't always resourced to work as efficient
+       as we'd like
+     - Some IT systems are dated; think PHP apps from the early 2000s
+     - Haven't grown to meet changing organisational needs due to limited resources
+     - Organisation is unique and not well-served by off-the-shelf products
   e. Supporting a Legion of Devs with Python
-    - We've considered raising a "Legion of Devs" to perpetuate volunteer-led
-      development & growth of Scouting information tools
-    - We chose Python for its similarity to English, and its ubiquitous use in
-      schools and tech programs
-    - These traits make Python and its frameworks friendly to young coders
+     - We've considered raising a "Legion of Devs" to perpetuate volunteer-led
+       development & growth of Scouting information tools
+     - We chose Python for its similarity to English, and its ubiquitous use in
+       schools and tech programs
+     - These traits make Python and its frameworks friendly to young coders
 
 2. Brownsea
   a. About ScoutHack
-    - ScoutHack: A weekend-long WebDev course
-    - Walks Scouts aged ten to adult through HTML, CSS, Python Flask
-    - Lightning Talk summary: [Everything Open
-      2023](https://www.youtube.com/watch?v=GGgHsA8WifE&t=1460)
-    - Full length presentation: [Developing Labs for Teaching Kids
-      Webdev](https://www.youtube.com/watch?v=VXFuL5PcPKI)
-    - Not covering this today though; let's discuss the registration app we
-      built
+     - ScoutHack: A weekend-long WebDev course
+     - Walks Scouts aged ten to adult through HTML, CSS, Python Flask
+     - Lightning Talk summary: [Everything Open
+       2023](https://www.youtube.com/watch?v=GGgHsA8WifE&t=1460)
+     - Full length presentation: [Developing Labs for Teaching Kids
+       Webdev](https://www.youtube.com/watch?v=VXFuL5PcPKI)
+     - Not covering this today though; let's discuss the registration app we
+       built
   b. Registration System needs
-    - Registration for a Scouting event poses some administrative burdens we
-      felt empowered to overcome:
-      1. FIXME: Complex point/concept: When a registration system doesn't allow
-         administrators to collect information such as dietary requirements, or
-         group people together for dormitory allocations or similar,
-         administrators typically export editable spreadsheets to facilitate
-         this. In addition to duplicating information and having potentially
-         outdated copies, it means PII (Personally Identifiable Information) is
-         floating around on users' devices and may not be secure.
+     - Registration for a Scouting event poses some administrative burdens we
+       felt empowered to overcome:
+       1. FIXME: Complex point/concept: When a registration system doesn't allow
+          administrators to collect information such as dietary requirements, or
+          group people together for dormitory allocations or similar,
+          administrators typically export editable spreadsheets to facilitate
+          this. In addition to duplicating information and having potentially
+          outdated copies, it means PII (Personally Identifiable Information) is
+          floating around on users' devices and may not be secure.
 
-         We wanted to discourage this risk by providing as much tooling as
-         possible within the interface so users didn't feel the need to create
-         exports.
-      2. Avoid paying a third party provider that only does half of what we
-         need
-      3. Use a system that understands the unique structure of the organisation
-    - In summary, our need is to:
-      1. Allow registered members to sign up for an event
-      2. Prefill the minimum essential PII from our membership database
-      3. Auto-generate an invoice from our accounting system
-      4. Summarise dietary needs at a glance
-      5. And as a proficient user, have the whole process take about 60 seconds
+          We wanted to discourage this risk by providing as much tooling as
+          possible within the interface, so users didn't feel the need to create
+          exports.
+       2. Avoid paying a third party provider that only does half of what we
+          need
+       3. Use a system that understands the unique structure of the organisation
+     - In summary, our need is to:
+       1. Allow registered members to sign up for an event
+       2. Prefill the minimum essential PII from our membership database
+       3. Auto-generate an invoice from our accounting system
+       4. Summarise dietary needs at a glance
+       5. And as a proficient user, have the whole process take about 60 seconds
   c. Registration System capabilities
+     - Welcome to Brownsea!
+       - Named after the first Scout camp held by Lord Robert Baden-Powell on
+         Brownsea Island, England in 1907
+     - Brownsea integrates with authenticated API endpoints of Extranet, Scouts
+       Victoria's membership database
+     - The API has two purposes:
+       1. Given a surname, date of birth, and membership number, confirm if
+          they match an active Scouts Victoria membership record.
+
+          I hate that we make assumptions about the format of people's names, but
+          that is thus far beyond our control.
+       2. Given a membership number, return minimal information about that
+          member:
+          - Name
+          - Email address
+          - Phone number
+          - Age (years, as an integer)
+          - List of roles within the organisation, including name of Scout
+            Group(s)
+     - FIXME: More info here
   d. Limiting data storage needs
   e. Ease and speed of use
 
@@ -102,20 +123,15 @@ Content Summary:
 
 ## 1.a. Introduce Speakers
 
-mattcen is a Linux systems administrator and software developer;
-Luke is a security analyst and systems architect with interests in web
-development and security education. We are also both Amateur Radio Operators.
+mattcen is a Linux systems administrator and software developer; Luke is a
+security analyst and systems architect with interests in web development and
+security education. We are also both Amateur Radio Operators, and members of the
+STEM (Science, Technology, Engineering, Maths) team of Scouts Victoria.
 
-FIXME: Phrasing: "We are also both…" "Luke and I are both…" -- tie these
-together better
-
-Luke and I are both members of the STEM[^STEM] team of Scouts Victoria; a "Youth
-Lead, Adult Supported" organisation focused on empowering young people to pursue
-fun and adventurous activities they want to do, and facilitating their safe
-participation in camping, climbing, sailing, cycling, and our specialties, radio
-communications and website development.
-
-[^STEM]: Science, Technology, Engineering, Maths
+Scouts Victoria is a "Youth Lead, Adult Supported" organisation focused on
+empowering young people to pursue fun and adventurous activities they want to
+do, and facilitating their safe participation in camping, climbing, sailing,
+cycling, and our specialties, radio communications and website development.
 
 ## 1.b. Talk Outline
 
@@ -151,7 +167,6 @@ coding education spaces.
 
 # 2. Brownsea
 
-
 <!--
 FIXME: This is verbose. Remove from talk, but keep this as a note.
 
@@ -174,7 +189,7 @@ Everything Open 2023](https://www.youtube.com/watch?v=GGgHsA8WifE&t=1460) for a
 little more about that adventure, or mattcen's talk, [Developing Labs for
 Teaching Kids Webdev](https://www.youtube.com/watch?v=VXFuL5PcPKI) for a deeper
 dive. Today we're discussing the registration app built to support event
-registrations - our <del>second</del><ins>first</ins> app in our trenchcoat!
+registrations - our first app in our trenchcoat!
 
 ## 2.b. Registration System needs
 
@@ -206,38 +221,36 @@ In summary, our need is to:
 
 ## 2.c. Registration System capabilities
 
-Welcome to Brownsea[^Brownsea]! This system integrates with authenticated API
-endpoints of Extranet[^Extranet], which do the following:
+Welcome to Brownsea! Named after the first Scout camp held by Lord Robert
+Baden-Powell on Brownsea Island in England in 1907, this system integrates with
+authenticated API endpoints of Extranet, Scouts Victoria's membership database.
 
-[^Brownsea]:
-    Named after the first Scout camp held by Lord Robert Baden-Powell
-    on Brownsea Island in England in 1907
+This API does the following:
 
-[^Extranet]: Scouts Victoria's membership database
+   1. Given a surname, date of birth, and membership number, confirm if they
+   match an active Scouts Victoria membership record
 
-1. Given a surname[^names], date of birth, and membership number, confirm if
-   they match an active Scouts Victoria membership record
+   I wish that we didn't assume people have surnames, but this is currently
+   beyond my control.
 2. Given a membership number, return minimal information about that member:
 
    - Name
    - Email address
    - Phone number
    - Age (years, as an integer)
-   - List of roles within the organisation, including name of Scout Group(s).
-
-[^names]: Yes, I hate that we split up names into given/surnames too.
+   - List of roles within the organisation, including name of Scout Group(s)
 
 We now have a viable system for any event administrator to manage the event
 details for our organisation.
 
+FIXME: More info for above paragraph
+
 ## 2.d. Limiting data storage needs
 
-Our goal is to store minimal PII[^PII] and streamline the sign-up experience by
-avoiding _requesting_ information that we could get from the existing membership
-database, and still allowing members to override system-provided information if
-desired.
-
-[^PII]: Personally Identifiable Information
+Our goal is to store minimal PII (Personally Identifiable Information) and
+streamline the sign-up experience by avoiding _requesting_ information that we
+could get from the existing membership database, and still allowing members to
+override system-provided information if desired.
 
 We achieved this by only allowing registration using valid member-database
 authorization credentials, forcing members to update their membership records if
@@ -391,12 +404,11 @@ TODO: Show RA8 dashboard listing base capacity and patrol locations
 
 ### 4. Star Trek: Survival (2022, 2024)
 
-The best way to teach a young person (or anyone, really) is to make it fun <ins>and engaging</ins>. The
-more fun the activity, the less obstruction to focus and learning. Immersion of
-experience, much like chocolate on vegetables, is a great way to discover new
-skills and explore self-capability without feeling the burden of pressure to
-learn.
-
+The best way to teach a young person (or anyone, really) is to make it fun and
+engaging. The more fun the activity, the less obstruction to focus and learning.
+Immersion of experience, much like chocolate on vegetables, is a great way to
+discover new skills and explore self-capability without feeling the burden of
+pressure to learn.
 To that end, we have devlivered not one, but two [_Star Trek:
 Survival_'s](https://startreksurvival.tech/), "an _immersive_ adventure
 experience for all Scouting Members". This website forms the third app in our
@@ -421,7 +433,8 @@ narrative, and a list of "I can..." skill-based statements that facilitate Scout
 Australia's award scheme components, ready for peer-review and presentation back
 to their Scout Groups post-event.
 
-![FIXME Get an "I Can" statement list from STS mission ]
+FIXME: Get an "I Can" statement list from STS mission
+[e.g](https://startreksurvival.tech/mission/captain-dirgos-folly/#mission_outcomes)
 
 Then into the STS[^STS] website, we added the Brownsea and RadioActiv8 Django
 applications, and mapped these into the STS website's various models.
