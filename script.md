@@ -11,7 +11,8 @@ Content Summary:
      - Luke: security analyst & systems architect; interests in web development
        & security education
      - Both Amateur Radio Operators
-     - Both members of STEM team of Scouts Victoria
+     - Both members of STEM (Science, Tech, Engineering, Maths) team of Scouts
+       Victoria
      - Scouts Victoria: "Youth Lead, Adult Supported" organisation. Focus:
       - empowering young people to pursue fun & adventurous activities they want to do
       - facilitating safe participation in:
@@ -43,7 +44,37 @@ Content Summary:
 
 2. Brownsea
   a. About ScoutHack
+    - ScoutHack: A weekend-long WebDev course
+    - Walks Scouts aged ten to adult through HTML, CSS, Python Flask
+    - Lightning Talk summary: [Everything Open
+      2023](https://www.youtube.com/watch?v=GGgHsA8WifE&t=1460)
+    - Full length presentation: [Developing Labs for Teaching Kids
+      Webdev](https://www.youtube.com/watch?v=VXFuL5PcPKI)
+    - Not covering this today though; let's discuss the registration app we
+      built
   b. Registration System needs
+    - Registration for a Scouting event poses some administrative burdens we
+      felt empowered to overcome:
+      1. FIXME: Complex point/concept: When a registration system doesn't allow
+         administrators to collect information such as dietary requirements, or
+         group people together for dormitory allocations or similar,
+         administrators typically export editable spreadsheets to facilitate
+         this. In addition to duplicating information and having potentially
+         outdated copies, it means PII (Personally Identifiable Information) is
+         floating around on users' devices and may not be secure.
+
+         We wanted to discourage this risk by providing as much tooling as
+         possible within the interface so users didn't feel the need to create
+         exports.
+      2. Avoid paying a third party provider that only does half of what we
+         need
+      3. Use a system that understands the unique structure of the organisation
+    - In summary, our need is to:
+      1. Allow registered members to sign up for an event
+      2. Prefill the minimum essential PII from our membership database
+      3. Auto-generate an invoice from our accounting system
+      4. Summarise dietary needs at a glance
+      5. And as a proficient user, have the whole process take about 60 seconds
   c. Registration System capabilities
   d. Limiting data storage needs
   e. Ease and speed of use
@@ -137,18 +168,18 @@ is the best place to start building skills with a tangible outcome.
 
 ## 2.a. About ScoutHack
 
-So we created ScoutHack[^ScoutHack], a WebDev course that walks Scouts aged ten
-to adult through HTML, CSS, and Python Flask. Check out our [Lightning Talk from
+So we created ScoutHack, a WebDev course that walks Scouts aged ten to adult
+through HTML, CSS, and Python Flask. Check out our [Lightning Talk from
 Everything Open 2023](https://www.youtube.com/watch?v=GGgHsA8WifE&t=1460) for a
 little more about that adventure, or mattcen's talk, [Developing Labs for
 Teaching Kids Webdev](https://www.youtube.com/watch?v=VXFuL5PcPKI) for a deeper
 dive. Today we're discussing the registration app built to support event
-registrations - our second app in our trenchcoat!
+registrations - our <del>second</del><ins>first</ins> app in our trenchcoat!
 
 ## 2.b. Registration System needs
 
-However, registration for a Scouting event poses some administrative burdens we
-felt empowered to overcome.
+Registration for a Scouting event poses some administrative burdens we felt
+empowered to overcome.
 
 FIXME tidy up phrasing:
 
@@ -167,11 +198,11 @@ organisation.
 
 In summary, our need is to:
 
-1. allow registered members to sign up for an event
-2. prefill the minimum essential PII from our membership database
-3. auto-generate an invoice from our accounting system
-4. summarise dietary needs at a glance
-5. and as a proficient user, have the whole process take about 60 seconds.
+1. Allow registered members to sign up for an event
+2. Prefill the minimum essential PII from our membership database
+3. Auto-generate an invoice from our accounting system
+4. Summarise dietary needs at a glance
+5. And as a proficient user, have the whole process take about 60 seconds.
 
 ## 2.c. Registration System capabilities
 
