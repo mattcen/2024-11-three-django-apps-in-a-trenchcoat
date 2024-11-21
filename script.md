@@ -7,10 +7,39 @@ Content Summary:
 
 1. Introduction & Motivation
   a. Introduce speakers
+     - mattcen: Linux systems administrator, software developer
+     - Luke: security analyst & systems architect; interests in web development
+       & security education
+     - Both Amateur Radio Operators
+     - Both members of STEM team of Scouts Victoria
+     - Scouts Victoria: "Youth Lead, Adult Supported" organisation. Focus:
+      - empowering young people to pursue fun & adventurous activities they want to do
+      - facilitating safe participation in:
+        - camping
+        - climbing
+        - sailing
+        - cycling
+        - our specialties: radio communications & web development
   b. Talk Outline
+    - Background about organisation and problems we're trying to solve
+    - Description of evolving solutions we've developed; high level, with some
+      technical detail, time permitting
   c. Introduce organisational goals
+    - Scouting has come a long way from cmping in the bush and tying knots
+    - We leaders are hellbent on supporting young people to provide better
+      resources to both Scouting and wider community
   d. Organisation limitations
+    - Our volunteer-run organisation isn't always resourced to work as efficient
+      as we'd like
+    - Some IT systems are dated; think PHP apps from the early 2000s
+    - Haven't grown to meet changing organisational needs due to limited resources
+    - Organisation is unique and not well-served by off-the-shelf products
   e. Supporting a Legion of Devs with Python
+    - We've considered raising a "Legion of Devs" to perpetuate volunteer-led
+      development & growth of Scouting information tools
+    - We chose Python for its similarity to English, and its ubiquitous use in
+      schools and tech programs
+    - These traits make Python and its frameworks friendly to young coders
 
 2. Brownsea
   a. About ScoutHack
@@ -33,7 +62,7 @@ Content Summary:
 
 4. Star Trek: Survival (2022, 2024)
 
-5.
+5. Wrap-up
   a. Evidence of success
 
 ---
@@ -57,12 +86,7 @@ communications and website development.
 
 [^STEM]: Science, Technology, Engineering, Maths
 
-[^WOSM]: World Organization of the Scout Movement
-
 ## 1.b. Talk Outline
-
-This talk is about building web apps voluntarily for a non-profit organisation
-to solve organisational and logistical challenges.
 
 We'll start with a little backstory about us and the organisation, and touch on
 the problems we're trying to solve.
@@ -78,17 +102,16 @@ better resources to both Scouting and the wider community.
 
 ## 1.d. Organisation Limitations
 
-As an organisation run by volunteers, we don't
-always have the resources to work as efficiently as we'd like. Some of our IT
-systems are dated (think PHP sites from the early 2000s) and due to limited
-resources, haven't always grown as the organisation's needs have changed. Our
-organisation is unique in its structure, and isn't well-served by off-the-shelf
-products.
+As an organisation run by volunteers, we don't always have the resources to work
+as efficiently as we'd like. Some of our IT systems are dated (think PHP sites
+from the early 2000s) and due to limited resources, haven't always grown as the
+organisation's needs have changed. Our organisation is unique in its structure,
+and isn't well-served by off-the-shelf products.
 
 ## 1.e. Supporting a Legion of Devs using Python
 
 Luke and I have often considered the value of raising a "Legion of Devs" to
-perpetuate volunteer development and growth of Scouting information tools.
+perpetuate volunteer-led development and growth of Scouting information tools.
 Python with its supportive framework is a natural colleague to this challenge,
 with Python being a friendly and familiar language to young coders through
 school and tech programs already well established. Python, along with its
@@ -97,8 +120,10 @@ coding education spaces.
 
 # 2. Brownsea
 
+
 <!--
-[!FIXME - This is verbose. Remove from talk, but keep this as a note.]
+FIXME: This is verbose. Remove from talk, but keep this as a note.
+
 Building a Legion of Devs is ambitious, and starting that process
 at age 10 is insanity. We have learnt that teaching young people to code can
 never be started too early - how this is achieved is much more important. While
@@ -290,13 +315,16 @@ Delete](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
 
 ### 3.h. RadioActiv8 is Youth Led!
 
-[!FIXME clean up this wording. #phrasing, boom]
+FIXME: clean up this wording. #phrasing, boom
+
 After a few trial sessions, we refined the app so effectively that the complex
 contest concepts became a simple process to follow. This was so effective that
 the entire game could be independently managed by older Scouts with minor
 support from us.
 
-![FIXME: The iteration of the RadioActiv8 main page](images/RadioActiv8%20-%20Play.png)
+FIXME: Improve alt text
+
+![The iteration of the RadioActiv8 main page](images/RadioActiv8%20-%20Play.png)
 
 ### 3.i. RadioActiv8 Interface
 
@@ -374,7 +402,9 @@ and organisers -- for the most part, this was achieved as a minimum viable
 product with room to grow.
 
 <del>The idea was:</del>
-The combined workflow follows: [!FIXME: phrasing this sentence.]
+The combined workflow follows:
+
+FIXME: phrasing this sentence
 
 1. Member uses Brownsea to sign up using their Scouts Victoria membership information
 2. As part of sign-up, the member can select which activities interest them
