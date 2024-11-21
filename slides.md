@@ -28,7 +28,7 @@ attributes: '<!-- data-autoslide="0" .slide: data-visibility="hidden" -->'
 
 ### Writing an event management website with not a lot of time
 
-- Matt Cengia (they/them) --  [blog.mattcen.com](https://blog.mattcen.com)
+- Matt Cengia (they/them) -- [blog.mattcen.com](https://blog.mattcen.com)
 - Luke Byrnes (he/him) --
 
 FIXME: Link(s) for Luke
@@ -176,7 +176,7 @@ Note:
 - met specific needs the current system did not
 - uses agile development methodology to rapidly build stuff without getting bogged down in policy and bureaucracy
 
-NOTE: 2 audiences:
+target: 2 audiences:
 
 1. PyConAU
 2. Members of Scouts Victoria
