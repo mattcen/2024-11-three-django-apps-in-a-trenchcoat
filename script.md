@@ -128,7 +128,7 @@ Content Summary:
 
 ---
 
-# Introduction & Motivation
+# 1. Introduction & Motivation
 
 ## 1.a. Introduce Speakers
 
@@ -233,6 +233,8 @@ As our State Leader of Communication Technologies, Luke wanted to replicate the 
 
 ### 3.b. Introduce Radio Contesting
 
+FIXME: "We're running a program for youth that relies on radio communication" - the background into contesting isn't necessary, and is currently confusing
+
 A metaphor of fishing (with a rod, not a mail server), the joy of contesting is found in making contact with another radio station, exchanging callsigns, location, and a custom serial identifier, before searching for another contact - the station with the most contacts wins the contest, so speed and efficiency are rewarded.
 
 ### 3.c. Contesting into youth program
@@ -250,6 +252,8 @@ The principle of RadioActiv8[^RA8Name] is quite straightforward: Bases are set o
 [^RA8Name]: Wordplay on the use of two-way radios, the active component of moving between bases, "activate", and "radioactive". Abbreviated to RA8
 
 ### 3.e. RadioActiv8 gameplay
+
+FIXME: Remove jargon: Team instead of Patrol, Question/Answer instead of Intelligence, Home Base instead of HQ station
 
 At the start of the game, each patrol[^Patrol] is sent to a base. Once they arrive, they radio to HQ and identify themselves and current location. The HQ station responds with a question which the patrol must answer using the intelligence answer matrix. On receipt of an answer HQ provides the patrol a new destination. The game's end condition (and whether it is competitive) is up to the facilitator's discretion. The proof-of-concept used a sheet of paper to track the game state[^GameState] of patrols, recorded by Luke while we gave contacts the next base to attend.
 
@@ -300,7 +304,7 @@ TODO: Show RA8 dashboard listing base capacity and patrol locations
 
 --- We are here ---
 
-### 4. Star Trek: Survival (2022, 2024)
+# 4. Star Trek: Survival (2022, 2024)
 
 The best way to teach a young person (or anyone, really) is to make it fun and engaging. The more fun the activity, the less obstruction to focus and learning. Immersion of experience, much like chocolate on vegetables, is a great way to discover new skills and explore self-capability without feeling the burden of pressure to learn. To that end, we have devlivered not one, but two [_Star Trek: Survival_'s](https://startreksurvival.tech/), "an _immersive_ adventure experience for all Scouting Members". This website forms the third app in our trenchcoat.
 
@@ -356,3 +360,26 @@ To guide our dispatch team to make operational decisions, RadioActiv8 uses compr
 Using RadioActiv8, Brownsea, and the STS website in an integrated fashion helped us to minimize the administrative functions of supporting the delivery of the Scouting program, and gave Scouts Victoria the capability to allow simultaneous participation and delivery of the Scouting program.
 
 As a result, we have literally made it possible for the operations of an event to be Youth Led, and Adult Supported. With thanks to the capabilities of Python and Django, we can continue to do perpetuate our success and upskill our members in ways that were only a dream just a few years ago.
+
+
+---
+
+## Suggestsions for tying things together:
+
+- Great UX (re-play video)
+- Protection of PII
+- Integrations between apps
+
+## Cool stuff
+
+- The modularity of Django apps; being able to tie together RA8 and Brownsea into STS
+- The Admin; enabling rapid use of the app with just a few models
+- Using AJAX and logic to predict information in RA8 dashboard
+- Do this with HTMX so folks don't need to learn JavaScript
+- Dashboard showing base capacity, and locations of patrols and how long since we've heard from them
+- GeoDjango; make it easy to add geospatial integration into an app
+- Route/time/distance estimates
+- Wagtail for easy CMS functionality
+- Custom auth with Extranet
+- Using Scouts Vic hierarchy to grant permissions in Brownsea
+- Docker containers for ease of dev and deployment
