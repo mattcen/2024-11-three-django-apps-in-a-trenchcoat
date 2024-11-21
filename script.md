@@ -364,7 +364,7 @@ As a result, we have literally made it possible for the operations of an event t
 
 ---
 
-## Suggestsions for tying things together:
+## Suggestions for tying things together:
 
 - Great UX (re-play video)
 - Protection of PII
@@ -372,14 +372,59 @@ As a result, we have literally made it possible for the operations of an event t
 
 ## Cool stuff
 
-- The modularity of Django apps; being able to tie together RA8 and Brownsea into STS
-- The Admin; enabling rapid use of the app with just a few models
-- Using AJAX and logic to predict information in RA8 dashboard
-- Do this with HTMX so folks don't need to learn JavaScript
-- Dashboard showing base capacity, and locations of patrols and how long since we've heard from them
-- GeoDjango; make it easy to add geospatial integration into an app
-- Route/time/distance estimates
-- Wagtail for easy CMS functionality
-- Custom auth with Extranet
-- Using Scouts Vic hierarchy to grant permissions in Brownsea
-- Docker containers for ease of dev and deployment
+1. Docker containers for ease of dev and deployment
+1. The modularity of Django apps; being able to tie together RA8 and Brownsea into STS
+1. Custom auth with Extranet
+1. Using Scouts Vic hierarchy to grant permissions in Brownsea
+1. The Admin; enabling rapid use of the app with just a few models
+1. Wagtail for easy CMS functionality
+1. Do this with HTMX so folks don't need to learn JavaScript
+1. Using AJAX and logic to predict information in RA8 dashboard
+1. Dashboard showing base capacity, and locations of patrols and how long since we've heard from them
+1. Route/time/distance estimates
+1. GeoDjango; make it easy to add geospatial integration into an app
+
+## flow notes from Luke at 11th hour:
+[CW: JARGON - we have removed Jargon wherever possible; note that words for some nouns in Scouting have been simplified, i.e. activity instead of mission, teams instead of patrols, etc]
+1. We're Scout leaders - we facilitate young people to explore the world with an ethos of Learning by Doing that is Youth Led, Adult Supported.
+  a. We don't just do fun things outdoors, but we also provide events like ScoutHack and teach Web Dev (see our lightning talk/Matt's talk).
+  b. We also run immersive STEM-themed camps. We call it Star Trek: Survival.
+    i. Instead of using a round-robin or "Track-based" program, we decided to have fun with radios and go agile.
+    ii. Participants told us their activity preferences, and we yeeted this into our software to make sure everyone did something they asked for to support their badge projects.
+    iii. 250 Scouts were each given their own radio (a choice so poor we've done it twice now), and they received their marching orders to attend their next activity from "Starfleet Command".
+    iv. All they had to do now was Check In to activity - do activity - Check Out of activity - Next activity. Food and sleep also occur in designated times and areas.
+
+2. To support such insanely ambitious plans, <del>Luke schmoozied up to Matt</del> we very much relied on custom developed apps to:
+  a. inform participants of the awesome activities on offer
+    i. a website for STS
+  b. register participants in a way that protects data, offers quality UX, provides transparency for guardians
+    i. a registration system, named after the very first Scouting campsite, Brownsea
+  c. gamify the distribution of participants across activity sites in a dynamic way that considered preferences for individuals and their activity team
+    i. a despatch system, RadioActiv8, a play on the words Radio, Active, and the totes hip spelling with a number like all the cool kids do. #toTaLHacKeRbRo
+
+3. To do this we needed three apps in a trenchcoat and a way to rapidly deploy should everything fall over like it did 2 hours after Day 1 started.
+  a. [ALL] Docker images means that we have a standardized operational environment. Say what you will about micro services being irritating but it does the job effectively.
+  b. [ALL] One project to <del>rule</del> host them all - using apps in Django. <maybe show some code?>
+  c. [BRN] Verify and pre-fill:
+    i. using membership validation to prefill and prompt updating of personal contact information
+    ii. Less is more - only gather what is needed; heath records have a dedicated confidential information system, so only catering basics are required.
+  d. [BRN] Provide both guardians and Scout leaders who are responsible for youth access to registration information for individuals.
+    i. legal guardians can see their child's data
+    ii. Scout Leaders can see their Youth Member data (to which they *should* already have access through member records).
+  e. [BRN] Event administration is handled by authorised personnel using the Django Admin backend framework.
+    i. conveniently, this is already built and was a breeze to customise and to enable bulk field editing.
+    ii. Exfiltration of data was limited to Super Users for the purposes of providing catering summaries to our Kitchen staff, and our event communications teams as required. Again, less is more.
+  f. [STS] Delegated access to program information control by using Wagtail CMS for activity content - STS missions.
+    i. reduces the overhead on git/VCS commit proficiency for maintaining website changes by giving program specialists the ability to edit specific event website content areas, such as the missions.
+  g. [RA8] Minimize JS by using the impressive capabilities of HTMX.
+    i. Single programming language for backend Dev avoiding bespoke or customized areas where, ordinarily, JS would feel like the _only_ way to solve a particular problem.
+  i. [RA8] Leveraging AJAX to update information on a realtime dashboard to give up-to-date information without refreshing
+    i. Allows for logical decision making without having to consciously think about refreshing to gain the latest information of the status.
+  j. [RA8] Use a live dashboard to show the states of change to radio operators.
+    i. Helps despatchers to make operational decisions by showing: Base Capacity, Last reported Location, Last time seen.
+  k. [RA8] Pre-populate Route/Time estimates between bases
+    i. Helps make smart decisions - do you send the 5 year olds on a 1km journey uphill 20mins before lunch? No. Older Scouts? Yes.
+  j. [RA8] Use GeoDjango to add geospatial integration to help with mapping.
+    i. Speaking of maps...\*show gamified map\*
+
+that's our trench coat. If you're interest in more about ScoutHack and other projects, check out Mattcen's talk.
