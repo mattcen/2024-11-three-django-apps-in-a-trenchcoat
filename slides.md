@@ -28,14 +28,15 @@ attributes: '<!-- data-autoslide="0" .slide: data-visibility="hidden" -->'
 
 ### Writing an event management website with not a lot of time
 
-Matt Cengia
-(they/them)
+- Matt Cengia (they/them) --  [blog.mattcen.com](https://blog.mattcen.com)
+- Luke Byrnes (he/him) --
 
-[blog.mattcen.com](https://blog.mattcen.com)
+FIXME: Link(s) for Luke
 
 <!--
 - Email: mattcen@mattcen.com
 - Mastodon: [@mattcen@aus.social](https://aus.social/@mattcen)
+- Bluesky: [@mattcen.com](https://bsky.app/profile/did:plc:3k4jsgseos5zo7mln3xq7na4)
 - Matrix: [@mattcen:mattcen.com](https://matrix.to/#/@mattcen:mattcen.com)
 - Website: [blog.mattcen.com](https://blog.mattcen.com)
 - Slides: https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat
@@ -56,7 +57,6 @@ Note:
 ## Slides
 
 [![https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat](images/slides_url.svg)](https://mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat)
-
 
 Note:
 
