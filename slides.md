@@ -56,7 +56,7 @@ Note:
 
 Note:
 
-Luke <!-- .element: style="color: blue" -->
+Matt <!-- .element: style="color: blue" -->
 
 I'm delivering this presentation on the unceded ancestral lands of many Indigenous peoples.
 I honour the knowledge, stewardship, and care with which they've tended this land throughout history, and recognise the deep and lasting damage that colonisation has inflicted on them.
@@ -92,16 +92,22 @@ Note:
 
 ---
 
-[![OAS photo]] | [![ScoutHack photo feat. Uniform?]]
+![OAS photo]() | ![ScoutHack photo feat. Uniform?](images/scouthack-uniform.jpg)
+
+<!-- .element: class="r-stretch" -->
 
 Note:
 
 a. We don't just do fun things outdoors, but we also provide events like ScoutHack and teach Web Dev (see our lightning talk/Matt's talk).
 
+- Lightning Talk summary: [Everything Open
+  2023](https://www.youtube.com/watch?v=GGgHsA8WifE&t=1460)
+- Full length presentation: [Developing Labs for Teaching Kids
+  Webdev](https://www.youtube.com/watch?v=VXFuL5PcPKI)
+
 ---
 
-https://startreksurvival.tech/static/sts_website/assets/img/cubsllap.jpg
-Joey Scouts at Star Trek: Survival
+![Joey Scouts at Star Trek: Survival](images/cubsllap.jpg)
 
 Note:
 
@@ -109,20 +115,11 @@ b. We also run immersive STEM-themed camps. We call it Star Trek: Survival.
 
 ----
 
-| Activity 1  | Activity 2  | Activity 3  |
-|-------------|-------------|-------------|
-| Red Team    | Blue Team   | Yellow Team |
-| Yellow Team | Red Team    | Blue Team   |
-| Blue Team   | Yellow Team | Red Team    |
-<!-- .element: data-auto-animate data-id="table" -->
-
-
-| Activity 1  | Activity 2  | Activity 3  |
-|-------------|-------------|-------------|
-| Red Team    | Blue Team   | Yellow Team |
-| Yellow Team | Red Team    | Blue Team   |
-| Blue Team   | Yellow Team | Red Team    |
-<!-- .element: data-auto-animate data-id="table" style="text-decoration: line-through" -->
+| Rotation | Activity 1    | Activity 2    | Activity 3    |
+| -------- | ------------- | ------------- | ------------- |
+| 1        | 🔴 Red Team    | 💙 Blue Team   | 🟨 Yellow Team |
+| 2        | 🟨 Yellow Team | 🔴 Red Team    | 💙 Blue Team   |
+| 3        | 💙 Blue Team   | 🟨 Yellow Team | 🔴 Red Team    |
 
 Note:
 
@@ -130,7 +127,17 @@ i. Most Scouting events use a round-robin or "Track-based" program...
 
 ----
 
+| Rotation | Activity 1    | Activity 2    | Activity 3    |
+| -------- | ------------- | ------------- | ------------- |
+| 1        | 🔴 Red Team    | 💙 Blue Team   | 🟨 Yellow Team |
+| 2        | 🟨 Yellow Team | 🔴 Red Team    | 💙 Blue Team   |
+| 3        | 💙 Blue Team   | 🟨 Yellow Team | 🔴 Red Team    |
 
+<!-- .element style="text-decoration: line-through" -->
+
+----
+
+RA8 screenshot? Too early in talk for that? Not sure what else to put here
 
 Note:
 
@@ -138,7 +145,11 @@ ii. we decided to go agile and use a despatch system to send youth members to th
 
 ----
 
-![Mission snapshot showing 36 missions]
+<video data-autoplay controls>
+  <source src="images/sts-mission-scroll.mp4" type="video/mp4">
+  <meta itemprop="description" content="Mission snapshot showing 36 missions">
+  <meta itemprop="url" content="https://startreksurvival.tech/mission/">
+</video>
 
 Note:
 
@@ -146,7 +157,7 @@ iii. To make an agile system work, participants gave us their top ten activity p
 
 ----
 
-![Kid(s) on radios]
+![Kid(s) on radios]()
 
 Note:
 
@@ -158,7 +169,14 @@ iv. 250 Scouts were each given their own radio (a choice so poor we've done it t
 
 Note:
 
-v. All they had to do now was Check In to activity - do activity - Check Out of activity - Next activity. Food and sleep also occur in designated times and areas.
+v. All they had to do now was:
+
+- Check In to activity
+- Do activity
+- Check Out of activity
+- Next activity
+
+Food and sleep also occur in designated times and areas.
 
 ---
 
@@ -166,7 +184,7 @@ v. All they had to do now was Check In to activity - do activity - Check Out of 
 
 Note:
 
-1. To support such insanely ambitious plans, <del>Luke schmoozied up to Matt</del> we very much relied on custom developed apps to:
+1. To support such outrageously ambitious plans, ~~Luke schmoozied up to Matt~~ we very much relied on custom developed apps to:
 
 ---
 
