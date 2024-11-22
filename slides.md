@@ -76,14 +76,14 @@ I pledge to do my best to respect, learn from, and support these peoples. We can
 
 Note:
 
-----
+---
 
 
 a. We don't just do fun things outdoors, but we also provide events like ScoutHack and teach Web Dev (see our lightning talk/Matt's talk).
 
 Note:
 
-----
+---
 
 b. We also run immersive STEM-themed camps. We call it Star Trek: Survival.
 
@@ -119,7 +119,7 @@ Note:
 
 Note:
 
-----
+---
 
 a. inform participants of the awesome activities on offer
 
@@ -131,7 +131,7 @@ i. a website for STS
 
 Note:
 
-----
+---
 
 b. register participants in a way that protects data, offers quality UX, provides transparency for guardians
 
@@ -143,7 +143,7 @@ i. a registration system, named after the very first Scouting campsite, Brownsea
 
 Note:
 
-----
+---
 
 c. gamify the distribution of participants across activity sites in a dynamic way that considered preferences for individuals and their activity team
 
@@ -161,19 +161,19 @@ Note:
 
 Note:
 
-----
+---
 
 a. [ALL] Docker images means that we have a standardized operational environment. Say what you will about micro services being irritating but it does the job effectively.
 
 Note:
 
-----
+---
 
 b. [ALL] One project to <del>rule</del> host them all - using apps in Django. <maybe show some code?>
 
 Note:
 
-----
+---
 
 c. [BRN] Verify and pre-fill:
 
@@ -191,7 +191,7 @@ ii. Less is more - only gather what is needed; heath records have a dedicated co
 
 Note:
 
-----
+---
 
 d. [BRN] Provide both guardians and Scout leaders who are responsible for youth access to registration information for individuals.
 
@@ -209,7 +209,7 @@ ii. Scout Leaders can see their Youth Member data (to which they *should* alread
 
 Note:
 
-----
+---
 
 e. [BRN] Event administration is handled by authorised personnel using the Django Admin backend framework.
 
@@ -227,7 +227,7 @@ ii. Exfiltration of data was limited to Super Users for the purposes of providin
 
 Note:
 
-----
+---
 
 f. [STS] Delegated access to program information control by using Wagtail CMS for activity content - STS missions.
 
@@ -239,7 +239,7 @@ i. reduces the overhead on git/VCS commit proficiency for maintaining website ch
 
 Note:
 
-----
+---
 
 g. [RA8] Minimize JS by using the impressive capabilities of HTMX.
 
@@ -251,9 +251,9 @@ i. Single programming language for backend Dev avoiding bespoke or customized ar
 
 Note:
 
-----
+---
 
-i. [RA8] Leveraging AJAX to update information on a realtime dashboard to give up-to-date information without refreshing
+h. [RA8] Leveraging AJAX to update information on a realtime dashboard to give up-to-date information without refreshing
 
 Note:
 
@@ -263,9 +263,9 @@ i. Allows for logical decision making without having to consciously think about 
 
 Note:
 
-----
+---
 
-j. [RA8] Use a live dashboard to show the states of change to radio operators.
+i. [RA8] Use a live dashboard to show the states of change to radio operators.
 
 Note:
 
@@ -275,9 +275,9 @@ i. Helps despatchers to make operational decisions by showing: Base Capacity, La
 
 Note:
 
-----
+---
 
-k. [RA8] Pre-populate Route/Time estimates between bases
+j. [RA8] Pre-populate Route/Time estimates between bases
 
 Note:
 
@@ -287,9 +287,9 @@ i. Helps make smart decisions - do you send the 5 year olds on a 1km journey uph
 
 Note:
 
-----
+---
 
-j. [RA8] Use GeoDjango to add geospatial integration to help with mapping.
+k. [RA8] Use GeoDjango to add geospatial integration to help with mapping.
 
 Note:
 

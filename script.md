@@ -418,13 +418,13 @@ As a result, we have literally made it possible for the operations of an event t
     i. reduces the overhead on git/VCS commit proficiency for maintaining website changes by giving program specialists the ability to edit specific event website content areas, such as the missions.
   g. [RA8] Minimize JS by using the impressive capabilities of HTMX.
     i. Single programming language for backend Dev avoiding bespoke or customized areas where, ordinarily, JS would feel like the _only_ way to solve a particular problem.
-  i. [RA8] Leveraging AJAX to update information on a realtime dashboard to give up-to-date information without refreshing
+  h. [RA8] Leveraging AJAX to update information on a realtime dashboard to give up-to-date information without refreshing
     i. Allows for logical decision making without having to consciously think about refreshing to gain the latest information of the status.
-  j. [RA8] Use a live dashboard to show the states of change to radio operators.
+  i. [RA8] Use a live dashboard to show the states of change to radio operators.
     i. Helps despatchers to make operational decisions by showing: Base Capacity, Last reported Location, Last time seen.
-  k. [RA8] Pre-populate Route/Time estimates between bases
+  j. [RA8] Pre-populate Route/Time estimates between bases
     i. Helps make smart decisions - do you send the 5 year olds on a 1km journey uphill 20mins before lunch? No. Older Scouts? Yes.
-  j. [RA8] Use GeoDjango to add geospatial integration to help with mapping.
+  k. [RA8] Use GeoDjango to add geospatial integration to help with mapping.
     i. Speaking of maps...\*show gamified map\*
 
 that's our trench coat. If you're interest in more about ScoutHack and other projects, check out Mattcen's talk.
