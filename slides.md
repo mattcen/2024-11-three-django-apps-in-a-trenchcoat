@@ -24,39 +24,25 @@ attributes: |
   <!-- data-timing="1" .slide: data-visibility="hidden" -->
 ---
 
-<!-- .slide: data-timing="1" -->
+<!-- .slide: data-timing="20" -->
 
 ## Three Django Apps in a Trenchcoat
 
 ### Writing an event management website with not a lot of time
 
-- Matt Cengia (they/them) -- [blog.mattcen.com](https://blog.mattcen.com)
-- Luke Byrnes (he/him) -- [ekulbyrnes.github.io](https://ekulbyrnes.github.io)
-
-<!--
-- Email: mattcen@mattcen.com
-- Mastodon: [@mattcen@aus.social](https://aus.social/@mattcen)
-- Bluesky: [@mattcen.com](https://bsky.app/profile/did:plc:3k4jsgseos5zo7mln3xq7na4)
-- Matrix: [@mattcen:mattcen.com](https://matrix.to/#/@mattcen:mattcen.com)
-- Website: [blog.mattcen.com](https://blog.mattcen.com)
-- Slides: https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat
--->
+- Matt (mattcen) Cengia (they/them) -- [blog.mattcen.com](https://blog.mattcen.com)
+- Luke (ekulbyrnes) Byrnes (he/him) -- [ekulbyrnes.github.io](https://ekulbyrnes.github.io)
 
 License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
 Note:
 
-- I'm Matt (they/them)
-- This is Luke (he/him)
-
-etc.
-
-- Find me by handle, M A T T C E N
-- Slides available on GitHub: <https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat>
+- I'm Matt, or mattcen: Linux systems administrator, software developer. I use they/them pronouns
+- I'm Luke: security analyst & systems architect; interests in web development & security education
 
 ---
 
-<!-- .slide: data-timing="1" -->
+<!-- .slide: data-timing="20 -->
 
 ## Acknowledgements
 
@@ -64,50 +50,54 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-I'm delivering this presentation on the unceded ancestral lands of many Indigenous peoples.
-I honour the knowledge, stewardship, and care with which they've tended this land throughout history, and recognise the deep and lasting damage that colonisation has inflicted on them.
-I pledge to do my best to respect, learn from, and support these peoples. We can all do better.
+We're delivering this presentation on the unceded ancestral lands of many Indigenous peoples.
+We honour the knowledge, stewardship, and care with which they've tended this land throughout history, and recognise the deep and lasting damage that colonisation has inflicted on them.
+We pledge to do my best to respect, learn from, and support these peoples. We can all do better.
 
 ---
 
-<!-- .slide: data-timing="1" -->
+<!-- .slide: data-timing="20 -->
 
 ## Slides
 
 [![https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat](images/slides_url.svg)](https://mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat)
 
----
-
-<!-- .slide: data-timing="1" -->
-
-<!--
-- Distill each slide down to a heading of some sort
-- Add (placeholders for) images where appropriate
-- Elaborate on what we want to say in the speaker notes
-- Potentially add code examples and/or screenshots
-- Stretch goal: Add enough info to speaker notes such that a reader would be able to get the talk content by just reading the slides
--->
-~~Compulsive volunteers~~
-
-Quality Scout Leaders
-
-![Scouts Victoria Logo](images/ScoutsVIC-Vert-11Col.svg)
-
-<!-- .element: class="r-stretch" -->
+[mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat](https://mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat)
 
 Note:
 
-Luke <!-- .element: style="color: red" -->
-
-
-1. We're Scout leaders - we facilitate young people to explore the world with an ethos of Learning by Doing that is Youth Led, Adult Supported.
+- Slides available at Github repo link at top of screen
+- Live view of slides as we progress through them available via QR Code or link below
+- Will give a few seconds for you to grab that link
 
 ---
 
-<!-- .slide: data-timing="1" -->
+<!-- .slide: data-timing="15" -->
 
-![OAS photo]() | ![ScoutHack photo feat. Uniform?](images/scouthack-uniform.jpg)
+![Scouts Victoria Logo](images/ScoutsVIC-Vert-11Col.svg)
 <!-- .element: class="r-stretch" -->
+
+## Quality Scout Leaders
+
+Note:
+
+~~Compulsive volunteers~~
+
+Luke <!-- .element: style="color: red" -->
+
+1. We're Scout leaders - we facilitate young people to explore the world with an ethos of Learning by Doing that is Youth Led, Adult Supported.
+
+- Scout Leaders
+- Help young people explore the world
+- Cultivate ethos of Learning By Doing
+- and Youth Led, Adult Supported
+
+---
+
+<!-- .slide: data-timing="15" -->
+
+![Scouts wearing hard hats rock climbing on a cliff face](images/oas.jpg) <!-- .element style="width: 45%" -->
+![Scouts in uniform sitting at computer desks, with a leader pointing at a computer monitor](images/scouthack-uniform.jpg) <!-- .element style="width: 50%" -->
 
 Note:
 
@@ -115,14 +105,18 @@ Luke <!-- .element: style="color: red" -->
 
 a. We don't just do fun things outdoors, but we also provide events like ScoutHack and teach Web Dev (see our lightning talk/Matt's talk).
 
-- Lightning Talk summary: [Everything Open
-  2023](https://www.youtube.com/watch?v=GGgHsA8WifE&t=1460)
-- Full length presentation: [Developing Labs for Teaching Kids
-  Webdev](https://www.youtube.com/watch?v=VXFuL5PcPKI)
+- Sure, we do fun outdoor activities
+- But also provide events like ScoutHack which teach website development
+- See our Lightning Talk, or Matt's presentation for details on that; links in slide notes
+
+- Lightning Talk summary: [Everything Open 2023](https://www.youtube.com/watch?v=GGgHsA8WifE&t=1460)
+- Full length presentation: [Developing Labs for Teaching Kids Webdev](https://www.youtube.com/watch?v=VXFuL5PcPKI)
+
+[OAS image credit, Scouts Victoria](https://www.instagram.com/scoutsvictoria/p/DB7UflsP9lL/?img_index=2)
 
 ---
 
-<!-- .slide: data-timing="1" -->
+<!-- .slide: data-timing="5" -->
 
 ![Joey Scouts at Star Trek: Survival](images/cubsllap.jpg)
 <!-- .element: class="r-stretch" -->
@@ -131,11 +125,11 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-b. We also run immersive STEM-themed camps. We call it Star Trek: Survival.
+b. We also run immersive STEM-focussed camps. We call it Star Trek: Survival.
 
 ----
 
-<!-- .slide: data-timing="1" -->
+<!-- .slide: data-timing="5" -->
 
 | Rotation | Activity 1    | Activity 2    | Activity 3    |
 | -------- | ------------- | ------------- | ------------- |
@@ -147,11 +141,11 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-i. Most Scouting events use a round-robin or "Track-based" program...
+i. Most Scouting events use a round-robin or "Track-based" program like this…
 
 ----
 
-<!-- .slide: data-timing="1" -->
+<!-- .slide: data-timing="3" -->
 
 | Rotation | Activity 1    | Activity 2    | Activity 3    |
 | -------- | ------------- | ------------- | ------------- |
@@ -161,16 +155,22 @@ i. Most Scouting events use a round-robin or "Track-based" program...
 
 <!-- .element style="text-decoration: line-through" -->
 
+Note:
+
+Luke <!-- .element: style="color: red" -->
+
+- We don't do that.
+
 ----
 
-<!-- .slide: data-timing="1" -->
+<!-- .slide: data-timing="5" -->
 
-~~ra8 screenshot? Too early in talk for that? Not sure what else to put here~~
-SFC Picture showing war-table/radio operators
+![Venturers standing around table with a tabletop-game-style map on it](images/ima_8b7ffc0.jpeg)
+<!-- .element: class="r-stretch" -->
 
 Note:
 
-ii. For STS, we decided to go agile and use a despatch system to send youth members to their activities.
+ii. For STS, we decided to go agile and use a dispatch system to send youth members to their activities.
 
 ----
 
@@ -569,8 +569,6 @@ k. [RA8] Use GeoDjango to add geospatial integration to help with mapping.
 
 <!-- .slide: data-timing="1" -->
 
-![Venturers standing around table with a tabletop-game-style map on it](images/ima_8b7ffc0.jpeg)
-<!-- .element: class="r-stretch" -->
 
 Note:
 
