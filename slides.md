@@ -72,232 +72,239 @@ I pledge to do my best to respect, learn from, and support these peoples. We can
 
 ---
 
-1. We're Scout leaders - we facilitate young people to explore the world with an ethos of Learning by Doing that is Youth Led, Adult Supported.
-
+<!--
+- Distill each slide down to a heading of some sort
+- Add (placeholders for) images where appropriate
+- Elaborate on what we want to say in the speaker notes
+- Potentially add code examples and/or screenshots
+- Stretch goal: Add enough info to speaker notes such that a reader would be able to get the talk content by just reading the slides
+-->
 Note:
+
+1. We're Scout leaders - we facilitate young people to explore the world with an ethos of Learning by Doing that is Youth Led, Adult Supported.
 
 ---
 
+
+Note:
 
 a. We don't just do fun things outdoors, but we also provide events like ScoutHack and teach Web Dev (see our lightning talk/Matt's talk).
 
-Note:
-
 ---
+
+Note:
 
 b. We also run immersive STEM-themed camps. We call it Star Trek: Survival.
 
-Note:
-
 ----
+
+Note:
 
 i. Instead of using a round-robin or "Track-based" program, we decided to have fun with radios and go agile.
 
-Note:
-
 ----
+
+Note:
 
 ii. Participants told us their activity preferences, and we yeeted this into our software to make sure everyone did something they asked for to support their badge projects.
 
-Note:
-
 ----
+
+Note:
 
 iii. 250 Scouts were each given their own radio (a choice so poor we've done it twice now), and they received their marching orders to attend their next activity from "Starfleet Command".
 
-Note:
-
 ----
+
+Note:
 
 iv. All they had to do now was Check In to activity - do activity - Check Out of activity - Next activity. Food and sleep also occur in designated times and areas.
 
-Note:
-
 ---
+
+Note:
 
 2. To support such insanely ambitious plans, <del>Luke schmoozied up to Matt</del> we very much relied on custom developed apps to:
 
-Note:
-
 ---
+
+Note:
 
 a. inform participants of the awesome activities on offer
 
-Note:
-
 ----
+
+Note:
 
 i. a website for STS
 
-Note:
-
 ---
+
+Note:
 
 b. register participants in a way that protects data, offers quality UX, provides transparency for guardians
 
-Note:
-
 ----
+
+Note:
 
 i. a registration system, named after the very first Scouting campsite, Brownsea
 
-Note:
-
 ---
+
+Note:
 
 c. gamify the distribution of participants across activity sites in a dynamic way that considered preferences for individuals and their activity team
 
-Note:
-
 ----
+
+Note:
 
 i. a despatch system, RadioActiv8, a play on the words Radio, Active, and the totes hip spelling with a number like all the cool kids do. #toTaLHacKeRbRo
 
-Note:
-
 ---
+
+Note:
 
 3. To do this we needed three apps in a trenchcoat and a way to rapidly deploy should everything fall over like it did 2 hours after Day 1 started.
 
-Note:
-
 ---
+
+Note:
 
 a. [ALL] Docker images means that we have a standardized operational environment. Say what you will about micro services being irritating but it does the job effectively.
 
-Note:
-
 ---
+
+Note:
 
 b. [ALL] One project to <del>rule</del> host them all - using apps in Django. <maybe show some code?>
 
-Note:
-
 ---
+
+Note:
 
 c. [BRN] Verify and pre-fill:
 
-Note:
-
 ----
+
+Note:
 
 i. using membership validation to prefill and prompt updating of personal contact information
 
-Note:
-
 ----
+
+Note:
 
 ii. Less is more - only gather what is needed; heath records have a dedicated confidential information system, so only catering basics are required.
 
-Note:
-
 ---
+
+Note:
 
 d. [BRN] Provide both guardians and Scout leaders who are responsible for youth access to registration information for individuals.
 
-Note:
-
 ----
+
+Note:
 
 i. legal guardians can see their child's data
 
-Note:
-
 ----
+
+Note:
 
 ii. Scout Leaders can see their Youth Member data (to which they *should* already have access through member records).
 
-Note:
-
 ---
+
+Note:
 
 e. [BRN] Event administration is handled by authorised personnel using the Django Admin backend framework.
 
-Note:
-
 ----
+
+Note:
 
 i. conveniently, this is already built and was a breeze to customise and to enable bulk field editing.
 
-Note:
-
 ----
+
+Note:
 
 ii. Exfiltration of data was limited to Super Users for the purposes of providing catering summaries to our Kitchen staff, and our event communications teams as required. Again, less is more.
 
-Note:
-
 ---
+
+Note:
 
 f. [STS] Delegated access to program information control by using Wagtail CMS for activity content - STS missions.
 
-Note:
-
 ----
+
+Note:
 
 i. reduces the overhead on git/VCS commit proficiency for maintaining website changes by giving program specialists the ability to edit specific event website content areas, such as the missions.
 
-Note:
-
 ---
+
+Note:
 
 g. [RA8] Minimize JS by using the impressive capabilities of HTMX.
 
-Note:
-
 ----
+
+Note:
 
 i. Single programming language for backend Dev avoiding bespoke or customized areas where, ordinarily, JS would feel like the _only_ way to solve a particular problem.
 
-Note:
-
 ---
+
+Note:
 
 h. [RA8] Leveraging AJAX to update information on a realtime dashboard to give up-to-date information without refreshing
 
-Note:
-
 ----
+
+Note:
 
 i. Allows for logical decision making without having to consciously think about refreshing to gain the latest information of the status.
 
-Note:
-
 ---
+
+Note:
 
 i. [RA8] Use a live dashboard to show the states of change to radio operators.
 
-Note:
-
 ----
+
+Note:
 
 i. Helps despatchers to make operational decisions by showing: Base Capacity, Last reported Location, Last time seen.
 
-Note:
-
 ---
+
+Note:
 
 j. [RA8] Pre-populate Route/Time estimates between bases
 
-Note:
-
 ----
+
+Note:
 
 i. Helps make smart decisions - do you send the 5 year olds on a 1km journey uphill 20mins before lunch? No. Older Scouts? Yes.
 
-Note:
-
 ---
+
+Note:
 
 k. [RA8] Use GeoDjango to add geospatial integration to help with mapping.
 
-Note:
-
 ----
 
-i. Speaking of maps...\*show gamified map\*
-
 Note:
+
+i. Speaking of maps...\*show gamified map\*
 
 ---
 
