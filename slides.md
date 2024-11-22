@@ -1,3 +1,4 @@
+<!-- data-timing="1" .slide: data-visibility="hidden" -->
 ---
 #type: slide
 title: "Three Django Apps in a Trenchcoat: Writing an event management website with not a lot of time"
@@ -19,10 +20,11 @@ slideOptions:
   - RevealNotes
   - RevealMath
   - RevealZoom
-attributes: '<!-- data-autoslide="0" .slide: data-visibility="hidden" -->'
+attributes: |
+  <!-- data-timing="1" .slide: data-visibility="hidden" -->
 ---
 
-<!-- .slide: data-autoslide="10000" -->
+<!-- .slide: data-timing="1" -->
 
 ## Three Django Apps in a Trenchcoat
 
@@ -54,7 +56,7 @@ etc.
 
 ---
 
-<!-- .slide: data-autoslide="20000" -->
+<!-- .slide: data-timing="1" -->
 
 ## Acknowledgements
 
@@ -68,13 +70,15 @@ I pledge to do my best to respect, learn from, and support these peoples. We can
 
 ---
 
- <!-- .slide: data-autoslide="20000" -->
+<!-- .slide: data-timing="1" -->
 
 ## Slides
 
 [![https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat](images/slides_url.svg)](https://mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat)
 
 ---
+
+<!-- .slide: data-timing="1" -->
 
 <!--
 - Distill each slide down to a heading of some sort
@@ -83,7 +87,7 @@ I pledge to do my best to respect, learn from, and support these peoples. We can
 - Potentially add code examples and/or screenshots
 - Stretch goal: Add enough info to speaker notes such that a reader would be able to get the talk content by just reading the slides
 -->
-<del>Compulsive volunteers</del>
+~~Compulsive volunteers~~
 
 Quality Scout Leaders
 
@@ -99,6 +103,8 @@ Luke <!-- .element: style="color: red" -->
 1. We're Scout leaders - we facilitate young people to explore the world with an ethos of Learning by Doing that is Youth Led, Adult Supported.
 
 ---
+
+<!-- .slide: data-timing="1" -->
 
 ![OAS photo]() | ![ScoutHack photo feat. Uniform?](images/scouthack-uniform.jpg)
 <!-- .element: class="r-stretch" -->
@@ -116,6 +122,8 @@ a. We don't just do fun things outdoors, but we also provide events like ScoutHa
 
 ---
 
+<!-- .slide: data-timing="1" -->
+
 ![Joey Scouts at Star Trek: Survival](images/cubsllap.jpg)
 <!-- .element: class="r-stretch" -->
 
@@ -126,6 +134,8 @@ Luke <!-- .element: style="color: red" -->
 b. We also run immersive STEM-themed camps. We call it Star Trek: Survival.
 
 ----
+
+<!-- .slide: data-timing="1" -->
 
 | Rotation | Activity 1    | Activity 2    | Activity 3    |
 | -------- | ------------- | ------------- | ------------- |
@@ -141,6 +151,8 @@ i. Most Scouting events use a round-robin or "Track-based" program...
 
 ----
 
+<!-- .slide: data-timing="1" -->
+
 | Rotation | Activity 1    | Activity 2    | Activity 3    |
 | -------- | ------------- | ------------- | ------------- |
 | 1        | 🔴 Red Team    | 💙 Blue Team   | 🟨 Yellow Team |
@@ -151,6 +163,8 @@ i. Most Scouting events use a round-robin or "Track-based" program...
 
 ----
 
+<!-- .slide: data-timing="1" -->
+
 ~~ra8 screenshot? Too early in talk for that? Not sure what else to put here~~
 SFC Picture showing war-table/radio operators
 
@@ -159,6 +173,8 @@ Note:
 ii. For STS, we decided to go agile and use a despatch system to send youth members to their activities.
 
 ----
+
+<!-- .slide: data-timing="1" -->
 
 <video data-autoplay controls>
   <source src="images/sts-mission-scroll.mp4" type="video/mp4">
@@ -174,6 +190,8 @@ iii. To make an agile system work, participants gave us their top ten activity p
 
 ----
 
+<!-- .slide: data-timing="1" -->
+
 ![Kid(s) on radios]()
 
 Note:
@@ -183,6 +201,8 @@ Luke <!-- .element: style="color: red" -->
 iv. 250 Scouts were each given their own radio (a choice so poor we've done it twice now), and they received their marching orders to attend their next activity from "Starfleet Command".
 
 ----
+
+<!-- .slide: data-timing="1" -->
 
 Note:
 
@@ -201,6 +221,8 @@ Food and sleep also occur in designated times and areas.
 
 ---
 
+<!-- .slide: data-timing="1" -->
+
 > Shoot for the moon. Even if you miss, you'll land among the stars.
 
 —Norman Vincent Peale
@@ -214,6 +236,8 @@ Luke <!-- .element: style="color: red" -->
 To support such outrageously ambitious plans, ~~Luke schmoozied up to Matt~~ we very much relied on custom developed apps:
 
 ---
+
+<!-- .slide: data-timing="1" -->
 
 #### Django App 1
 _Star Trek: Survival_ website
@@ -231,6 +255,8 @@ Matt <!-- .element: style="color: blue" -->
 The first Django app, a nice and simple concept.
 
 ----
+
+<!-- .slide: data-timing="1" -->
 
 #### Django App 2
 
@@ -252,6 +278,8 @@ Matt <!-- .element: style="color:blue"-->
 
 ----
 
+<!-- .slide: data-timing="1" -->
+
 #### Django App 3
 
 _RadioActiv8_: the event controller
@@ -267,6 +295,8 @@ The name RadioActiv8, a play on the words Radio, Active, and the totes hip spell
 
 ---
 
+<!-- .slide: data-timing="1" -->
+
 ![StarTrek:Survival Logo](images/sts_logo_text_horizontal-neg.svg)
 ![Brownsea "logo"](images/brownsea-logo.svg)
 ![RadioActiv8](images/ra8-logo.svg)
@@ -279,6 +309,8 @@ Matt <!-- .element: style="color:blue" -->
 
 ---
 
+<!-- .slide: data-timing="1" -->
+
 ![Docker logo](images/docker-logo.svg)
 
 Note:
@@ -288,6 +320,8 @@ Matt <!-- .element: style="color: blue" -->
 a. [ALL] Docker images means that we have a standardized operational environment. Say what you will about micro services being irritating but it does the job effectively.
 
 ---
+
+<!-- .slide: data-timing="1" -->
 
 
 
@@ -307,6 +341,8 @@ https://github.com/Scouts-Victoria-Program/scoutsvic-rego/blob/638b6ad775430d9e7
 
 ---
 
+<!-- .slide: data-timing="1" -->
+
 
 
 ![Screenshot of login form](https://startreksurvival.tech/events/verify_member/)
@@ -318,6 +354,8 @@ Matt <!-- .element: style="color: blue" -->
 c. [BRN] Verify and pre-fill:
 
 ----
+
+<!-- .slide: data-timing="1" -->
 
 <video data-autoplay controls>
   <source src="images/Brownsea-rego.mp4" type="video/mp4">
@@ -331,6 +369,8 @@ Matt <!-- .element: style="color: blue" -->
 i. using membership validation to prefill and prompt updating of personal contact information
 
 ----
+
+<!-- .slide: data-timing="1" -->
 
 ### Appropriate Access
 
@@ -347,6 +387,8 @@ We use an intentionally separate health information provider to allow members to
 
 ---
 
+<!-- .slide: data-timing="1" -->
+
 ### "Alright, who's coming along?"
 
 Managing transport and logistics of adults is tricky.
@@ -361,6 +403,8 @@ d. [BRN] Provide both guardians and Scout leaders who are responsible for youth 
 
 ----
 
+<!-- .slide: data-timing="1" -->
+
 Note:
 
 Matt <!-- .element: style="color: blue" -->
@@ -368,6 +412,8 @@ Matt <!-- .element: style="color: blue" -->
 i. legal guardians can see their child's data
 
 ----
+
+<!-- .slide: data-timing="1" -->
 
 ![Brownsea Event Supportal screenshot]()
 
@@ -379,11 +425,15 @@ ii. Scout Leaders can see their Youth Member data (to which they *should* alread
 
 ---
 
+<!-- .slide: data-timing="1" -->
+
 Note:
 
 e. [BRN] Event administration is handled by authorised personnel using the Django Admin backend framework.
 
 ----
+
+<!-- .slide: data-timing="1" -->
 
 ![Django Admin screenshot]()
 
@@ -395,6 +445,8 @@ i. conveniently, this is already built and was a breeze to customise and to enab
 
 ----
 
+<!-- .slide: data-timing="1" -->
+
 Note:
 
 Matt <!-- .element: style="color: blue" -->
@@ -403,11 +455,15 @@ ii. Exfiltration of data was limited to Super Users for the purposes of providin
 
 ---
 
+<!-- .slide: data-timing="1" -->
+
 Note:
 
 f. [STS] Delegated access to program information control by using Wagtail CMS for activity content - STS missions.
 
 ----
+
+<!-- .slide: data-timing="1" -->
 
 ![Wagtail screenshot]()
 
@@ -416,6 +472,8 @@ Note:
 i. reduces the overhead on git/VCS commit proficiency for maintaining website changes by giving program specialists the ability to edit specific event website content areas, such as the missions.
 
 ---
+
+<!-- .slide: data-timing="1" -->
 
 https://github.com/Scouts-Victoria-Program/RadioActiv8/blob/dcbffd2fa4d6f28ba72804422b84d9601b86fd60/django/RadioActiv8/templates/RadioActiv8/master/play.html#L38
 
@@ -427,6 +485,8 @@ g. [RA8] Minimize JS by using the impressive capabilities of HTMX.
 
 ----
 
+<!-- .slide: data-timing="1" -->
+
 Note:
 
 Matt <!-- .element: style="color: blue" -->
@@ -435,6 +495,8 @@ i. Single programming language for backend Dev avoiding bespoke or customized ar
 
 ---
 
+<!-- .slide: data-timing="1" -->
+
 Note:
 
 Matt <!-- .element: style="color: blue" -->
@@ -442,6 +504,8 @@ Matt <!-- .element: style="color: blue" -->
 h. [RA8] Leveraging AJAX to update information on a realtime dashboard to give up-to-date information without refreshing
 
 ----
+
+<!-- .slide: data-timing="1" -->
 
 Note:
 
@@ -453,6 +517,8 @@ i. Allows for logical decision making without having to consciously think about 
 
 ---
 
+<!-- .slide: data-timing="1" -->
+
 Note:
 
 Matt <!-- .element: style="color: blue" -->
@@ -460,6 +526,8 @@ Matt <!-- .element: style="color: blue" -->
 i. [RA8] Use a live dashboard to show the states of change to radio operators.
 
 ----
+
+<!-- .slide: data-timing="1" -->
 
 Note:
 
@@ -469,6 +537,8 @@ i. Helps despatchers to make operational decisions by showing: Base Capacity, La
 
 ---
 
+<!-- .slide: data-timing="1" -->
+
 Note:
 
 Matt <!-- .element: style="color: blue" -->
@@ -476,6 +546,8 @@ Matt <!-- .element: style="color: blue" -->
 j. [RA8] Pre-populate Route/Time estimates between bases
 
 ----
+
+<!-- .slide: data-timing="1" -->
 
 Note:
 
@@ -485,6 +557,8 @@ i. Helps make smart decisions - do you send the 5 year olds on a 1km journey uph
 
 ---
 
+<!-- .slide: data-timing="1" -->
+
 Note:
 
 Matt <!-- .element: style="color: blue" -->
@@ -492,6 +566,8 @@ Matt <!-- .element: style="color: blue" -->
 k. [RA8] Use GeoDjango to add geospatial integration to help with mapping.
 
 ----
+
+<!-- .slide: data-timing="1" -->
 
 ![Venturers standing around table with a tabletop-game-style map on it](images/ima_8b7ffc0.jpeg)
 <!-- .element: class="r-stretch" -->
@@ -503,6 +579,8 @@ Matt <!-- .element: style="color: blue" -->
 i. Speaking of maps...\*show gamified map\*
 
 ---
+
+<!-- .slide: data-timing="1" -->
 
 Note:
 
