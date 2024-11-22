@@ -245,12 +245,12 @@ To support such outrageously ambitious plans, ~~Luke schmoozied up to Matt~~ we 
 
 ---
 
-<!-- .slide: data-timing="1" -->
+<!-- .slide: data-timing="15" -->
 
 #### Django App 1
 _Star Trek: Survival_ website
 
-explain the event and showcase the activities on offer
+Explain the event and showcase the activities on offer
 
 Note:
 
@@ -264,13 +264,13 @@ The first Django app, a nice and simple concept.
 
 ----
 
-<!-- .slide: data-timing="1" -->
+<!-- .slide: data-timing="30" -->
 
 #### Django App 2
 
 _Brownsea_: Event Management System
 
-simple, secure, and speedy sign-up
+Simple, secure, and speedy sign-up
 
 Note:
 
@@ -280,40 +280,47 @@ b. register participants in a way that is fast, protects personal data, offers q
 
 Matt <!-- .element: style="color:blue"-->
 
-- Critically, this was successfully implemented despite the complexity of the organisations hierarchal arrangement.
-
-- The system has been designed atomically to capture the key elements of event management success beyond the needs of our event, so that others in Scouting can make use of this great work too.
+- ~~Critically, this was successfully implemented despite the complexity of the organisation's hierarchical arrangement.~~
+- Critically: Successfully implemented despite Scouts Victoria's complex hierarchical arrangement
+- ~~The system has been designed atomically to capture the key elements of event management success beyond the needs of our event, so that others in Scouting can make use of this great work too.~~
+- Designed generically, extensibly, and with modularity
+- Allows us to capture key elements of event management
+- Crucially, *beyond* the needs of just our event
+- So others in Scouting can use this great tool too
 
 ----
 
-<!-- .slide: data-timing="1" -->
+<!-- .slide: data-timing="20" -->
 
 #### Django App 3
 
 _RadioActiv8_: the event controller
 
-despatch and event operations as an activity for all youth members
+Dispatch and event operations as an activity for all youth members
 
 Note:
 
 Luke <!-- .element: style="color: red" -->
 
 c. gamify the distribution of participants across activity sites in a dynamic way that considered preferences for individuals and their activity team
-The name RadioActiv8, a play on the words Radio, Active, and the totes hip spelling with a number like all the cool kids do. #toTaLHacKeRbRo
+
+The name RadioActiv8 is a play on the words Radio, Active, and the totes hip spelling with a number like all the cool kids do. #toTaLHacKeRbRo
 
 ---
 
-<!-- .slide: data-timing="1" -->
+<!-- .slide: data-timing="10" -->
 
-![StarTrek:Survival Logo](images/sts_logo_text_horizontal-neg.svg)
-![Brownsea "logo"](images/brownsea-logo.svg)
-![RadioActiv8](images/ra8-logo.svg)
+![StarTrek:Survival Logo](images/sts_logo_text_horizontal-neg.svg) <!-- .element style="width: 30%; margin: 0 auto" -->
+![Brownsea "logo"](images/brownsea-logo.svg) <!-- .element style="width: 30%; margin: 0 auto" -->
+![RadioActiv8](images/ra8-logo.svg) <!-- .element style="width: 30%; margin: 0 auto" -->
+
+<!-- .element style="box-sizing: border-box; display: block" -->
 
 Note:
 
 Matt <!-- .element: style="color:blue" -->
 
-3. To make this event a success, we packed these three apps in a trenchcoat in a way that could be rapidly redeployed should everything fall over like it did 2 hours into Day 1 activities.
+3. To make this event a success, we packed these three apps into a trenchcoat in a way that could be rapidly redeployed should everything fall over like it did 2 hours into Day 1 activities.
 
 ---
 
