@@ -16,7 +16,7 @@ Reveal.initialize({
 	minimumTiming: 5,
 	width: 560 * 2.5,
 	height: 300 * 2.5,
-	//autoSlide: 5000,
+	autoSlide: false,
 	//showNotes: true,
 	//autoSlideStoppable: false,
 	// Learn about plugins: https://revealjs.com/plugins/
