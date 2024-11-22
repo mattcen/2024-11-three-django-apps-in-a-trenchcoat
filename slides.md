@@ -29,9 +29,7 @@ attributes: '<!-- data-autoslide="0" .slide: data-visibility="hidden" -->'
 ### Writing an event management website with not a lot of time
 
 - Matt Cengia (they/them) -- [blog.mattcen.com](https://blog.mattcen.com)
-- Luke Byrnes (he/him) --
-
-FIXME: Link(s) for Luke
+- Luke Byrnes (he/him) -- [ekulbyrnes.github.io](https://ekulbyrnes.github.io)
 
 <!--
 - Email: mattcen@mattcen.com
@@ -54,43 +52,11 @@ Note:
 
 <!-- .slide: data-autoslide="20000" -->
 
-## Slides
-
-[![https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat](images/slides_url.svg)](https://mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat)
-
-Note:
-
-- 5 minutes on the organisational problem
-  - want *youth* to be able to maintain this in future ([Youth Leading, Adults Supporting](https://pr.scouts.com.au/?mdocs-file=5191)), for succession planning etc.
-  - registration and validation of members
-    - brownsea, denizulu (AAA) - simplification by design (less is more - require little info (a) so we don't have to store info, and (b) to reduce friction for user)
-  - gamification of event operations
-    - RA8
-  - communicating to masses
-    - STS website, Be Very Informed - internal vs external
-- 5 minutes on the technical problem
-  - why python
-    - simplicity to code/teach (popularity/ubiquity)
-  - why django
-    - rapid development ("Web framework for perfectionists with deadlines")
-    - durable/secure/BCP out of the box
-    - extensible
-    - Django Admin
-  - why docker
-    - 12 factor, easy to deploy anywhere
-  - why htmx
-    - Reduce need for custom javascript, rapid (AJAX) responsiveness
-  - why… whatever else
-- 15 minutes on the solution
-- 5 mins for question time
-
----
-
-<!-- .slide: data-autoslide="20000" -->
-
 ## Acknowledgements
 
 Note:
+
+Luke <!-- .element: style="color: blue" -->
 
 I'm delivering this presentation on the unceded ancenstral lands of many Indigenous peoples.
 I honour the knowledge, stewardship, and care with which they've tended this land throughout history, and recognise the deep and lasting damage that colonisation has inflicted on them.
@@ -98,115 +64,6 @@ I pledge to do my best to respect, learn from, and support these peoples. We can
 
 ---
 
-## Scouts Victoria
-
-Note:
-
-Scouts Australia is an accredited member of the World Organisation of the Scouting Movement. Scouts Victoria is a Branch of this federation, and provides young people aged 5 to 25 with fun and challenging opportunities to grow through adventure. The modern Scouting program goes beyond the traditional outdoor Scouting activities of camping and hiking, and incorporates contemporary program opportunities that involve responsible risk taking and development of vocational skills that are supported through a peer-supported award scheme to recognize individual achievement. Each Branch of Scouts Australia works to achieve these common goals, but is responsible for executing their own administrative support objectives.
-
-
-You can see where the hierarchy problem begins...
-
----
-
-----
-
-# "Let's make a tech and radio outdoor wide game!"
-
-## "It'll be fun!", he said
-
-> wide game (n) (plural wide games):
->
->  Any of various games played by groups in a large area, such as a field or woodland.
-
-Note:
-
-Luke wanted to create a wide game which uses 2-way to communicate with a home base. Each radio would be at a base out in the field, and patrols of scouts would be sent to one of those bases.
-
-Upon reaching a base, they would use the radio to contact HQ for further instructions. Each base would have a sheet of "intelligence" questions, one of which would be requested by the operator at HQ. Once the scouts answered the intelligence question, HQ would send them to another base.
-
----
-
-## Getting RadioActiv8 off the ground
-
-----
-
-![RA8 0.1 paper implementation. A sheet of lined paper with 4 named bases, each
-represented by coloured dot stickers. Under each base is a list of intelligence
-answers, most of which are crossed out with circled patrol names beside them,
-indicating who answered what.](images/ra8-0.1.jpg)
-<!-- .element: class="r-stretch" -->
-
-----
-
-![RA8 current Play screen](images/RadioActiv8%20-%20Play.svg)
-<!-- .element: class="r-stretch" -->
-
-----
-
-![RadioActiv8 site map](images/RA8%20Wattle%20Park%20A4.svg)
-<!-- .element: class="r-stretch" -->
-
-----
-
-![RA8 0.1 paper implementation. A sheet of lined paper with 4 named bases, each
-represented by coloured dot stickers. Under each base is a list of intelligence
-answers, most of which are crossed out with circled patrol names beside them,
-indicating who answered what.](images/ra8-0.1.jpg)
-<!-- .element: class="r-stretch" -->
-
-----
-
-![RA8 current Play screen](images/RadioActiv8%20-%20Play.svg)
-<!-- .element: class="r-stretch" -->
-
-----
-
-![RadioActiv8 site map](images/RA8%20Wattle%20Park%20A4.svg)
-<!-- .element: class="r-stretch" -->
-
-----
-
-# "We should build an(other) event registration platform!"
-
-Note:
-
-- multiple intersecting hierarchies
-- good user flow
-- met specific needs the current system did not
-- uses agile development methodology to rapidly build stuff without getting bogged down in policy and bureaucracy
-
-target: 2 audiences:
-
-1. PyConAU
-2. Members of Scouts Victoria
-
-----
-
-----
-
----
-## "Uh, sure?"
-
----
-
-## The gathering of Brownsea
-
-----
-
-# "So I wanna run the biggest STEM scout camp in the state…"
-
-## "And I want to make use of these other two apps *and* build a new one!"
-
----
-
-## Creating Star Trek: Survival
-
-### And getting youth to run it
-
-----
-
-# Lessons learned
 
 ---
 
