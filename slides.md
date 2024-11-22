@@ -64,6 +64,13 @@ I pledge to do my best to respect, learn from, and support these peoples. We can
 
 ---
 
+ <!-- .slide: data-autoslide="20000" -->
+
+## Slides
+
+[![https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat](images/slides_url.svg)](https://mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat)
+
+---
 
 1. We're Scout leaders - we facilitate young people to explore the world with an ethos of Learning by Doing that is Youth Led, Adult Supported.
 
