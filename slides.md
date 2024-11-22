@@ -159,7 +159,7 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-- We don't do that.
+- …We don't do that.
 
 ----
 
@@ -174,7 +174,7 @@ ii. For STS, we decided to go agile and use a dispatch system to send youth memb
 
 ----
 
-<!-- .slide: data-timing="1" -->
+<!-- .slide: data-timing="25 -->
 
 <video data-autoplay controls>
   <source src="images/sts-mission-scroll.mp4" type="video/mp4">
@@ -190,9 +190,10 @@ iii. To make an agile system work, participants gave us their top ten activity p
 
 ----
 
-<!-- .slide: data-timing="1" -->
+<!-- .slide: data-timing="10" -->
 
-![Kid(s) on radios]()
+![Kid(s) on radios](images/ima_bbd027b.jpeg)
+<!-- .element: class="r-stretch" -->
 
 Note:
 
@@ -202,7 +203,14 @@ iv. 250 Scouts were each given their own radio (a choice so poor we've done it t
 
 ----
 
-<!-- .slide: data-timing="1" -->
+<!-- .slide: data-timing="25" -->
+
+## Activity Engagement
+
+- Check In to designated activity
+- Do activity
+- Check Out of activity
+- Head to next designated activity
 
 Note:
 
@@ -213,7 +221,7 @@ v. To engage in activities at this event, all the teams have to do to participat
 - Check In to designated activity
 - Do activity
 - Check Out of activity
-- Next designated activity
+- Head to next designated activity
 
 This methodology provided flexibility of staff, scalability of activity delivery, and most importantly, no queueing for fun!
 
@@ -221,7 +229,7 @@ Food and sleep also occur in designated times and areas.
 
 ---
 
-<!-- .slide: data-timing="1" -->
+<!-- .slide: data-timing="10" -->
 
 > Shoot for the moon. Even if you miss, you'll land among the stars.
 
