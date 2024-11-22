@@ -79,12 +79,20 @@ I pledge to do my best to respect, learn from, and support these peoples. We can
 - Potentially add code examples and/or screenshots
 - Stretch goal: Add enough info to speaker notes such that a reader would be able to get the talk content by just reading the slides
 -->
+<del>Compulsive volunteers</del>
+
+Quality Scout Leaders
+
+![Scouts Victoria Logo](images/ScoutsVIC-Vert-11Col.svg)
+<!-- .element: class="r-stretch" -->
+
 Note:
 
 1. We're Scout leaders - we facilitate young people to explore the world with an ethos of Learning by Doing that is Youth Led, Adult Supported.
 
 ---
 
+[![OAS photo]] | [![ScoutHack photo feat. Uniform?]]
 
 Note:
 
@@ -92,41 +100,78 @@ a. We don't just do fun things outdoors, but we also provide events like ScoutHa
 
 ---
 
+https://startreksurvival.tech/static/sts_website/assets/img/cubsllap.jpg
+Joey Scouts at Star Trek: Survival
+
 Note:
 
 b. We also run immersive STEM-themed camps. We call it Star Trek: Survival.
 
 ----
 
+| Activity 1  | Activity 2  | Activity 3  |
+|-------------|-------------|-------------|
+| Red Team    | Blue Team   | Yellow Team |
+| Yellow Team | Red Team    | Blue Team   |
+| Blue Team   | Yellow Team | Red Team    |
+<!-- .element: data-auto-animate data-id="table" -->
+
+
+| Activity 1  | Activity 2  | Activity 3  |
+|-------------|-------------|-------------|
+| Red Team    | Blue Team   | Yellow Team |
+| Yellow Team | Red Team    | Blue Team   |
+| Blue Team   | Yellow Team | Red Team    |
+<!-- .element: data-auto-animate data-id="table" style="text-decoration: line-through" -->
+
 Note:
 
-i. Instead of using a round-robin or "Track-based" program, we decided to have fun with radios and go agile.
+i. Most Scouting events use a round-robin or "Track-based" program...
 
 ----
 
+
+
 Note:
 
-ii. Participants told us their activity preferences, and we yeeted this into our software to make sure everyone did something they asked for to support their badge projects.
+ii. we decided to go agile and use a despatch system to send youth members to their activities.
 
 ----
 
+![Mission snapshot showing 36 missions]
+
 Note:
 
-iii. 250 Scouts were each given their own radio (a choice so poor we've done it twice now), and they received their marching orders to attend their next activity from "Starfleet Command".
+iii. To make an agile system work, participants gave us their top ten activity preferences, and we yeeted this into our software to make sure everyone did something they asked for to support their badge projects.
 
 ----
 
+![Kid(s) on radios]
+
 Note:
 
-iv. All they had to do now was Check In to activity - do activity - Check Out of activity - Next activity. Food and sleep also occur in designated times and areas.
+iv. 250 Scouts were each given their own radio (a choice so poor we've done it twice now), and they received their marching orders to attend their next activity from "Starfleet Command".
+
+----
+
+
+
+Note:
+
+v. All they had to do now was Check In to activity - do activity - Check Out of activity - Next activity. Food and sleep also occur in designated times and areas.
 
 ---
 
+
+
 Note:
 
-2. To support such insanely ambitious plans, <del>Luke schmoozied up to Matt</del> we very much relied on custom developed apps to:
+1. To support such insanely ambitious plans, <del>Luke schmoozied up to Matt</del> we very much relied on custom developed apps to:
 
 ---
+
+
+
 
 Note:
 
