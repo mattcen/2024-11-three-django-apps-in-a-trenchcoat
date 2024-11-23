@@ -539,7 +539,7 @@ Note:
 Matt <!-- .element style="color:blue" -->
 
 - The Radio Conversation process is built into the form workflow
-- Operators iterate from top of screen
+- Operators iterate the process from top of screen
 - Delivered by Django Admin's "interface-for-free."
 
 ---
