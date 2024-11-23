@@ -163,7 +163,7 @@ Luke <!-- .element: style="color: red" -->
 
 ----
 
-<!-- .slide: data-timing="35 -->
+<!-- .slide: data-timing="35" -->
 
 ![Venturers standing around table with a tabletop-game-style map on it](images/ima_8b7ffc0.jpeg)
 <!-- .element: class="r-stretch" -->
@@ -288,9 +288,7 @@ b. register participants in a way that is fast, protects personal data, offers q
 
 Matt <!-- .element: style="color:blue"-->
 
-- ~~Critically, this was successfully implemented despite the complexity of the organisation's hierarchical arrangement.~~
 - Critically: Successfully implemented despite Scouts Victoria's complex hierarchical arrangement
-- ~~The system has been designed atomically to capture the key elements of event management success beyond the needs of our event, so that others in Scouting can make use of this great work too.~~
 - Designed generically, extensibly, and with modularity
 - Allows us to capture key elements of event management
 - Crucially, *beyond* the needs of just our event
@@ -335,8 +333,6 @@ Matt <!-- .element: style="color:blue" -->
 - Aimed for a 12-factor app to enable rapid redeployment
 - In case everything should fall over…
 - Like it did 2 hours into Day 1 of our event
-
-~~3. To make this event a success, we packed these three apps into a trenchcoat in a way that could be rapidly redeployed should everything fall over like it did 2 hours into Day 1 activities.~~
 
 FIXME: maybe show some code?
 
