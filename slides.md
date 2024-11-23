@@ -96,7 +96,7 @@ Luke <!-- .element: style="color: red" -->
 
 <!-- .slide: data-timing="15" -->
 
-![Scouts wearing hard hats rock climbing on a cliff face](images/oas.jpg)<!--Picture by Lachlan Bence; Source: https://www.thecourier.com.au/story/8221341/hanging-on-to-build-our-citys-future-leaders-but-they-need-help/--> <!-- .element style="width: 45%" -->
+![Cub wearing hard hats rock climbing on a cliff face](images/oas2.jpg)<!-- .element style="width: 45%" -->
 ![Scouts in uniform sitting at computer desks, with a leader pointing at a computer monitor](images/scouthack-uniform.jpg) <!-- .element style="width: 50%" -->
 
 Note:
@@ -597,7 +597,7 @@ Here are our operators - an older Scout, helping a younger scout, direct OTHER s
 ![Will](images/ra8_table_dashboards.jpg)
 <!-- .element: class="r-stretch" -->
 
-![DashboardRA8](images/ra8-dashboard-patrols.png)<!-- .element: class="r-stretch" -->
+![Patrol Dashboard RA8](images/ra8-dashboard-patrols.png)<!-- .element: class="r-stretch" -->
 
 https://github.com/Scouts-Victoria-Program/RadioActiv8/blob/dcbffd2fa4d6f28ba72804422b84d9601b86fd60/django/RadioActiv8/templates/RadioActiv8/master/play.html#L38
 
@@ -605,21 +605,15 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-g. [RA8] Minimize JS by using the impressive capabilities of HTMX.
+- [RA8] Minimize JS by using the impressive capabilities of HTMX.
+- Single programming language for backend Dev avoiding bespoke or customized areas where, ordinarily, JS would feel like the _only_ way to solve a particular problem.
 
-----
-
-<!-- .slide: data-timing="1" -->
-
-Note:
-
-Matt <!-- .element: style="color: blue" -->
-
-i. Single programming language for backend Dev avoiding bespoke or customized areas where, ordinarily, JS would feel like the _only_ way to solve a particular problem.
 
 ---
 
 <!-- .slide: data-timing="1" -->
+
+![Base Dashboard RA8](images/ra8-base-dashboard.png)<!-- .element class="r-stretch" -->
 
 Note:
 
