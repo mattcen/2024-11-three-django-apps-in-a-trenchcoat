@@ -314,37 +314,21 @@ The name RadioActiv8 is a play on the words Radio, Active, and the totes hip spe
 ![Brownsea "logo"](images/brownsea-logo.svg) <!-- .element style="width: 30%; margin: 0 auto" -->
 ![RadioActiv8](images/ra8-logo.svg) <!-- .element style="width: 30%; margin: 0 auto" -->
 
-<!-- .element style="box-sizing: border-box; display: block" -->
+<!-- .element style="justify-content: center; display: flex" -->
 
 Note:
 
 Matt <!-- .element: style="color:blue" -->
 
-3. To make this event a success, we packed these three apps into a trenchcoat in a way that could be rapidly redeployed should everything fall over like it did 2 hours into Day 1 activities.
+- To make _Star Trek: Survival_ a success:
+- Packed our 3 apps into a trenchcoat
+- One project to ~~rule~~ host them all:
+- A single multi-app Django project
+- Aimed for a 12-factor app to enable rapid redeployment
+- In case everything should fall over…
+- Like it did 2 hours into Day 1 of our event
 
----
-
-<!-- .slide: data-timing="1" -->
-
-![Docker logo](images/docker-logo.svg)
-
-Note:
-
-Matt <!-- .element: style="color: blue" -->
-
-a. [ALL] Docker images means that we have a standardized operational environment. Say what you will about micro services being irritating but it does the job effectively.
-
----
-
-<!-- .slide: data-timing="1" -->
-
-
-
-Note:
-
-Matt <!-- .element: style="color: blue" -->
-
-b. [ALL] One project to ~~rule~~ host them all - using apps in Django.
+~~3. To make this event a success, we packed these three apps into a trenchcoat in a way that could be rapidly redeployed should everything fall over like it did 2 hours into Day 1 activities.~~
 
 FIXME: maybe show some code?
 
@@ -358,9 +342,24 @@ https://github.com/Scouts-Victoria-Program/scoutsvic-rego/blob/638b6ad775430d9e7
 
 <!-- .slide: data-timing="1" -->
 
+![OCI logo](images/OCI-logo.svg)
+![Docker logo](images/docker-logo.svg)
 
+Note:
 
-![Screenshot of login form](https://startreksurvival.tech/events/verify_member/)
+Matt <!-- .element: style="color: blue" -->
+
+- OCI-compliant images helped us standardise our environment
+- Containers and micro-services aren't for everyone, but they work for us
+- We chose Docker to run our containers
+- See [Matt's Docker talk](https://www.youtube.com/watch?v=X0aarx6LLzI) to learn about Docker
+
+---
+
+<!-- .slide: data-timing="1" -->
+
+![Screenshot of login form showing 3 fields: Scout Membership number, surname, date of birth](images/brownsea-login-cropped.png)
+<!-- .element: class="r-stretch" -->
 
 Note:
 
