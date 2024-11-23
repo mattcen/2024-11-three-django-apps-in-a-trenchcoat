@@ -142,6 +142,7 @@ Note:
 Luke <!-- .element: style="color: red" -->
 
 i. Most Scouting events use a round-robin or "Track-based" program like this…
+Each team rotates through activities for a limited duration.
 
 ----
 
@@ -160,6 +161,10 @@ Note:
 Luke <!-- .element: style="color: red" -->
 
 - …We don't do that.
+
+Youth-Led means youth members decide how long they want to be throwing sponges at their Leaders before exploring something else.
+
+We have made that decision capability a reality.
 
 ----
 
