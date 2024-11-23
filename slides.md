@@ -52,7 +52,7 @@ Matt <!-- .element: style="color: blue" -->
 
 We're delivering this presentation on the unceded ancestral lands of many Indigenous peoples.
 We honour the knowledge, stewardship, and care with which they've tended this land throughout history, and recognise the deep and lasting damage that colonisation has inflicted on them.
-We pledge to do my best to respect, learn from, and support these peoples. We can all do better.
+We pledge to do our best to respect, learn from, and support these peoples. We can all do better.
 
 ---
 
@@ -349,7 +349,7 @@ https://github.com/Scouts-Victoria-Program/scoutsvic-rego/blob/638b6ad775430d9e7
 
 ---
 
-<!-- .slide: data-timing="1" -->
+<!-- .slide: data-timing="15" -->
 
 ![OCI logo](images/OCI-logo.svg)
 ![Docker logo](images/docker-logo.svg)
@@ -361,7 +361,7 @@ Matt <!-- .element: style="color: blue" -->
 - OCI-compliant images helped us standardise our environment
 - Containers and micro-services aren't for everyone, but they work for us
 - We chose Docker to run our containers
-- See [Matt's Docker talk](https://www.youtube.com/watch?v=X0aarx6LLzI) to learn about Docker
+- See [Matt's Docker talk](https://www.youtube.com/watch?v=X0aarx6LLzI), linked in slide notes, to learn about Docker
 
 ---
 
@@ -401,40 +401,10 @@ No more, no less
 
 Note:
 
-FIXME: Does Luke do this one instead?
-
-Matt <!-- .element: style="color: blue" -->
+Luke <!-- .element: style="color: red" -->
 
 ii. Less is more - only gather what is needed; heath records have a dedicated confidential information system, so only catering basics are required.
 We use an intentionally separate health information provider to allow members to subscribe their health information to event organisers on an as-needed basis. This allows for personal information protection and restricts unnecessary exposure. It also keeps control of the information in the hands of the individual guardians.
-
----
-
-<!-- .slide: data-timing="1" -->
-
-### "Alright, who's coming along?"
-
-Managing transport and logistics of adults is tricky.
-
-Managing transport and logistics of youth members is insanity.
-
-Note:
-
-Matt <!-- .element: style="color: blue" -->
-
-d. [BRN] Provide both guardians and Scout leaders who are responsible for youth access to registration information for individuals.
-
-----
-
-<!-- .slide: data-timing="1" -->
-
-Note:
-
-Matt <!-- .element: style="color: blue" -->
-
-i. legal guardians can see their child's data
-
-----
 
 <!-- .slide: data-timing="1" -->
 
@@ -444,6 +414,7 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
+i. legal guardians can see their child's data
 ii. Scout Leaders can see their Youth Member data (to which they *should* already have access through member records).
 
 ---
