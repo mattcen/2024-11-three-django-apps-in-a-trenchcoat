@@ -70,37 +70,30 @@ Matt <!-- .element: style="color: blue" -->
 - Will give a few seconds for you to grab that link
 
 ---
+
 <!-- .slide: data-timing="15" -->
 
 ![Scouts Victoria Logo](images/ScoutsVIC-Vert-11Col.svg)
 <!-- .element: class="r-stretch" -->
 
-## ~~Compulsive volunteers~~
-
-## Quality Scout Leaders
-
 Note:
 
 Luke <!-- .element: style="color: red" -->
 
-1. We're Scout leaders - we facilitate young people to explore the world with an ethos of Learning by Doing that is Youth Led, Adult Supported.
-
-- Scout Leaders
-- Help young people explore the world
-- Cultivate ethos of Learning By Doing
-- and Youth Led, Adult Supported
+We're Scout leaders - we:
+- facilitate young people to explore the world
+- an ethos of Learning by Doing
+- is Youth Led, Adult Supported.
 
 ---
 <!-- .slide: data-timing="15" -->
 
 ![Cub wearing hard hat rock climbing on a cliff face](images/oas2.jpg)<!-- .element style="width: 45%" -->
-![Scouts in uniform sitting at computer desks, with a leader pointing at a computer monitor](images/scouthack-uniform.jpg) <!-- .element style="width: 50%" -->
+![Scouts in uniform sitting at computer desks, with a leader pointing at a computer monitor](images/scouthack-uniform.jpg) <!-- .element style="width: 45%" -->
 
 Note:
 
 Luke <!-- .element: style="color: red" -->
-
-a. We don't just do fun things outdoors, but we also provide events like ScoutHack and teach Web Dev (see our lightning talk/Matt's talk).
 
 - Sure, we do fun outdoor activities
 - But also provide events like ScoutHack which teach website development
@@ -121,7 +114,7 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-b. We also run immersive STEM-focussed camps. We call it Star Trek: Survival.
+- We also run immersive STEM-focussed camps. We call it Star Trek: Survival.
 
 ----
 <!-- .slide: data-timing="5" -->
@@ -136,8 +129,8 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-i. Most Scouting events use a round-robin or "Track-based" program like this…
-Each team rotates through activities for a limited duration.
+- Most Scouting events use a round-robin or "Track-based" program like this…
+- Each team rotates through activities for a limited duration.
 
 ----
 <!-- .slide: data-timing="3" -->
@@ -170,10 +163,11 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-ii. For STS, we decided to go agile and use a dispatch system to send youth members to their activities.
+- At STS we went agile
+- built the event around a dispatch system to send youth members to their activities via radio
 
 Shown here:
-- Game board: an analogue manifestation of our software in gamified state
+- Game board: an analogue representation of the game-state reported by our software
 - In background: screen showing digital dashboard showing game state
 - Around table: Youth updating team locations
 - Off to side: Adult supporting
@@ -191,7 +185,11 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-iii. To make an agile system work, participants gave us their top ten activity preferences, and we yeeted this into our software to make sure everyone did something they asked for to support their badge projects.
+[STS]
+
+- To make an agile system work, participants gave us their top ten activity preferences
+- we yeeted this into our software to make sure everyone did something they asked for to support their badge projects.
+- we doubled our program from 18 activities in 2022 to 36 activites in 2024.
 
 ----
 <!-- .slide: data-timing="10" -->
@@ -203,7 +201,8 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-iv. 250 Scouts were each given their own radio (a choice so poor we've done it twice now), and they received their marching orders to attend their next activity from "Starfleet Command".
+- 250 Scouts were each given their own radio (a choice so poor we've done it twice now)
+- they received their marching orders to attend their next activity from "Starfleet Command".
 
 ----
 <!-- .slide: data-timing="25" -->
@@ -219,7 +218,7 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-v. To engage in activities at this event, all the teams have to do to participate is:
+To engage in activities at this event, all the teams have to do to participate is:
 
 - Check In to designated activity
 - Do activity
@@ -240,9 +239,9 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-1. An event of this style had never been achieved before.
+- An event of this style had never been achieved before.
 
-To support such outrageously ambitious plans, ~~Luke schmoozied up to Matt~~ we very much relied on custom developed apps:
+- To support such outrageously ambitious plans, ~~Luke schmoozied up to Matt~~ we very much relied on custom developed apps:
 
 ---
 <!-- .slide: data-timing="15" -->
@@ -256,9 +255,8 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-a. inform participants of the awesome activities on offer by creating a website for STS
-
-The first Django app, a nice and simple concept.
+- first Django app, a nice and simple concept
+- create a website for STS to inform participants of the awesome activities on offer
 
 ----
 <!-- .slide: data-timing="30" -->
@@ -273,7 +271,11 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-b. register participants in a way that is fast, protects personal data, offers quality UX, and provides transparency for guardians
+- used for participant registration and team management
+- implemented for speed
+- security of personal data
+- offers quality UX
+- provides transparency for guardians
 
 Matt <!-- .element: style="color:blue"-->
 
@@ -296,11 +298,30 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-c. gamify the distribution of participants across activity sites in a dynamic way that considered preferences for individuals and their activity team
+- Outsourcing the operational components of the event as an activity for youth members
+- by gamify the distribution of participants across activity sites
+- maintains preference consideration for individuals and their activity teams
+- The name RadioActiv8 is a play on the words Radio, Active, and the totes hip spelling of script kiddies. #toTaLHacKeRbRo
 
-The name RadioActiv8 is a play on the words Radio, Active, and the totes hip spelling with a number like all the cool kids do. #toTaLHacKeRbRo
+----
+
+<!-- .slide: data-timing="15" -->
+
+![OCI logo](images/OCI-logo.svg)
+![Docker logo](images/docker-logo.svg)
+
+Note:
+
+Matt <!-- .element: style="color: blue" -->
+
+- OCI-compliant images helped us standardise our environment
+- We chose Docker to run our containers
+- See [Matt's Docker talk](https://www.youtube.com/watch?v=X0aarx6LLzI), linked in slide notes, to learn about Docker
+
+!FIXME[Cut me and merge info if shortening required?]
 
 ---
+
 <!-- .slide: data-timing="10" -->
 
 ![StarTrek:Survival Logo](images/sts_logo_text_horizontal-neg.svg) <!-- .element style="width: 30%; margin: 0 auto" -->
@@ -315,34 +336,80 @@ Matt <!-- .element: style="color:blue" -->
 
 - To make _Star Trek: Survival_ a success:
 - Packed our 3 apps into a trenchcoat
-- One project to ~~rule~~ host them all:
-- A single multi-app Django project
-- Aimed for a 12-factor app to enable rapid redeployment
+- Single, standardized environment so that
 - In case everything should fall over…
 - Like it did 2 hours into Day 1 of our event
 
-FIXME: maybe show some code?
+----
 
-https://github.com/Scouts-Victoria-Program/sts/blob/e012c21e7c6d87e898c005fe4191f728efb0c8ba/django/myproject/settings.py#L88-L91
+<!-- .slide: data-timing="5"-->
 
-https://github.com/Scouts-Victoria-Program/RadioActiv8/blob/b3b19a481be39f49c3b627bd4ef3653eeecc7c99/django/RadioActiv8/models.py#L228-L233
+Team class using registration app data
 
-https://github.com/Scouts-Victoria-Program/scoutsvic-rego/blob/638b6ad775430d9e7158499daa7395dec21c3ac6/django/scoutsvic_ems/models.py#L563
+<!--https://github.com/Scouts-Victoria-Program/RadioActiv8/blob/b3b19a481be39f49c3b627bd4ef3653eeecc7c99/django/RadioActiv8/models.py#L228-L233-->
+```python
+class Patrol(models.Model):
+    history = HistoricalRecords()
+    event_patrol = models.ForeignKey(
+        "scoutsvic_ems.EventPatrol",
+        blank=True,
+        null=True,
+        on_delete=models.SET_NULL,
+        )
+```
 
----
-<!-- .slide: data-timing="15" -->
+Team information accessed by Foreign Key from registration app
 
-![OCI logo](images/OCI-logo.svg)
-![Docker logo](images/docker-logo.svg)
+<!--https://github.com/Scouts-Victoria-Program/scoutsvic-rego/blob/638b6ad775430d9e7158499daa7395dec21c3ac6/django/scoutsvic_ems/models.py#L563-->
+```python
+class Registration(RulesModel):
+    class Meta:
+        rules_permissions = {
+        …
+        patrol = models.ForeignKey(
+            Patrol,
+            on_delete=models.SET_NULL,
+            null=True,
+            blank=True)
+        …
+        }
+```
+
+Note:
+
+Matt <!-- .element: style="color:blue" -->
+
+- One project to ~~rule~~ host them all:
+- A single multi-app Django project
+- Aimed for a 12-factor app to enable rapid redeployment
+
+!FIXME[@mattcen read and re-write slides and notes however you see fit.]
+
+----
+
+<!-- .slide: data-timing="5"-->
+
+Blending three apps <!--https://github.com/Scouts-Victoria-Program/sts/blob/e012c21e7c6d87e898c005fe4191f728efb0c8ba/django/myproject/settings.py#L88-L91
+-->
+```python
+                                INSTALLED_APPS = [
+                                    …
+                                    "sts_website",
+                                    "scoutsvic_extranet",
+                                    "scoutsvic_ems",
+                                    "RadioActiv8",
+                                ]
+```
 
 Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-- OCI-compliant images helped us standardise our environment
-- Containers and micro-services aren't for everyone, but they work for us
-- We chose Docker to run our containers
-- See [Matt's Docker talk](https://www.youtube.com/watch?v=X0aarx6LLzI), linked in slide notes, to learn about Docker
+- App installation is as easy as
+- a list
+- a submodule update!
+
+!FIXME[@mattcen read and re-write slides and notes however you see fit.]
 
 ---
 <!-- .slide: data-timing="1" -->
@@ -354,7 +421,8 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-c. [BRN] Verify and pre-fill:
+[BRN]
+- Verify and pre-fill:
 
 ----
 <!-- .slide: data-timing="1" -->
@@ -368,7 +436,13 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-i. using membership validation to prefill and prompt updating of personal contact information
+[BRN]
+Registration Process Highlight
+- validate member with membership database;
+- prefill and prompt replacement of personal contact information for the event
+- provide any notes that may be beneficial to event organisers (but not health info)
+- provide a cursory summary of catering/dietary needs
+- receive invoice for payment.
 
 ----
 <!-- .slide: data-timing="1" -->
@@ -381,6 +455,7 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
+[BRN]
 - We only gather data that is needed
 - heath records have a dedicated confidential information system, so only catering needs are flagged to event admins.
 - We use an intentionally separate health information provider, so as an event we don't need to manage that data flow here.
@@ -395,7 +470,8 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-i. legal guardians can see their child's data
+[BRN]
+- legal guardians can see their child's data
 
 ----
 ![Brownsea Event Supportal screenshot](images/supportal_list.png)
@@ -405,7 +481,8 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-ii. Scout Leaders can see their Youth Member data (to which they *should* already have access through member records).
+[BRN]
+- Scout Leaders can see their Youth Member data (to which they *should* already have access through member records).
 
 ----
 <!-- .slide: data-timing="1" -->
@@ -417,7 +494,8 @@ Note:
 
 Matt <!-- .element style="color: blue" -->
 
-[BRN] Event administration is handled by authorised personnel using the Django Admin backend framework.
+[BRN]
+- Event administration is handled by authorised personnel using the Django Admin backend framework.
 - We see here the different activities can be switched on, off, and have content updated on the fly through this interface.
 
 ----
@@ -431,6 +509,7 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
+[BRN, STS, RA8]
 - Here we have an overview of the django model elements.
 
 ---
@@ -442,6 +521,8 @@ Matt <!-- .element: style="color: blue" -->
 Note:
 
 Luke <!-- .element: style="color:red" -->
+
+[RA8]
 
 Now for some fun.
 
@@ -478,7 +559,8 @@ Matt <!-- .element: style="color: blue" -->
 - Learning: Paper does not scale.
 
 ---
-![RA8 list of submitted events](images/ra8-0.5_2.png)<!-- .element: class="r-stretch" -->
+![RA8 list of submitted events](images/ra8-0.5_2.png)
+<!-- .element: class="r-stretch" -->
 
 <!-- .slide: data-timing="1" -->
 
@@ -529,114 +611,186 @@ Matt <!-- .element: style="color: blue" -->
 - … and then we match Luke's style guide. For better or worse.
 
 ---
-<!-- .slide data-timing="1" -->
 
-![Operators](images/operators_with_youth.jpg)
+<!-- .slide: data-timing="1" -->
+
+![RadioActiv8 for STS](images/RadioActiv8%20-%20Play.png)
 <!-- .element: class="r-stretch" -->
+
+Note:
+
+Matt <!-- .element: style="color: blue" -->
+
+- and add some buttons, specific for the event.
+- some of the apps made use of tags and branches to customise some apps for the event.
+- We can also see the feedback provided when assumed information is not present.
+- RadioActiv8 is smart enough to say something is wrong
+- yet allows the operator to override suggestions, letting play continue.
+
+---
+<!-- .slide: data-timing="1" -->
+
+![Adult Despatchers](images/ra8-adults.jpg)<!-- .element style="width: 28%" -->
+![Adult Despatchers](images/ra8-adults2.jpg)<!-- .element style="width: 50%" -->
 
 Note:
 
 Luke <!-- .element style="color:red"-->
 
-- Wide games are fun, but this process can be used to manage activities.
-- Instead of bases, we use activities.
-- This means HQ needs to be a little bigger than before, but Youth-Led, Adult Supported, let's make it work!
-
-Here are our operators - an older Scout, helping a younger scout, direct OTHER scouts on where to go next!
+- Wide games are fun, but this same process can be used to manage activities.
+- Instead of intel bases, we use activities.
+- This means HQ needs to be a little bigger than before, but with Youth-Led, Adult Supported, we can go from this…
 
 ----
+
+<!-- .slide: data-timing="1"-->
+
+![Radio Operators](images/operators_with_youth.jpg)<!-- .element style="width: 45%" -->
+![Operator Images](images/radio_user2.JPG)<!-- .element style="width: 31%" -->
+
+Note:
+
+- Here are our operators - an older Scout, helping a younger scout, direct OTHER scouts on where to go next!
+- This is how we made outsourcing event operations possible:
+
+---
+
 <!-- .slide: data-timing="1" -->
 
-![Patrol Dashboard RA8](images/ra8-dashboard-patrols.png)<!-- .element: class="r-stretch" -->
+![RA8 Mision path distance](images/ra8-mission-selection-distance.png)
+<!-- .element: class="r-stretch"-->
 
-https://github.com/Scouts-Victoria-Program/RadioActiv8/blob/dcbffd2fa4d6f28ba72804422b84d9601b86fd60/django/RadioActiv8/templates/RadioActiv8/master/play.html#L38
+Note:
+
+!FIXME[@mattcen, do you want to do all of this one instead of me starting?]
+
+Luke <!-- .element: style="color: red" -->
+
+RadioActiv8 provides path-trace distancing between bases, shown as time. Combined with a site map, operators make tactical decisions, such as
+
+> Do we send the 5 year olds on a 1km journey, uphill, 20mins before lunch? No.
+
+> Do we send the Older Scouts? Yes.
+
+Matt <!-- .element: style="color:blue" -->
+
+- Each base recommendation populates Route/Time estimates between bases
+- we use GeoDjango to add geospatial integration to help with mapping data.
+
+!FIXME[What else do you want to showcase here @mattcen?]
+
+- Success message displays at the top of the page and includes:
+ - A timestamp
+ - the Team Number
+ - the Current Base
+ - and their next Base (if in transit).
+
+- AKA: Wait, what did I just log!?
+
+---
+<!-- .slide: data-timing="1" -->
+
+![Base Dashboard RA8](images/ra8-base-dashboard.png)<!-- .element style="width: 20%" -->
+![Patrol Dashboard RA8](images/ra8-dashboard-patrols.png)<!-- .element style="width: 50%" -->
 
 Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-- [RA8] Minimize JS by using the impressive capabilities of HTMX.
+There are two dashboards shown on the monitors.
+
+- Each
+  - uses HTMX to give up-to-date information without refreshing
+  - Supports the decision making process for despatchers without manually refreshing the page.
+
+- the Base Dashboard on the left shows
+  - Available Bases
+  - Base Capacity
+  - and Full bases
+
+- the Team Dashboard on the right
+ - Lists teams by number
+ - Shows either:
+  - Their Current Location if one base is listed, or
+  - their previous and next base, indicating they are in transit.
+ - and the time since they last radio'd HQ.
+
+----
+
+<!-- .slide: data-timing="1" -->
+
+```html
+                    <div id="base-status" class="form-group"
+                        hx-trigger="every 10s"
+                        hx-get=""
+                        hx-target="this"
+                        hx-select="#base-status"
+                        hx-swap="outerHTML"
+                        hx-select-oob="#patrol-locations">
+```
+
+[github](https://github.com/Scouts-Victoria-Program/RadioActiv8/blob/dcbffd2fa4d6f28ba72804422b84d9601b86fd60/django/RadioActiv8/templates/RadioActiv8/master/play.html#L38)
+
+Note:
+
+Matt <!-- .element: style="color: blue" -->
+
+!FIXME[Talk about the HTMX dependencies/installation?]
+- Code is all the HTMX needed to auto-refresh the dashboards.
+- Minimize JS by using the impressive capabilities of HTMX.
 - Single programming language for backend Dev avoiding bespoke or customized areas where, ordinarily, JS would feel like the _only_ way to solve a particular problem.
 
-
 ---
 <!-- .slide: data-timing="1" -->
 
-![Base Dashboard RA8](images/ra8-base-dashboard.png)<!-- .element class="r-stretch" -->
+![RA8 Tabletop View](images/ra8_table_dashboards.jpg)
+<!-- .element: class="r-stretch"-->
 
 Note:
 
-Matt <!-- .element: style="color: blue" -->
+Luke <!-- .element: style="color: red" -->
 
-h. [RA8] Leveraging AJAX to update information on a realtime dashboard to give up-to-date information without refreshing
+- This "tactical table" setup was very popular, and had youth members of all ages racing to update the sprites on the board after reading the screens.
+- Pictured here is the young person in command of this whole operation activity, at only 17 years of age.
+
+---
+
+<!-- .slide: data-timing="1" -->
+
+![Youth on radio](images/youth_on_radio2.jpg)<!-- .element style="width: 30%" -->
+![Youth on radio](images/youth_on_radio.jpg)<!-- .element style="width: 30%" -->
+
+Note:
+
+Luke <!-- .element: style="color: red" -->
+
+RadioActiv8 was initially developed for VicJam 2022, a state-wide Jamboree for Scouts.
+The first front-end interface was written on day one of the event after months of model-testing.
 
 ----
 <!-- .slide: data-timing="1" -->
 
-![Operator Images](images/radio_user2.JPG)
-<!-- .element: class="r-stretch" -->
+![EOM-Radio](images/radio_user1.JPG)
+<!-- .element: class="r-stretch"-->
 
 Note:
 
-FIXME: Maybe Luke?
-
 Matt <!-- .element: style="color: blue" -->
 
-i. Allows for logical decision making without having to consciously think about refreshing to gain the latest information of the status.
+- event operations outsourcing went so well
+- our Event Operations Manager spent most of his time like this
+- when he wasn't playing with the tabletop pieces.
 
 ---
 <!-- .slide: data-timing="1" -->
 
-Note:
-
-Matt <!-- .element: style="color: blue" -->
-
-i. [RA8] Use a live dashboard to show the states of change to radio operators.
-
-----
-<!-- .slide: data-timing="1" -->
+CONTENT WARNING!
 
 Note:
 
-Matt <!-- .element: style="color: blue" -->
+Speaker <!-- .element: style="color: orange" -->
 
-i. Helps despatchers to make operational decisions by showing: Base Capacity, Last reported Location, Last time seen.
-
----
-<!-- .slide: data-timing="1" -->
-
-Note:
-
-Matt <!-- .element: style="color: blue" -->
-
-j. [RA8] Pre-populate Route/Time estimates between bases
-
-----
-<!-- .slide: data-timing="1" -->
-
-Note:
-
-Matt <!-- .element: style="color: blue" -->
-
-i. Helps make smart decisions - do you send the 5 year olds on a 1km journey uphill 20mins before lunch? No. Older Scouts? Yes.
-
----
-<!-- .slide: data-timing="1" -->
-
-Note:
-
-Matt <!-- .element: style="color: blue" -->
-
-k. [RA8] Use GeoDjango to add geospatial integration to help with mapping.
-
-----
-<!-- .slide: data-timing="1" -->
-
-Note:
-
-Matt <!-- .element: style="color: blue" -->
-
-i. Speaking of maps...\*show gamified map\*
+Cuteness overload ahead
 
 ---
 <!-- .slide: data-timing="1" -->
@@ -647,23 +801,35 @@ i. Speaking of maps...\*show gamified map\*
 ---
 <!-- .slide: data-timing="1" -->
 
+![mattcen, erryboddy](images/mattcen_everybody.jpg)
+<!-- .element: class="r-stretch" -->
+
 Note:
 
+Luke <!-- .element: style="color: red" -->
+
+This project would not be as efficient without the contributions of many people. From development and testing to trial and error, we all did a little learning by doing.
+
+While the code base carries a lot of the work, this would not be possible without the wonderful team at Scouts Victoria.
+
+There is one people in particular who carried their weight and then some - please thank `@mattcen, everybody.`
 
 ---
+<!-- .slide: data-timing="1" -->
 
-Conclusions
-
+![Django](images/django-tagline.png)
+<!-- .element class="r-stretch" -->
 
 Note:
 
 Matt <!-- .element: style="color:blue" -->
 
-----
+!FIXME[Add your own closing thoughts. I pre-filled something to nod to Python/Django teams, but whatever you like best.]
 
-Questions welcome
+Django is very much for Perfectionists with Deadlines, and we squished all three apps into a very successful trenchcoat.
+<!--https://dev.to/terieyenike/what-is-django-first-impressions-3m60-->
 
-Notes:
+Our thanks to the contributors to this excellent framework.
 
 # Potential questions
 
