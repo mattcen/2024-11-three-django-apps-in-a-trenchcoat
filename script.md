@@ -414,8 +414,8 @@ As a result, we have literally made it possible for the operations of an event t
   e. [BRN] Event administration is handled by authorised personnel using the Django Admin backend framework.
     i. conveniently, this is already built and was a breeze to customise and to enable bulk field editing.
     ii. Exfiltration of data was limited to Super Users for the purposes of providing catering summaries to our Kitchen staff, and our event communications teams as required. Again, less is more.
-  f. [STS] Delegated access to program information control by using Wagtail CMS for activity content - STS missions.
-    i. reduces the overhead on git/VCS commit proficiency for maintaining website changes by giving program specialists the ability to edit specific event website content areas, such as the missions.
+  ~~f. [STS] Delegated access to program information control by using Wagtail CMS for activity content - STS missions.
+    i. reduces the overhead on git/VCS commit proficiency for maintaining website changes by giving program specialists the ability to edit specific event website content areas, such as the missions.~~
   g. [RA8] Minimize JS by using the impressive capabilities of HTMX.
     i. Single programming language for backend Dev avoiding bespoke or customized areas where, ordinarily, JS would feel like the _only_ way to solve a particular problem.
   h. [RA8] Leveraging AJAX to update information on a realtime dashboard to give up-to-date information without refreshing

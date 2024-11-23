@@ -38,7 +38,7 @@ License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 Note:
 
 - I'm Matt, or mattcen: Linux systems administrator, software developer. I use they/them pronouns
-- I'm Luke: security analyst & systems architect; interests in web development & security education
+- I'm Luke: systems technician and aspiring security architect; interests in web development & security education
 
 ---
 
@@ -96,7 +96,7 @@ Luke <!-- .element: style="color: red" -->
 
 <!-- .slide: data-timing="15" -->
 
-![Scouts wearing hard hats rock climbing on a cliff face](images/oas.jpg) <!-- .element style="width: 45%" -->
+![Scouts wearing hard hats rock climbing on a cliff face](images/oas.jpg)<!--Picture by Lachlan Bence; Source: https://www.thecourier.com.au/story/8221341/hanging-on-to-build-our-citys-future-leaders-but-they-need-help/--> <!-- .element style="width: 45%" -->
 ![Scouts in uniform sitting at computer desks, with a leader pointing at a computer monitor](images/scouthack-uniform.jpg) <!-- .element style="width: 50%" -->
 
 Note:
@@ -205,7 +205,7 @@ iii. To make an agile system work, participants gave us their top ten activity p
 
 <!-- .slide: data-timing="10" -->
 
-![Kid(s) on radios](images/ima_bbd027b.jpeg)
+![Group of Kids on Radio](images/youth_on_radio5.jpg)
 <!-- .element: class="r-stretch" -->
 
 Note:
@@ -218,12 +218,12 @@ iv. 250 Scouts were each given their own radio (a choice so poor we've done it t
 
 <!-- .slide: data-timing="25" -->
 
-## Activity Engagement
+![Youth at RA8 base](images/youth_on_radio3.jpg)
+<!-- .element: class="r-stretch" -->
 
-- Check In to designated activity
-- Do activity
-- Check Out of activity
-- Head to next designated activity
+Check IN: Do activity
+
+Check OUT: Request next activity
 
 Note:
 
@@ -244,9 +244,9 @@ Food and sleep also occur in designated times and areas.
 
 <!-- .slide: data-timing="10" -->
 
-> Shoot for the moon. Even if you miss, you'll land among the stars.
+![STS Radios](images/sts_radio.jpeg)
+<!-- .element: class="r-stretch" -->
 
-—Norman Vincent Peale
 
 Note:
 
@@ -395,51 +395,82 @@ i. using membership validation to prefill and prompt updating of personal contac
 
 <!-- .slide: data-timing="1" -->
 
-### Appropriate Access
+### Appropriate Info, Appropriate Access
 
-No more, no less
+No more, no less.
 
 Note:
 
 Luke <!-- .element: style="color: red" -->
 
-ii. Less is more - only gather what is needed; heath records have a dedicated confidential information system, so only catering basics are required.
-We use an intentionally separate health information provider to allow members to subscribe their health information to event organisers on an as-needed basis. This allows for personal information protection and restricts unnecessary exposure. It also keeps control of the information in the hands of the individual guardians.
+- We only gather data that is needed
+- heath records have a dedicated confidential information system, so only catering needs are flagged to event admins.
+- We use an intentionally separate health information provider, so as an event we don't need to manage that data flow here.
+
+
+----
 
 <!-- .slide: data-timing="1" -->
 
-![Brownsea Event Supportal screenshot]()
+![Brownsea Event Supportal screenshot](images/supportal_list.png)
+<!-- .element: class="r-stretch" -->
 
 Note:
 
 Matt <!-- .element: style="color: blue" -->
 
 i. legal guardians can see their child's data
-ii. Scout Leaders can see their Youth Member data (to which they *should* already have access through member records).
-
----
-
-<!-- .slide: data-timing="1" -->
-
-Note:
-
-e. [BRN] Event administration is handled by authorised personnel using the Django Admin backend framework.
 
 ----
 
-<!-- .slide: data-timing="1" -->
-
-![Django Admin screenshot]()
+![Brownsea Event Supportal List](images/supportal_detail.png)
+<!-- .element: class="r-stretch" -->
 
 Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-i. conveniently, this is already built and was a breeze to customise and to enable bulk field editing.
+ii. Scout Leaders can see their Youth Member data (to which they *should* already have access through member records).
 
 ----
 
 <!-- .slide: data-timing="1" -->
+
+
+![Django Admin Page](images/django_admin.png)
+<!-- .element: class="r-stretch" -->
+
+Note:
+
+Matt <!-- .element style="color: blue" -->
+
+[BRN] Event administration is handled by authorised personnel using the Django Admin backend framework.
+
+----
+
+<!-- .slide: data-timing="1" -->
+
+![Django Admin Models](images/sts_website_model.png)
+
+
+![Django Admin Models](images/radioactiv8_model.png)
+
+
+![Django Admin Models](images/brownsea_model.png)
+
+
+Note:
+
+Matt <!-- .element: style="color: blue" -->
+
+- conveniently, this is already built using the event models and are a breeze to customise and to enable bulk field editing.
+- We see here the different activities can be switched on, off, and have content updated on the fly through this interface.
+
+----
+
+<!-- .slide: data-timing="1" -->
+
+Restricted exfiltration
 
 Note:
 
@@ -451,21 +482,102 @@ ii. Exfiltration of data was limited to Super Users for the purposes of providin
 
 <!-- .slide: data-timing="1" -->
 
+![Kid(s) on radios](images/ima_bbd027b.jpeg)
+<!-- .element: class="r-stretch" -->
+
 Note:
 
-f. [STS] Delegated access to program information control by using Wagtail CMS for activity content - STS missions.
+Luke <!-- .element: style="color:red" -->
+
+Now for some fun.
+
+RadioActiv8 has multiple modes of play - it can be a radio wide game, and it can be used to dispatch participants to activities at an event!
+
+The principle of RadioActiv8[^RA8Name] is quite straightforward: Bases are set out across a neighbourhood park or Scout Camp. Each base has a two-way radio, and a sign with the name of the base and an intelligence grid featuring an answer matrix.
 
 ----
 
 <!-- .slide: data-timing="1" -->
 
-![Wagtail screenshot]()
+![RA8 Field Map](images/RA8%20Wattle%20Park%20A4.svg)
+<!-- .element: class="r-stretch" -->
 
 Note:
 
-i. reduces the overhead on git/VCS commit proficiency for maintaining website changes by giving program specialists the ability to edit specific event website content areas, such as the missions.
+Luke <!-- .element: style="color:red" -->
+
+- At the start of the game, each partcipant team is sent to a base.
+- Once they arrive, they radio to HQ and identify themselves and current location.
+- The HQ station responds with a question to which the team must return an answer via radio.
+- On receipt of an answer, HQ provides the patrol a new destination.
+- The game's end condition (and whether it is competitive) is up to the facilitator's discretion.
+
+Easy, right? Let's record this, and then lets use this process to run an event!
+
+----
+
+![RadioActiv8 Mk0.1](images/ra8-0.1.jpg)
+<!-- .element: class="r-stretch" -->
+
+Note:
+
+Matt <!-- .element: style="color: blue" -->
+
+- The proof-of-concept used a sheet of paper to track the game state[^GameState] of patrols, recorded by Luke while we gave contacts the next base to attend.
+
+- Learning: Paper does not scale.
 
 ---
+
+![RadioActiv8 Mk0.5](images/ra8-0.5.png)
+<!-- .element: class="r-stretch" -->
+
+<!-- .slide: data-timing="1" -->
+
+Note:
+
+Matt <!-- .element style="color:blue" -->
+
+- The Radio Conversation process is built into the form workflow
+- Operators iterate from top of screen
+- Delivered by Django Admin's "interface-for-free."
+
+---
+
+<!-- .slide: data-timing="1" -->
+
+![RA8 list of submitted events](images/ra8-0.5-event-list.png)
+<!-- .element: class="r-stretch" -->
+
+Note:
+
+Matt <!-- .element: style="color: blue" -->
+
+- Here we see the events - a log of each entry, tracking
+  - the last known location of each team at a given time
+  - the "INTEL" collected, featuring correct/incorrect flagging.
+  - the next base they've been sent to.
+
+---
+
+<!-- .slide data-timing="1" -->
+
+![Will](images/ra8_table_dashboards.jpg)
+<!-- .element: class="r-stretch" -->
+
+Note:
+
+Luke <!-- .element style="color:red"-->
+
+- Wide games are fun, but this process can be used to manage activites.
+- Instead of bases, we use activities.
+- This means HQ needs to be a little bigger than before, but Youth-Led, Adult Supported, let's make it work!
+
+Here are our operators - an older Scout, helping a younger scout, direct OTHER scouts on where to go next!
+
+----
+
+
 
 <!-- .slide: data-timing="1" -->
 
@@ -500,6 +612,9 @@ h. [RA8] Leveraging AJAX to update information on a realtime dashboard to give u
 ----
 
 <!-- .slide: data-timing="1" -->
+
+![Operator Images](images/radio_user2.JPG)
+<!-- .element: class="r-stretch" -->
 
 Note:
 
