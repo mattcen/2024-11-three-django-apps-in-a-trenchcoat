@@ -27,7 +27,8 @@ Reveal.initialize({
 		RevealNotes,
 		RevealMath,
 		RevealMenu,
-		RevealZoom
+		RevealZoom,
+    RevealPointer
 	],
 
 	multiplex: {
@@ -54,6 +55,15 @@ Reveal.initialize({
 			],
 		// ['None', 'Fade', 'Slide']
 		transitions: true,
+	},
+
+	pointer: {
+		key: "q", // key to enable pointer, default "q", not case-sensitive
+		color: "red", // color of a cursor, default "red" any valid CSS color
+		opacity: 0.8, // opacity of cursor, default 0.8
+		pointerSize: 32, // pointer size in px, default 12
+		alwaysVisible: false, // should pointer mode be always visible? default "false"
+		tailLength: 10, // NOT IMPLEMENTED YET!!! how long the "tail" should be? default 10
 	},
 
 	// Multiplex dependencies

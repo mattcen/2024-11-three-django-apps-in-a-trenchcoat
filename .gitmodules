@@ -4,3 +4,6 @@
 [submodule "reveal.js-menu"]
 	path = reveal.js-menu
 	url = https://github.com/denehyg/reveal.js-menu
+[submodule "reveal-pointer"]
+	path = reveal-pointer
+	url = https://github.com/burnpiro/reveal-pointer
