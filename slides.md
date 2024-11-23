@@ -42,7 +42,7 @@ Note:
 
 ---
 
-<!-- .slide: data-timing="20 -->
+<!-- .slide: data-timing="20" -->
 
 ## Acknowledgements
 
@@ -56,7 +56,7 @@ We pledge to do my best to respect, learn from, and support these peoples. We ca
 
 ---
 
-<!-- .slide: data-timing="20 -->
+<!-- .slide: data-timing="20" -->
 
 ## Slides
 
@@ -77,11 +77,11 @@ Note:
 ![Scouts Victoria Logo](images/ScoutsVIC-Vert-11Col.svg)
 <!-- .element: class="r-stretch" -->
 
+## ~~Compulsive volunteers~~
+
 ## Quality Scout Leaders
 
 Note:
-
-~~Compulsive volunteers~~
 
 Luke <!-- .element: style="color: red" -->
 
@@ -163,18 +163,26 @@ Luke <!-- .element: style="color: red" -->
 
 ----
 
-<!-- .slide: data-timing="5" -->
+<!-- .slide: data-timing="35 -->
 
 ![Venturers standing around table with a tabletop-game-style map on it](images/ima_8b7ffc0.jpeg)
 <!-- .element: class="r-stretch" -->
 
 Note:
 
+Luke <!-- .element: style="color: red" -->
+
 ii. For STS, we decided to go agile and use a dispatch system to send youth members to their activities.
+
+Shown here:
+- Game board: an analogue manifestation of our software in gamified state
+- In background: screen showing digital dashboard showing game state
+- Around table: Youth updating team locations
+- Off to side: Adult supporting
 
 ----
 
-<!-- .slide: data-timing="25 -->
+<!-- .slide: data-timing="25" -->
 
 <video data-autoplay controls>
   <source src="images/sts-mission-scroll.mp4" type="video/mp4">
