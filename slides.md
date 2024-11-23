@@ -445,44 +445,28 @@ Note:
 Matt <!-- .element style="color: blue" -->
 
 [BRN] Event administration is handled by authorised personnel using the Django Admin backend framework.
-
-----
-
-<!-- .slide: data-timing="1" -->
-
-![Django Admin Models](images/sts_website_model.png)
-
-
-![Django Admin Models](images/radioactiv8_model.png)
-
-
-![Django Admin Models](images/brownsea_model.png)
-
-
-Note:
-
-Matt <!-- .element: style="color: blue" -->
-
-- conveniently, this is already built using the event models and are a breeze to customise and to enable bulk field editing.
 - We see here the different activities can be switched on, off, and have content updated on the fly through this interface.
 
+
 ----
 
 <!-- .slide: data-timing="1" -->
 
-Restricted exfiltration
+![Django Admin Models](images/radioactiv8_model.png) <!-- .element style="width: 30%" -->
+![Django Admin Models](images/brownsea_model.png) <!-- .element style="width: 30%" -->
+![Django Admin Models](images/sts_website_model.png) <!-- .element style="width: 30%" -->
 
 Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-ii. Exfiltration of data was limited to Super Users for the purposes of providing catering summaries to our Kitchen staff, and our event communications teams as required. Again, less is more.
+- Here we have an overview of the django model elements.
 
 ---
 
 <!-- .slide: data-timing="1" -->
 
-![Kid(s) on radios](images/ima_bbd027b.jpeg)
+![RA8 folder](images/ra8_folder.jpeg)
 <!-- .element: class="r-stretch" -->
 
 Note:
@@ -492,8 +476,6 @@ Luke <!-- .element: style="color:red" -->
 Now for some fun.
 
 RadioActiv8 has multiple modes of play - it can be a radio wide game, and it can be used to dispatch participants to activities at an event!
-
-The principle of RadioActiv8[^RA8Name] is quite straightforward: Bases are set out across a neighbourhood park or Scout Camp. Each base has a two-way radio, and a sign with the name of the base and an intelligence grid featuring an answer matrix.
 
 ----
 
@@ -509,7 +491,7 @@ Luke <!-- .element: style="color:red" -->
 - At the start of the game, each partcipant team is sent to a base.
 - Once they arrive, they radio to HQ and identify themselves and current location.
 - The HQ station responds with a question to which the team must return an answer via radio.
-- On receipt of an answer, HQ provides the patrol a new destination.
+- On receipt of an answer, HQ provides the team a new destination.
 - The game's end condition (and whether it is competitive) is up to the facilitator's discretion.
 
 Easy, right? Let's record this, and then lets use this process to run an event!
@@ -523,14 +505,13 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-- The proof-of-concept used a sheet of paper to track the game state[^GameState] of patrols, recorded by Luke while we gave contacts the next base to attend.
+- The proof-of-concept used a sheet of paper to track the game state[^GameState] of teams, recorded by Luke while we gave contacts the next base to attend.
 
 - Learning: Paper does not scale.
 
 ---
 
-![RadioActiv8 Mk0.5](images/ra8-0.5.png)
-<!-- .element: class="r-stretch" -->
+![RA8 list of submitted events](images/ra8-0.5_2.png)<!-- .element: class="r-stretch" -->
 
 <!-- .slide: data-timing="1" -->
 
@@ -546,24 +527,56 @@ Matt <!-- .element style="color:blue" -->
 
 <!-- .slide: data-timing="1" -->
 
-![RA8 list of submitted events](images/ra8-0.5-event-list.png)
-<!-- .element: class="r-stretch" -->
+![RA8 list of submitted events](images/ra8-0.5-event-list.png)<!-- .element style="width: 40%" -->
+
+
 
 Note:
 
 Matt <!-- .element: style="color: blue" -->
 
 - Here we see the events - a log of each entry, tracking
-  - the last known location of each team at a given time
+  - the last known **location** of each team at a given time
   - the "INTEL" collected, featuring correct/incorrect flagging.
   - the next base they've been sent to.
+
+----
+
+<!-- .slide: data-timing="1" -->
+
+![RA8 better interface](images/ra8-0.8.png)
+<!-- .element: class="r-stretch" -->
+
+Note:
+
+Matt <!-- .element: style="color: blue" -->
+
+- Now we create front-end styling, and a state-of-play dashboard to help with decision making.
+
+----
+
+<!-- .slide: data-timing="1" -->
+
+![Polished RA8 frontend](images/ra8-1.0.png)
+<!-- .element: class="r-stretch"-->
+
+Note:
+
+Matt <!-- .element: style="color: blue" -->
+
+- … and then we match Luke's style guide. For better or worse.
+
+
+
 
 ---
 
 <!-- .slide data-timing="1" -->
 
-![Will](images/ra8_table_dashboards.jpg)
+![Operators](images/operators_with_youth.jpg)
 <!-- .element: class="r-stretch" -->
+
+
 
 Note:
 
@@ -580,6 +593,11 @@ Here are our operators - an older Scout, helping a younger scout, direct OTHER s
 
 
 <!-- .slide: data-timing="1" -->
+
+![Will](images/ra8_table_dashboards.jpg)
+<!-- .element: class="r-stretch" -->
+
+![DashboardRA8](images/ra8-dashboard-patrols.png)<!-- .element: class="r-stretch" -->
 
 https://github.com/Scouts-Victoria-Program/RadioActiv8/blob/dcbffd2fa4d6f28ba72804422b84d9601b86fd60/django/RadioActiv8/templates/RadioActiv8/master/play.html#L38
 
