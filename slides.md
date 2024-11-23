@@ -93,7 +93,7 @@ Luke <!-- .element: style="color: red" -->
 ---
 <!-- .slide: data-timing="15" -->
 
-![Cub wearing hard hats rock climbing on a cliff face](images/oas2.jpg)<!-- .element style="width: 45%" -->
+![Cub wearing hard hat rock climbing on a cliff face](images/oas2.jpg)<!-- .element style="width: 45%" -->
 ![Scouts in uniform sitting at computer desks, with a leader pointing at a computer monitor](images/scouthack-uniform.jpg) <!-- .element style="width: 50%" -->
 
 Note:
@@ -109,7 +109,7 @@ a. We don't just do fun things outdoors, but we also provide events like ScoutHa
 - Lightning Talk summary: [Everything Open 2023](https://www.youtube.com/watch?v=GGgHsA8WifE&t=1460)
 - Full length presentation: [Developing Labs for Teaching Kids Webdev](https://www.youtube.com/watch?v=VXFuL5PcPKI)
 
-[OAS image credit, Scouts Victoria](https://www.instagram.com/scoutsvictoria/p/DB7UflsP9lL/?img_index=2)
+[Rock climbing image credit: Lachlan Bence](https://www.thecourier.com.au/story/8221341/hanging-on-to-build-our-citys-future-leaders-but-they-need-help/)
 
 ---
 <!-- .slide: data-timing="5" -->
