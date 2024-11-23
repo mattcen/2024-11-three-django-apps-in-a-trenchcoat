@@ -547,9 +547,6 @@ Here are our operators - an older Scout, helping a younger scout, direct OTHER s
 ----
 <!-- .slide: data-timing="1" -->
 
-![Will](images/ra8_table_dashboards.jpg)
-<!-- .element: class="r-stretch" -->
-
 ![Patrol Dashboard RA8](images/ra8-dashboard-patrols.png)<!-- .element: class="r-stretch" -->
 
 https://github.com/Scouts-Victoria-Program/RadioActiv8/blob/dcbffd2fa4d6f28ba72804422b84d9601b86fd60/django/RadioActiv8/templates/RadioActiv8/master/play.html#L38
@@ -651,6 +648,22 @@ i. Speaking of maps...\*show gamified map\*
 <!-- .slide: data-timing="1" -->
 
 Note:
+
+
+---
+
+Conclusions
+
+
+Note:
+
+Matt <!-- .element: style="color:blue" -->
+
+----
+
+Questions welcome
+
+Notes:
 
 # Potential questions
 
