@@ -29,7 +29,7 @@ attributes: |
 
 ### Writing an event management website with not a lot of time
 
-- Matt (mattcen) Cengia (they/them) -- [blog.mattcen.com](https://blog.mattcen.com)
+- Matt (mattcen) Cengia (they/them) -- [mattcen.com](https://blog.mattcen.com)
 - Luke (ekulbyrnes) Byrnes (he/him) -- [ekulbyrnes.github.io](https://ekulbyrnes.github.io)
 
 License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
@@ -188,7 +188,7 @@ Luke <!-- .element: style="color: red" -->
 
 - To make an agile system work, participants gave us their top ten activity preferences
 - we yeeted this into our software to make sure everyone did something they asked for to support their badge projects.
-- we doubled our program from 18 activities in 2022 to 36 activites in 2024.
+- we doubled our program from 18 activities in 2022 to 36 activities in 2024.
 
 ----
 <!-- .slide: data-timing="10" -->
@@ -579,6 +579,35 @@ Note:
 - This is how we made outsourcing event operations possible:
 
 ----
+<!-- .slide: data-timing="5"-->
+
+Blending three apps <!--https://github.com/Scouts-Victoria-Program/sts/blob/e012c21e7c6d87e898c005fe4191f728efb0c8ba/django/myproject/settings.py#L88-L91
+-->
+```python
+INSTALLED_APPS = [
+    …
+    "sts_website",
+    "scoutsvic_extranet",
+    "scoutsvic_ems",
+    "RadioActiv8",
+]
+```
+<!-- .element: style="width: fit-content" -->
+
+Note:
+
+Matt <!-- .element: style="color:blue" -->
+
+- So back to our Trenchcoat
+- we created One project to ~~rule~~ host them all:
+- A single multi-app Django project, including our 3 apps
+- App installation is as easy as
+- adding it to the list in our Django `settings.py`
+- Adding the app code to our project
+
+!FIXME[@mattcen read and re-write slides and notes however you see fit.]
+
+----
 
 <!-- .slide: data-timing="5"-->
 
@@ -597,61 +626,14 @@ class Patrol(models.Model):
 ```
 <!-- .element: style="width: fit-content" -->
 
-Team information accessed by Foreign Key from registration app
-
-<!--https://github.com/Scouts-Victoria-Program/scoutsvic-rego/blob/638b6ad775430d9e7158499daa7395dec21c3ac6/django/scoutsvic_ems/models.py#L563-->
-```python
-class Registration(RulesModel):
-    class Meta:
-        rules_permissions = {
-        …
-        patrol = models.ForeignKey(
-            Patrol,
-            on_delete=models.SET_NULL,
-            null=True,
-            blank=True)
-        …
-        }
-```
-<!-- .element: style="width: fit-content" -->
-
-Note:
-
-Matt <!-- .element: style="color:blue" -->
-
-- So back to our Trenchcoat
-- we created One project to ~~rule~~ host them all:
-- A single multi-app Django project
-
-!FIXME[@mattcen read and re-write slides and notes however you see fit.]
-
-----
-
-<!-- .slide: data-timing="5"-->
-
-Blending three apps <!--https://github.com/Scouts-Victoria-Program/sts/blob/e012c21e7c6d87e898c005fe4191f728efb0c8ba/django/myproject/settings.py#L88-L91
--->
-```python
-INSTALLED_APPS = [
-    …
-    "sts_website",
-    "scoutsvic_extranet",
-    "scoutsvic_ems",
-    "RadioActiv8",
-]
-```
-<!-- .element: style="width: fit-content" -->
-
 Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-- App installation is as easy as
-- a list
-- a submodule update!
+- Then we can connect our apps' models together
+- Here we ensure that a Patrol, or team, in RadioActiv8, is related to the group of Registrants in  `scoutsvic_ems`, or Brownsea
 
 !FIXME[@mattcen read and re-write slides and notes however you see fit.]
-
 
 ----
 <!-- .slide: data-timing="1" -->
@@ -681,9 +663,7 @@ Matt <!-- .element: style="color: blue" -->
 
 Note:
 
-!FIXME[@mattcen, do you want to do all of this one instead of me starting?]
-
-Luke <!-- .element: style="color: red" -->
+Matt <!-- .element: style="color:blue" -->
 
 RadioActiv8 provides path-trace distancing between bases, shown as time. Combined with a site map, operators make tactical decisions, such as
 
@@ -691,19 +671,14 @@ RadioActiv8 provides path-trace distancing between bases, shown as time. Combine
 
 > Do we send the Older Scouts? Yes.
 
-Matt <!-- .element: style="color:blue" -->
 
 - Each base recommendation populates Route/Time estimates between bases
 - we use GeoDjango to add geospatial integration to help with mapping data.
-
-!FIXME[What else do you want to showcase here @mattcen?]
-
 - Success message displays at the top of the page and includes:
  - A timestamp
  - the Team Number
  - the Current Base
  - and their next Base (if in transit).
-
 - AKA: Wait, what did I just log!?
 
 ---
@@ -728,8 +703,8 @@ There are two dashboards shown on the monitors.
 - the Team Dashboard on the right
  - Lists teams by number
  - Shows either:
-  - Their Current Location if one base is listed, or
-  - their previous and next base, indicating they are in transit.
+   - Their Current Location if one base is listed, or
+   - their previous and next base, indicating they are in transit.
  - and the time since they last radio'd HQ.
 
 ----
@@ -755,9 +730,8 @@ Matt <!-- .element: style="color: blue" -->
 [github link to code](https://github.com/Scouts-Victoria-Program/RadioActiv8/blob/dcbffd2fa4d6f28ba72804422b84d9601b86fd60/django/RadioActiv8/templates/RadioActiv8/master/heading.html#L15)
 [github link to code](https://github.com/Scouts-Victoria-Program/RadioActiv8/blob/dcbffd2fa4d6f28ba72804422b84d9601b86fd60/django/RadioActiv8/templates/RadioActiv8/master/play.html#L38)
 
-!FIXME[Talk about the HTMX dependencies/installation?]
 - Code is all the HTMX needed to auto-refresh the dashboards.
-- Minimize JS by using the impressive capabilities of HTMX.
+- For those who don't know H.T.M.X., it's a small JavaScript library which makes use of attributes on your HTML elements to make AJAX queries and dynamically update content, without you having to actually *write* JavaScript. You should definitely check it out!
 - Single programming language for backend Dev avoiding bespoke or customized areas where, ordinarily, JS would feel like the _only_ way to solve a particular problem.
 
 ---
@@ -795,7 +769,7 @@ The first front-end interface was written on day one of the event after months o
 
 Note:
 
-Matt <!-- .element: style="color: blue" -->
+Luke <!-- .element: style="color: red" -->
 
 - event operations outsourcing went so well
 - our Event Operations Manager spent most of his time like this
@@ -809,7 +783,7 @@ Matt <!-- .element: style="color: blue" -->
 
 Note:
 
-Speaker <!-- .element: style="color: orange" -->
+Luke <!-- .element: style="color: red" -->
 
 - At event's end, our youth members go home having each had a unique adventure.
 - They receive summary outcomes of activity completion for each team.
@@ -823,7 +797,7 @@ CONTENT WARNING!
 
 Note:
 
-Speaker <!-- .element: style="color: orange" -->
+Luke <!-- .element: style="color: red" -->
 
 Cuteness overload ahead
 
@@ -832,6 +806,10 @@ Cuteness overload ahead
 
 ![Cub Scouts at Star Trek: Survival](images/cubsllap.jpg)
 <!-- .element: class="r-stretch" -->
+
+Notes:
+
+Luke <!-- .element: style="color: red" -->
 
 ---
 <!-- .slide: data-timing="1" -->
@@ -861,10 +839,36 @@ Matt <!-- .element: style="color:blue" -->
 
 !FIXME[Add your own closing thoughts. I pre-filled something to nod to Python/Django teams, but whatever you like best.]
 
-Django is very much for Perfectionists with Deadlines, and we squished all three apps into a very successful trenchcoat.
-<!--https://dev.to/terieyenike/what-is-django-first-impressions-3m60-->
+Django is very much for Perfectionists with Deadlines, and we squished all three apps into a very stylish trenchcoat.
 
 Our thanks to the contributors to this excellent framework.
+
+---
+
+### Three Django Apps in a Trenchcoat
+#### Writing an event management website with not a lot of time
+
+- Matt (mattcen) Cengia (they/them) -- [mattcen.com](https://blog.mattcen.com)
+- Luke (ekulbyrnes) Byrnes (he/him) -- [ekulbyrnes.github.io](https://ekulbyrnes.github.io)
+
+License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+
+[mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat](https://mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat)
+
+[![https://github.com/mattcen/2024-11-three-django-apps-in-a-trenchcoat](images/slides_url.svg)](https://mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat)
+<!-- .element: class="r-stretch" -->
+
+Note:
+
+- I'm Matt, or mattcen: Linux systems administrator, software developer. I use they/them pronouns
+- I'm Luke: systems technician and aspiring security architect; interests in web development & security education
+
+[mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat](https://mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat)
+
+---
+
+
+
 
 # Potential questions
 
