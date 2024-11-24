@@ -36,7 +36,7 @@ License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
 Note:
 
-- I'm Matt, or mattcen: Linux systems administrator, software developer. I use they/them pronouns
+- I'm Matt: Linux systems administrator, software developer. I use they/them pronouns
 - I'm Luke: systems technician and aspiring security architect; interests in web development & security education
 
 ---
@@ -48,9 +48,9 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-We're delivering this presentation on the unceded ancestral lands of many Indigenous peoples.
-We honour the knowledge, stewardship, and care with which they've tended this land throughout history, and recognise the deep and lasting damage that colonisation has inflicted on them.
-We pledge to do our best to respect, learn from, and support these peoples. We can all do better.
+- We're delivering this presentation on traditional lands of the Wurundjeri people
+- We want to pay our respect to their elders, past and present
+- Sovereignty was never ceded, and we all need do better to respect this land
 
 ---
 <!-- .slide: data-timing="20" -->
@@ -65,9 +65,9 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-- Slides available at Github repo link at top of screen
-- Live view of slides as we progress through them available via QR Code or link below
-- Will give a few seconds for you to grab that link
+- Slides are available at Github repo link at top of screen
+- A live view of the slides as we progress through them is available via QR Code or the link below
+- We'll give you a few seconds for you to grab that link
 
 ---
 
@@ -288,8 +288,8 @@ The name Brownsea refers to Brownsea Island, the location of the first Scouting 
 Matt <!-- .element: style="color:blue"-->
 
 - Critically: This was successfully implemented despite Scouts Victoria's complex hierarchical arrangement
-- Designed generically, extensibly, and with modularity
-- Allows us to capture key elements of event management
+- Our apps were designed generically, extensibly, and with modularity
+- This allows us to capture key elements of event management
 - Crucially, it works *beyond* the needs of just our event
 - So other Scouting events can use this as well
 
@@ -327,11 +327,12 @@ Note:
 
 Matt <!-- .element: style="color:blue" -->
 
-- To make _Star Trek: Survival_ a success:
-- Packed our 3 apps into a trenchcoat
-- Single, standardized environment so that
-- In case everything should fall over…
-- Like it did 2 hours into Day 1 of our event
+- To make _Star Trek: Survival_ a success,
+- We Packed our 3 apps into a trenchcoat
+- We used a single, standardized environment so that we could spin it up rapidly…
+- …if everything should fall over…
+- …
+- …Like it did 2 hours into Day 1 of our event
 
 ----
 <!-- .slide: data-timing="15" -->
@@ -349,8 +350,6 @@ Matt <!-- .element: style="color: blue" -->
 - To learn more about Docker, see [my Docker talk](https://www.youtube.com/watch?v=X0aarx6LLzI), linked in the slide notes
 - This made it easy to spin up on new infrastructure if necessary
 
-!FIXME[Cut me and merge info if shortening required?]
-
 ---
 <!-- .slide: data-timing="1" -->
 
@@ -363,13 +362,11 @@ Matt <!-- .element: style="color: blue" -->
 
 [BRN]
 - For our event registration system, we wanted a smooth user experience
-- To access our event portal, we only require:
-  - Their membership number
+- For a user to access our event portal, we only require:
+  - Their scout membership number
   - Their surname*
-  - Their date of birth
+  - And their date of birth
 - We don't store their date of birth; it's just used to authenticate against the Scouts Victoria membership API
-
-\* Yes, I wish we didn't make assumptions about the format of people's names, too.
 
 ----
 <!-- .slide: data-timing="1" -->
@@ -383,13 +380,15 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-[BRN]
-Registration Process Highlight
-- validate members with membership database;
-- prefill and prompt replacement of personal contact information for the event
-- let member provide any notes that may be beneficial to event organisers (but not health info)
-- and let them provide a cursory summary of catering/dietary needs
-- then they receive invoice for payment.
+Here's a video of the registration process:
+- We confirm the user is a member of Scouts Victoria
+- Offer them a list of available events
+- And a list of tickets they're eligible for
+- Then we pre-fill information from Scouts Victoria's membership database
+- And allow them to override this if necessary
+- We also request dietary information for catering
+- And any other noteworthy information
+- Then we present them with, and email them, an invoice, for payment
 
 ----
 <!-- .slide: data-timing="1" -->
@@ -418,7 +417,7 @@ Note:
 Matt <!-- .element: style="color: blue" -->
 
 [BRN]
-- legal guardians can sign in to see their children's data…
+- As part of this system, legal guardians can sign in to see their children's data…
 
 ----
 <!-- .slide: data-timing="1" -->
@@ -431,7 +430,7 @@ Note:
 Matt <!-- .element: style="color: blue" -->
 
 [BRN]
-- … And Scout Leaders can see their Youth Member data
+- … And Scout Leaders can see their Youth Members' data
 - (to which they *should* already have access through member records)
 
 ----
@@ -444,8 +443,9 @@ Note:
 Matt <!-- .element style="color: blue" -->
 
 [BRN]
-- Event administration is handled by authorised personnel using the Django Admin backend framework.
-- We see here the different activities can be switched on, off, and have content updated on the fly through this interface.
+- Event administration is handled by authorised personnel using Django's Admin app, which Django offers out of the box
+- This has the benefit of requiring very little setup on our part, and I think this is one Django's big strengths
+- We see here the different activities can be switched on, off, and receive bulk updates
 
 ---
 <!-- .slide: data-timing="1" -->
@@ -489,9 +489,9 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-- The proof-of-concept used a sheet of paper to track the game state of teams, recorded by Luke while we gave contacts the next base to attend.
-
-- Learning: Paper does not scale.
+- The RadioActiv8 proof-of-concept used a sheet of paper to track the game state of teams
+- This state was recorded by Luke while we used the radio to tell teams which next base to attend
+- Our Learning from this was: Paper does not scale
 
 ---
 <!-- .slide: data-timing="1" -->
@@ -503,8 +503,8 @@ Note:
 Matt <!-- .element style="color:blue" -->
 
 - The Radio Conversation process is built into the form workflow
-- Operators iterate the process from top of screen
-- Delivered by Django Admin's "interface-for-free."
+- Operators progress from top of screen downwards
+- Again, this was initially delivered for free by Django's Admin
 
 ---
 <!-- .slide: data-timing="1" -->
@@ -515,7 +515,8 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-- Here we see the events - a log of each entry, tracking
+- Here we see a list of events
+- a log of each entry, tracking
   - the last known **location** of each team at a given time
   - the "INTEL" collected, featuring correct/incorrect flagging.
   - the next base they've been sent to.
@@ -530,7 +531,8 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-- Now we create front-end styling, and a state-of-play dashboard to help with decision making.
+- Now we create front-end styling
+- and add a state-of-play dashboard to help with decision making
 
 ----
 <!-- .slide: data-timing="1" -->
@@ -542,7 +544,7 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-- … and then we match Luke's style guide. For better or worse.
+- … and then we match Luke's style guide. For better or worse
 
 ---
 
@@ -557,11 +559,12 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-- and add some buttons, specific for the event.
-- some of the apps needed minor code forks to customise some apps for the event
-- We can see the app provides feedback if entered info doesn't match its view view of the world
+- Then we add some buttons, specific for the event.
+- some of the apps needed minor code updates to customise them for STS
+- We can see the app provides feedback if entered info doesn't match its view of the world
+- Here it's showing that the Team's reported location doesn't align with where they were last sent
 - RadioActiv8 is smart enough to say something is wrong…
-- …allows the operator to override suggestions, letting play continue
+- …but allows the operator to override suggestions, letting gameplay continue
 
 ---
 <!-- .slide: data-timing="1" -->
@@ -611,12 +614,10 @@ Matt <!-- .element: style="color:blue" -->
 
 - So back to our Trenchcoat
 - we created One project to ~~rule~~ host them all:
-- A single multi-app Django project, including our 3 apps
-- App installation is as easy as
-- adding it to the list in our Django `settings.py`
-- Adding the app code to our project
-
-!FIXME[@mattcen read and re-write slides and notes however you see fit.]
+- This was a single multi-app Django project, including our 3 apps
+- App installation is as easy as:
+- Adding it to the list in our Django `settings.py`
+- And adding the app code to our project
 
 ----
 
@@ -644,8 +645,6 @@ Matt <!-- .element: style="color: blue" -->
 - Then we can connect our apps' models together
 - Here we ensure that a Patrol, or team, in RadioActiv8, is related to the group of Registrants in  `scoutsvic_ems`, or Brownsea
 
-!FIXME[@mattcen read and re-write slides and notes however you see fit.]
-
 ----
 <!-- .slide: data-timing="1" -->
 
@@ -658,12 +657,14 @@ Note:
 Matt <!-- .element: style="color: blue" -->
 
 [BRN, STS, RA8]
-- Here we have an overview of the django model elements.
-- Team members sign in with credentials referenced in the ScoutsVic_Extranet app
+- Here we have an overview of the django model elements
+- There's a lot here, but I'll cover some highlights:
+- Team members sign in using credentials managed in the ScoutsVic_EMS (Brownsea) app
 - They Register for the event via ScoutsVic_EMS (Brownsea)
-- As part of Registration, they select their preferred activities, connected to PatrolPreferences in the STS app
-- When activities start and a Patrol or team, checks in, the system consults their linked PatrolPreferences to select a candidate for their next activity
-- Each Base, or activity, also has GPS coordinates and route distance/time estimates to each other activity so we don't make teams walk too far
+- As part of Registration, they select their preferred activities
+- These activities are connected to PatrolPreferences in the STS app
+- When activities start and a Patrol or team, checks in with Starfleet Command
+- The system consults their linked PatrolPreferences to select a candidate for their next activity
 
 ---
 
@@ -676,21 +677,21 @@ Note:
 
 Matt <!-- .element: style="color:blue" -->
 
-RadioActiv8 provides path-trace distancing between bases, shown as time. Combined with a site map, operators make tactical decisions, such as
+- RadioActiv8 provides walking time estimates between bases
+- Combined with a site map, operators make tactical decisions, such as:
 
-> Do we send the 5 year olds on a 1km journey, uphill, 20mins before lunch? No.
+> Do we send a team 5 year olds on a 1km journey, uphill, 20mins before lunch? No.
 
-> Do we send the Older Scouts? Yes.
+> Would we do this for a team of Older Scouts? Yes.
 
-
-- Each base recommendation populates Route/Time estimates between bases
-- we use GeoDjango to add geospatial integration to help with mapping data.
-- Success message displays at the top of the page and includes:
- - A timestamp
- - the Team Number
- - the Current Base
- - and their next Base (if in transit).
-- AKA: Wait, what did I just log!?
+- Each base recommendation includes its estimated walking time from the team's current location
+- we use GeoDjango to add geospatial integration to help with mapping data
+- RadioActiv8 shows a success message at the top of the page including:
+  - A timestamp
+  - the Team Number
+  - their Current Base
+  - and their next Base, if they're in transit
+- This helps keep track of what we just logged
 
 ---
 <!-- .slide: data-timing="1" -->
@@ -706,17 +707,17 @@ There are two dashboards shown on the monitors.
 
 - Each
   - uses HTMX to give up-to-date information without refreshing
-  - Supports the decision making process for despatchers without manually refreshing the page.
+  - This supports the decision making process for dispatchers without manually refreshing the page.
 - the Base Dashboard on the left shows
   - Available Bases
   - Base Capacity
   - and Full bases
 - the Team Dashboard on the right
  - Lists teams by number
- - Shows either:
-   - Their Current Location if one base is listed, or
-   - their previous and next base, indicating they are in transit.
- - and the time since they last radio'd HQ.
+ - And shows either:
+   - their Current Location if one base is listed, or
+   - their previous and next base, indicating they are in transit
+ - It also displays the duration since HQ last heard from the team
 
 ----
 
@@ -741,7 +742,7 @@ Matt <!-- .element: style="color: blue" -->
 [github link to code](https://github.com/Scouts-Victoria-Program/RadioActiv8/blob/dcbffd2fa4d6f28ba72804422b84d9601b86fd60/django/RadioActiv8/templates/RadioActiv8/master/heading.html#L15)
 [github link to code](https://github.com/Scouts-Victoria-Program/RadioActiv8/blob/dcbffd2fa4d6f28ba72804422b84d9601b86fd60/django/RadioActiv8/templates/RadioActiv8/master/play.html#L38)
 
-- Code is all the HTMX needed to auto-refresh the dashboards.
+- This code is all HTMX requires to auto-refresh the dashboards.
 - For those who don't know H.T.M.X., it's a small JavaScript library which makes use of attributes on your HTML elements to make AJAX queries and dynamically update content, without you having to actually *write* JavaScript. You should definitely check it out!
 - Single programming language for backend Dev avoiding bespoke or customized areas where, ordinarily, JS would feel like the _only_ way to solve a particular problem.
 
@@ -871,7 +872,7 @@ License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
 Note:
 
-- I'm Matt, or mattcen: Linux systems administrator, software developer. I use they/them pronouns
+- I'm Matt: Linux systems administrator, software developer. I use they/them pronouns
 - I'm Luke: systems technician and aspiring security architect; interests in web development & security education
 
 [mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat](https://mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat)
