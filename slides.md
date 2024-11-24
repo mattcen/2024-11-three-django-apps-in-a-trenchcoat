@@ -85,6 +85,8 @@ We're Scout leaders - we:
 - an ethos of Learning by Doing
 - is Youth Led, Adult Supported.
 
+[Scouts Victoria](https://scoutsvictoria.com.au)
+
 ---
 <!-- .slide: data-timing="15" -->
 
@@ -129,7 +131,7 @@ Note:
 Luke <!-- .element: style="color: red" -->
 
 - Most Scouting events use a round-robin or "Track-based" program like this…
-- Each team rotates through activities for a limited duration.
+- Each team rotates through activities for a limited duration at a specified time.
 
 ----
 <!-- .slide: data-timing="3" -->
@@ -146,7 +148,7 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-- …We don't do that.
+- … we don't do thatat STS.
 
 Youth-Led means youth members decide how long they want to be throwing sponges at their Leaders before exploring something else.
 
@@ -162,7 +164,7 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-- At STS we went agile
+- At STS we went agile with program delivery.
 - built the event around a dispatch system to send youth members to their activities via radio
 
 Shown here:
@@ -200,7 +202,7 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-- 250 Scouts were each given their own radio (a choice so poor we've done it twice now)
+- 250 Scouts, aged 5 - 26, were each given their own radio (a choice so poor we've done it twice now)
 - they received their marching orders to attend their next activity from "Starfleet Command".
 
 ----
@@ -226,7 +228,7 @@ To engage in activities at this event, all the teams have to do to participate i
 
 This methodology provided flexibility of staff, scalability of activity delivery, and most importantly, no queueing for fun!
 
-Food and sleep also occur in designated times and areas.
+Food and sleep also occur in designated times and areas - these activities do not require a radio.
 
 ---
 <!-- .slide: data-timing="10" -->
