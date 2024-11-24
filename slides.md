@@ -807,6 +807,8 @@ Luke <!-- .element: style="color: red" -->
 
 CONTENT WARNING!
 
+Cuteness
+
 Note:
 
 Luke <!-- .element: style="color: red" -->
@@ -857,8 +859,7 @@ Our thanks to the contributors to this excellent framework.
 
 ---
 
-### Three Django Apps in a Trenchcoat
-#### Writing an event management website with not a lot of time
+# Thanks!
 
 - Matt (mattcen) Cengia (they/them) -- [mattcen.com](https://blog.mattcen.com)
 - Luke (ekulbyrnes) Byrnes (he/him) -- [ekulbyrnes.github.io](https://ekulbyrnes.github.io)
@@ -871,11 +872,6 @@ License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 <!-- .element: class="r-stretch" -->
 
 Note:
-
-- I'm Matt: Linux systems administrator, software developer. I use they/them pronouns
-- I'm Luke: systems technician and aspiring security architect; interests in web development & security education
-
-[mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat](https://mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat)
 
 Potential questions:
 
