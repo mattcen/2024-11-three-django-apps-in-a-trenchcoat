@@ -865,12 +865,7 @@ Note:
 
 [mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat](https://mattcen.github.io/2024-11-three-django-apps-in-a-trenchcoat)
 
----
-
-
-
-
-# Potential questions
+Potential questions:
 
 - Why not PHP/Laravel, or some other framework/language
 - Why not Node/Javascript
