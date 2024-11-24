@@ -804,6 +804,21 @@ Matt <!-- .element: style="color: blue" -->
 ---
 <!-- .slide: data-timing="1" -->
 
+![Mission Outcomes Summary](images/mission-outcomes.png)
+<!-- .element: class="r-stretch"-->
+
+Note:
+
+Speaker <!-- .element: style="color: orange" -->
+
+- At event's end, our youth members go home having each had a unique adventure.
+- They receive summary outcomes of activity completion for each team.
+- distributed via the registration system at event's end.
+- ready for badge awarding the following week.
+
+---
+<!-- .slide: data-timing="1" -->
+
 CONTENT WARNING!
 
 Note:
@@ -812,7 +827,7 @@ Speaker <!-- .element: style="color: orange" -->
 
 Cuteness overload ahead
 
----
+----
 <!-- .slide: data-timing="1" -->
 
 ![Cub Scouts at Star Trek: Survival](images/cubsllap.jpg)
