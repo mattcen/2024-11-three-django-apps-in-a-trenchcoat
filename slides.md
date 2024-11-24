@@ -254,6 +254,8 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
+#### Django App 1: Star Trek: Survival Website
+
 - first Django app, a nice and simple concept
 - create a website for STS to inform participants of the awesome activities on offer
 
@@ -270,11 +272,16 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
+#### Django App 2: Brownsea
+
+The name Brownsea refers to Brownsea Island, the location of the first Scouting event.
+
 - used for participant registration and team management
 - implemented for speed
 - security of personal data
 - offers quality UX
 - provides transparency for guardians
+
 
 Matt <!-- .element: style="color:blue"-->
 
@@ -296,6 +303,8 @@ Dispatch and event operations as an activity for all youth members
 Note:
 
 Luke <!-- .element: style="color: red" -->
+
+#### Django App 3: RadioActiv8
 
 - Outsourcing the operational components of the event as an activity for youth members
 - by gamifying the distribution of participants across activity sites
