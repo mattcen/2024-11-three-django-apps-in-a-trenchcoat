@@ -150,7 +150,7 @@ Luke <!-- .element: style="color: red" -->
 
 Youth-Led means youth members decide how long they want to be throwing sponges at their Leaders before exploring something else.
 
-We have made that decision capability a reality.
+This talk demonstrates how we have made youth decision capability a reality, powered by technology.
 
 ----
 <!-- .slide: data-timing="35" -->
