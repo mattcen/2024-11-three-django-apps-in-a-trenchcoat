@@ -88,7 +88,7 @@ We're Scout leaders - we:
 ---
 <!-- .slide: data-timing="15" -->
 
-![Cub wearing hard hat rock climbing on a cliff face](images/oas2.jpg)<!-- .element style="width: 45%" -->
+![Cub wearing hard hat abseiling down a wall](images/oas2.jpg)<!-- .element style="width: 45%" -->
 ![Scouts in uniform sitting at computer desks, with a leader pointing at a computer monitor](images/scouthack-uniform.jpg) <!-- .element style="width: 45%" -->
 
 Note:
@@ -98,11 +98,10 @@ Luke <!-- .element: style="color: red" -->
 - Sure, we do fun outdoor activities
 - But also provide events like ScoutHack which teach website development
 - See our Lightning Talk, or Matt's presentation for details on that; links in slide notes
-
 - Lightning Talk summary: [Everything Open 2023](https://www.youtube.com/watch?v=GGgHsA8WifE&t=1460)
 - Full length presentation: [Developing Labs for Teaching Kids Webdev](https://www.youtube.com/watch?v=VXFuL5PcPKI)
 
-[Rock climbing image credit: Lachlan Bence](https://www.thecourier.com.au/story/8221341/hanging-on-to-build-our-citys-future-leaders-but-they-need-help/)
+[Abseiling climbing image credit: Lachlan Bence](https://www.thecourier.com.au/story/8221341/hanging-on-to-build-our-citys-future-leaders-but-they-need-help/)
 
 ---
 <!-- .slide: data-timing="5" -->
@@ -114,7 +113,7 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-- We also run immersive STEM-focussed camps. We call it Star Trek: Survival.
+- We also run immersive STEM-focussed camps. We call this one Star Trek: Survival.
 
 ----
 <!-- .slide: data-timing="5" -->
@@ -279,11 +278,11 @@ Luke <!-- .element: style="color: red" -->
 
 Matt <!-- .element: style="color:blue"-->
 
-- Critically: Successfully implemented despite Scouts Victoria's complex hierarchical arrangement
+- Critically: This was successfully implemented despite Scouts Victoria's complex hierarchical arrangement
 - Designed generically, extensibly, and with modularity
 - Allows us to capture key elements of event management
-- Crucially, *beyond* the needs of just our event
-- So others in Scouting can use this great tool too
+- Crucially, it works *beyond* the needs of just our event
+- So other Scouting events can use this as well
 
 ----
 <!-- .slide: data-timing="20" -->
@@ -299,26 +298,9 @@ Note:
 Luke <!-- .element: style="color: red" -->
 
 - Outsourcing the operational components of the event as an activity for youth members
-- by gamify the distribution of participants across activity sites
+- by gamifying the distribution of participants across activity sites
 - maintains preference consideration for individuals and their activity teams
 - The name RadioActiv8 is a play on the words Radio, Active, and the totes hip spelling of script kiddies. #toTaLHacKeRbRo
-
-----
-
-<!-- .slide: data-timing="15" -->
-
-![OCI logo](images/OCI-logo.svg)
-![Docker logo](images/docker-logo.svg)
-
-Note:
-
-Matt <!-- .element: style="color: blue" -->
-
-- OCI-compliant images helped us standardise our environment
-- We chose Docker to run our containers
-- See [Matt's Docker talk](https://www.youtube.com/watch?v=X0aarx6LLzI), linked in slide notes, to learn about Docker
-
-!FIXME[Cut me and merge info if shortening required?]
 
 ---
 
@@ -341,75 +323,22 @@ Matt <!-- .element: style="color:blue" -->
 - Like it did 2 hours into Day 1 of our event
 
 ----
+<!-- .slide: data-timing="15" -->
 
-<!-- .slide: data-timing="5"-->
-
-Team class using registration app data
-
-<!--https://github.com/Scouts-Victoria-Program/RadioActiv8/blob/b3b19a481be39f49c3b627bd4ef3653eeecc7c99/django/RadioActiv8/models.py#L228-L233-->
-```python
-class Patrol(models.Model):
-    history = HistoricalRecords()
-    event_patrol = models.ForeignKey(
-        "scoutsvic_ems.EventPatrol",
-        blank=True,
-        null=True,
-        on_delete=models.SET_NULL,
-        )
-```
-
-Team information accessed by Foreign Key from registration app
-
-<!--https://github.com/Scouts-Victoria-Program/scoutsvic-rego/blob/638b6ad775430d9e7158499daa7395dec21c3ac6/django/scoutsvic_ems/models.py#L563-->
-```python
-class Registration(RulesModel):
-    class Meta:
-        rules_permissions = {
-        …
-        patrol = models.ForeignKey(
-            Patrol,
-            on_delete=models.SET_NULL,
-            null=True,
-            blank=True)
-        …
-        }
-```
-
-Note:
-
-Matt <!-- .element: style="color:blue" -->
-
-- One project to ~~rule~~ host them all:
-- A single multi-app Django project
-- Aimed for a 12-factor app to enable rapid redeployment
-
-!FIXME[@mattcen read and re-write slides and notes however you see fit.]
-
-----
-
-<!-- .slide: data-timing="5"-->
-
-Blending three apps <!--https://github.com/Scouts-Victoria-Program/sts/blob/e012c21e7c6d87e898c005fe4191f728efb0c8ba/django/myproject/settings.py#L88-L91
--->
-```python
-                                INSTALLED_APPS = [
-                                    …
-                                    "sts_website",
-                                    "scoutsvic_extranet",
-                                    "scoutsvic_ems",
-                                    "RadioActiv8",
-                                ]
-```
+![OCI logo](images/OCI-logo.svg)
+![Docker logo](images/docker-logo.svg)
 
 Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-- App installation is as easy as
-- a list
-- a submodule update!
+- Fortunately, we aimed for 12-factor apps to enable rapid redeployment
+- We used OCI-compliant images helped us standardise our environment
+- And chose Docker's container engine to run our containers
+- To learn more about Docker, see [my Docker talk](https://www.youtube.com/watch?v=X0aarx6LLzI), linked in the slide notes
+- This made it easy to spin up on new infrastructure if necessary
 
-!FIXME[@mattcen read and re-write slides and notes however you see fit.]
+!FIXME[Cut me and merge info if shortening required?]
 
 ---
 <!-- .slide: data-timing="1" -->
@@ -422,7 +351,14 @@ Note:
 Matt <!-- .element: style="color: blue" -->
 
 [BRN]
-- Verify and pre-fill:
+- For our event registration system, we wanted a smooth user experience
+- To access our event portal, we only require:
+  - Their membership number
+  - Their surname*
+  - Their date of birth
+- We don't store their date of birth; it's just used to authenticate against the Scouts Victoria membership API
+
+\* Yes, I wish we didn't make assumptions about the format of people's names, too.
 
 ----
 <!-- .slide: data-timing="1" -->
@@ -438,11 +374,11 @@ Matt <!-- .element: style="color: blue" -->
 
 [BRN]
 Registration Process Highlight
-- validate member with membership database;
+- validate members with membership database;
 - prefill and prompt replacement of personal contact information for the event
-- provide any notes that may be beneficial to event organisers (but not health info)
-- provide a cursory summary of catering/dietary needs
-- receive invoice for payment.
+- let member provide any notes that may be beneficial to event organisers (but not health info)
+- and let them provide a cursory summary of catering/dietary needs
+- then they receive invoice for payment.
 
 ----
 <!-- .slide: data-timing="1" -->
@@ -471,9 +407,11 @@ Note:
 Matt <!-- .element: style="color: blue" -->
 
 [BRN]
-- legal guardians can see their child's data
+- legal guardians can sign in to see their children's data…
 
 ----
+<!-- .slide: data-timing="1" -->
+
 ![Brownsea Event Supportal screenshot](images/supportal_list.png)
 <!-- .element: class="r-stretch" -->
 
@@ -482,13 +420,13 @@ Note:
 Matt <!-- .element: style="color: blue" -->
 
 [BRN]
-- Scout Leaders can see their Youth Member data (to which they *should* already have access through member records).
+- … And Scout Leaders can see their Youth Member data
+- (to which they *should* already have access through member records)
 
 ----
 <!-- .slide: data-timing="1" -->
 
 ![Django Admin Page](images/django_admin.png)
-<!-- .element: class="r-stretch" -->
 
 Note:
 
@@ -497,20 +435,6 @@ Matt <!-- .element style="color: blue" -->
 [BRN]
 - Event administration is handled by authorised personnel using the Django Admin backend framework.
 - We see here the different activities can be switched on, off, and have content updated on the fly through this interface.
-
-----
-<!-- .slide: data-timing="1" -->
-
-![Django Admin Models](images/radioactiv8_model.png) <!-- .element style="width: 30%" -->
-![Django Admin Models](images/brownsea_model.png) <!-- .element style="width: 30%" -->
-![Django Admin Models](images/sts_website_model.png) <!-- .element style="width: 30%" -->
-
-Note:
-
-Matt <!-- .element: style="color: blue" -->
-
-[BRN, STS, RA8]
-- Here we have an overview of the django model elements.
 
 ---
 <!-- .slide: data-timing="1" -->
@@ -554,15 +478,14 @@ Note:
 
 Matt <!-- .element: style="color: blue" -->
 
-- The proof-of-concept used a sheet of paper to track the game state[^GameState] of teams, recorded by Luke while we gave contacts the next base to attend.
+- The proof-of-concept used a sheet of paper to track the game state of teams, recorded by Luke while we gave contacts the next base to attend.
 
 - Learning: Paper does not scale.
 
 ---
-![RA8 list of submitted events](images/ra8-0.5_2.png)
-<!-- .element: class="r-stretch" -->
-
 <!-- .slide: data-timing="1" -->
+
+![RA8 list of submitted events](images/ra8-0.5_2.png) <!-- .element: style="" -->
 
 Note:
 
@@ -575,7 +498,7 @@ Matt <!-- .element style="color:blue" -->
 ---
 <!-- .slide: data-timing="1" -->
 
-![RA8 list of submitted events](images/ra8-0.5-event-list.png)<!-- .element style="width: 40%" -->
+![RA8 list of submitted events](images/ra8-0.5-event-list.png)<!-- .element style="width: 100%" -->
 
 Note:
 
@@ -614,7 +537,9 @@ Matt <!-- .element: style="color: blue" -->
 
 <!-- .slide: data-timing="1" -->
 
-![RadioActiv8 for STS](images/RadioActiv8%20-%20Play.png)
+![RadioActiv8 for STS](images/RadioActiv8%20-%20Play_top.png)
+![RadioActiv8 for STS](images/RadioActiv8%20-%20Play_bottom.png)
+
 <!-- .element: class="r-stretch" -->
 
 Note:
@@ -622,10 +547,10 @@ Note:
 Matt <!-- .element: style="color: blue" -->
 
 - and add some buttons, specific for the event.
-- some of the apps made use of tags and branches to customise some apps for the event.
-- We can also see the feedback provided when assumed information is not present.
-- RadioActiv8 is smart enough to say something is wrong
-- yet allows the operator to override suggestions, letting play continue.
+- some of the apps needed minor code forks to customise some apps for the event
+- We can see the app provides feedback if entered info doesn't match its view view of the world
+- RadioActiv8 is smart enough to say something is wrong…
+- …allows the operator to override suggestions, letting play continue
 
 ---
 <!-- .slide: data-timing="1" -->
@@ -653,11 +578,105 @@ Note:
 - Here are our operators - an older Scout, helping a younger scout, direct OTHER scouts on where to go next!
 - This is how we made outsourcing event operations possible:
 
+----
+
+<!-- .slide: data-timing="5"-->
+
+Team class using registration app data
+
+<!--https://github.com/Scouts-Victoria-Program/RadioActiv8/blob/b3b19a481be39f49c3b627bd4ef3653eeecc7c99/django/RadioActiv8/models.py#L228-L233-->
+```python
+class Patrol(models.Model):
+    history = HistoricalRecords()
+    event_patrol = models.ForeignKey(
+        "scoutsvic_ems.EventPatrol",
+        blank=True,
+        null=True,
+        on_delete=models.SET_NULL,
+        )
+```
+<!-- .element: style="width: fit-content" -->
+
+Team information accessed by Foreign Key from registration app
+
+<!--https://github.com/Scouts-Victoria-Program/scoutsvic-rego/blob/638b6ad775430d9e7158499daa7395dec21c3ac6/django/scoutsvic_ems/models.py#L563-->
+```python
+class Registration(RulesModel):
+    class Meta:
+        rules_permissions = {
+        …
+        patrol = models.ForeignKey(
+            Patrol,
+            on_delete=models.SET_NULL,
+            null=True,
+            blank=True)
+        …
+        }
+```
+<!-- .element: style="width: fit-content" -->
+
+Note:
+
+Matt <!-- .element: style="color:blue" -->
+
+- So back to our Trenchcoat
+- we created One project to ~~rule~~ host them all:
+- A single multi-app Django project
+
+!FIXME[@mattcen read and re-write slides and notes however you see fit.]
+
+----
+
+<!-- .slide: data-timing="5"-->
+
+Blending three apps <!--https://github.com/Scouts-Victoria-Program/sts/blob/e012c21e7c6d87e898c005fe4191f728efb0c8ba/django/myproject/settings.py#L88-L91
+-->
+```python
+INSTALLED_APPS = [
+    …
+    "sts_website",
+    "scoutsvic_extranet",
+    "scoutsvic_ems",
+    "RadioActiv8",
+]
+```
+<!-- .element: style="width: fit-content" -->
+
+Note:
+
+Matt <!-- .element: style="color: blue" -->
+
+- App installation is as easy as
+- a list
+- a submodule update!
+
+!FIXME[@mattcen read and re-write slides and notes however you see fit.]
+
+
+----
+<!-- .slide: data-timing="1" -->
+
+![Django Admin Models](images/radioactiv8_model.png) <!-- .element style="width: 30%" -->
+![Django Admin Models](images/brownsea_model.png) <!-- .element style="width: 30%" -->
+![Django Admin Models](images/sts_website_model.png) <!-- .element style="width: 30%" -->
+
+Note:
+
+Matt <!-- .element: style="color: blue" -->
+
+[BRN, STS, RA8]
+- Here we have an overview of the django model elements.
+- Team members sign in with credentials referenced in the ScoutsVic_Extranet app
+- They Register for the event via ScoutsVic_EMS (Brownsea)
+- As part of Registration, they select their preferred activities, connected to PatrolPreferences in the STS app
+- When activities start and a Patrol or team, checks in, the system consults their linked PatrolPreferences to select a candidate for their next activity
+- Each Base, or activity, also has GPS coordinates and route distance/time estimates to each other activity so we don't make teams walk too far
+
 ---
 
 <!-- .slide: data-timing="1" -->
 
-![RA8 Mision path distance](images/ra8-mission-selection-distance.png)
+![RA8 Mission path distance](images/ra8-mission-selection-distance.png)
 <!-- .element: class="r-stretch"-->
 
 Note:
@@ -690,8 +709,8 @@ Matt <!-- .element: style="color:blue" -->
 ---
 <!-- .slide: data-timing="1" -->
 
-![Base Dashboard RA8](images/ra8-base-dashboard.png)<!-- .element style="width: 20%" -->
-![Patrol Dashboard RA8](images/ra8-dashboard-patrols.png)<!-- .element style="width: 50%" -->
+![Base Dashboard RA8](images/ra8-base-dashboard.png)<!-- .element style="width: 28%" -->
+![Patrol Dashboard RA8](images/ra8-dashboard-patrols.png)<!-- .element style="width: 70%" -->
 
 Note:
 
@@ -702,12 +721,10 @@ There are two dashboards shown on the monitors.
 - Each
   - uses HTMX to give up-to-date information without refreshing
   - Supports the decision making process for despatchers without manually refreshing the page.
-
 - the Base Dashboard on the left shows
   - Available Bases
   - Base Capacity
   - and Full bases
-
 - the Team Dashboard on the right
  - Lists teams by number
  - Shows either:
@@ -720,20 +737,23 @@ There are two dashboards shown on the monitors.
 <!-- .slide: data-timing="1" -->
 
 ```html
-                    <div id="base-status" class="form-group"
-                        hx-trigger="every 10s"
-                        hx-get=""
-                        hx-target="this"
-                        hx-select="#base-status"
-                        hx-swap="outerHTML"
-                        hx-select-oob="#patrol-locations">
+<script src="{% static 'admin/js/htmx.min.js' %}"></script>
+<div id="base-status" class="form-group"
+    hx-trigger="every 10s"
+    hx-get=""
+    hx-target="this"
+    hx-select="#base-status"
+    hx-swap="outerHTML"
+    hx-select-oob="#patrol-locations">
 ```
-
-[github](https://github.com/Scouts-Victoria-Program/RadioActiv8/blob/dcbffd2fa4d6f28ba72804422b84d9601b86fd60/django/RadioActiv8/templates/RadioActiv8/master/play.html#L38)
+<!-- .element: style="width: fit-content" -->
 
 Note:
 
 Matt <!-- .element: style="color: blue" -->
+
+[github link to code](https://github.com/Scouts-Victoria-Program/RadioActiv8/blob/dcbffd2fa4d6f28ba72804422b84d9601b86fd60/django/RadioActiv8/templates/RadioActiv8/master/heading.html#L15)
+[github link to code](https://github.com/Scouts-Victoria-Program/RadioActiv8/blob/dcbffd2fa4d6f28ba72804422b84d9601b86fd60/django/RadioActiv8/templates/RadioActiv8/master/play.html#L38)
 
 !FIXME[Talk about the HTMX dependencies/installation?]
 - Code is all the HTMX needed to auto-refresh the dashboards.
