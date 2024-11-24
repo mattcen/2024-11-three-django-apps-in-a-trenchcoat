@@ -39,7 +39,7 @@ Reveal.initialize({
 		// For viewer
 		secret: null, // null so the clients do not have control of the master presentation
 		// TODO: Set id for client here
-		id: '688237e853b409c5', // Obtained from socket.io server
+		id: 'bfc4e7327a6694dd', // Obtained from socket.io server
 		url: socket_server
 	},
 
