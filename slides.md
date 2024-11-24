@@ -148,7 +148,7 @@ Note:
 
 Luke <!-- .element: style="color: red" -->
 
-- … we don't do thatat STS.
+- … we don't do that at STS.
 
 Youth-Led means youth members decide how long they want to be throwing sponges at their Leaders before exploring something else.
 
@@ -364,7 +364,7 @@ Matt <!-- .element: style="color: blue" -->
 - For our event registration system, we wanted a smooth user experience
 - For a user to access our event portal, we only require:
   - Their scout membership number
-  - Their surname*
+  - Their surname
   - And their date of birth
 - We don't store their date of birth; it's just used to authenticate against the Scouts Victoria membership API
 
